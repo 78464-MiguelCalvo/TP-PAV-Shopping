@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
-            this.btnSalirOK = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrarSesionOK = new System.Windows.Forms.Button();
+            this.btnSalirOK = new System.Windows.Forms.Button();
             this.pnlSalir = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
@@ -59,8 +60,8 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pctLogoFondo = new System.Windows.Forms.PictureBox();
             this.pnlFormularioHijo = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMenuPrincipal.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlSalir.SuspendLayout();
             this.pnlSistemaSubmenu.SuspendLayout();
             this.pnlParkingSubmenu.SuspendLayout();
@@ -70,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoFondo)).BeginInit();
             this.pnlFormularioHijo.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenuPrincipal
@@ -94,23 +94,15 @@
             this.pnlMenuPrincipal.Size = new System.Drawing.Size(265, 684);
             this.pnlMenuPrincipal.TabIndex = 0;
             // 
-            // btnSalirOK
+            // panel1
             // 
-            this.btnSalirOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnSalirOK.FlatAppearance.BorderSize = 0;
-            this.btnSalirOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnSalirOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnSalirOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirOK.ForeColor = System.Drawing.Color.White;
-            this.btnSalirOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalirOK.Location = new System.Drawing.Point(133, 0);
-            this.btnSalirOK.Name = "btnSalirOK";
-            this.btnSalirOK.Size = new System.Drawing.Size(132, 34);
-            this.btnSalirOK.TabIndex = 10;
-            this.btnSalirOK.Text = "Salir";
-            this.btnSalirOK.UseVisualStyleBackColor = false;
-            this.btnSalirOK.Click += new System.EventHandler(this.btnSalirOK_Click);
+            this.panel1.Controls.Add(this.btnCerrarSesionOK);
+            this.panel1.Controls.Add(this.btnSalirOK);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 665);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(265, 34);
+            this.panel1.TabIndex = 11;
             // 
             // btnCerrarSesionOK
             // 
@@ -130,12 +122,30 @@
             this.btnCerrarSesionOK.UseVisualStyleBackColor = false;
             this.btnCerrarSesionOK.Click += new System.EventHandler(this.btnCerrarSesionOK_Click);
             // 
+            // btnSalirOK
+            // 
+            this.btnSalirOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
+            this.btnSalirOK.FlatAppearance.BorderSize = 0;
+            this.btnSalirOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
+            this.btnSalirOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnSalirOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirOK.ForeColor = System.Drawing.Color.White;
+            this.btnSalirOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalirOK.Location = new System.Drawing.Point(133, 0);
+            this.btnSalirOK.Name = "btnSalirOK";
+            this.btnSalirOK.Size = new System.Drawing.Size(132, 34);
+            this.btnSalirOK.TabIndex = 10;
+            this.btnSalirOK.Text = "Salir";
+            this.btnSalirOK.UseVisualStyleBackColor = false;
+            this.btnSalirOK.Click += new System.EventHandler(this.btnSalirOK_Click);
+            // 
             // pnlSalir
             // 
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 962);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 977);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -558,16 +568,6 @@
             this.pnlFormularioHijo.Size = new System.Drawing.Size(555, 684);
             this.pnlFormularioHijo.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnCerrarSesionOK);
-            this.panel1.Controls.Add(this.btnSalirOK);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 665);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(265, 34);
-            this.panel1.TabIndex = 11;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +577,7 @@
             this.ClientSize = new System.Drawing.Size(820, 684);
             this.Controls.Add(this.pnlFormularioHijo);
             this.Controls.Add(this.pnlMenuPrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(836, 723);
             this.Name = "MenuPrincipal";
@@ -584,6 +585,7 @@
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.pnlMenuPrincipal.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlSalir.ResumeLayout(false);
             this.pnlSistemaSubmenu.ResumeLayout(false);
             this.pnlParkingSubmenu.ResumeLayout(false);
@@ -594,7 +596,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogoFondo)).EndInit();
             this.pnlFormularioHijo.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

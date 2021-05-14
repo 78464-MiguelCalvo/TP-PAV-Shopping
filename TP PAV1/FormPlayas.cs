@@ -17,6 +17,25 @@ namespace TP_PAV1
             InitializeComponent();
         }
 
+        // metodos para limpiar campos del form
+        private void LimpiarCamposPnlEstacionamientos()
+        {
+            txtNroEstacionamiento.Text = "";
+            //VER COMBOBOX. selecteditem?
+        }
+
+        private void LimpiarCamposPnlPlayas()
+        {
+            txtPlaya.Text = "";
+            txtIDPlaya.Text = "";
+
+        }
+
+        private void FormTarjetas_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void FormPlayas_Load(object sender, EventArgs e)
         {
 
