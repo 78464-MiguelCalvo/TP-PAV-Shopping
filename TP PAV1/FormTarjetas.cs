@@ -16,5 +16,28 @@ namespace TP_PAV1
         {
             InitializeComponent();
         }
+
+        // metodos para limpiar campos del form
+        private void LimpiarCamposPnlBuscarTarjeta()
+        {
+            txtBuscarNombreTarjeta.Text = "";
+            txtBuscarIDTarjeta.Text = "";
+        }
+
+        private void LimpiarCamposPnlModificarEliminarTarjeta()
+        {
+            txtNombreTarjeta.Text = "";
+            txtIDTarjeta.Text = "";
+        }
+
+        private void LimpiarCamposPnlAgregarTarjeta()
+        {
+            txtNombreNuevaTarjeta.Text = "";
+        }
+
+        private void FormTarjetas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
