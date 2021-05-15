@@ -32,8 +32,8 @@
             this.grillaUsuarios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
+            this.txtBuscarUsuarioNombre = new System.Windows.Forms.TextBox();
             this.PICagregar = new System.Windows.Forms.PictureBox();
             this.PICborrar = new System.Windows.Forms.PictureBox();
             this.PICeditar = new System.Windows.Forms.PictureBox();
@@ -56,6 +56,7 @@
             this.grillaUsuarios.RowHeadersVisible = false;
             this.grillaUsuarios.Size = new System.Drawing.Size(514, 466);
             this.grillaUsuarios.TabIndex = 0;
+            this.grillaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaUsuarios_CellClick);
             // 
             // label1
             // 
@@ -70,7 +71,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnBuscarUsuario);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtBuscarUsuarioNombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
@@ -79,13 +80,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscador";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(149, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 20);
-            this.textBox1.TabIndex = 2;
             // 
             // btnBuscarUsuario
             // 
@@ -96,6 +90,13 @@
             this.btnBuscarUsuario.TabIndex = 3;
             this.btnBuscarUsuario.Text = "Buscar";
             this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarUsuarioNombre
+            // 
+            this.txtBuscarUsuarioNombre.Location = new System.Drawing.Point(149, 30);
+            this.txtBuscarUsuarioNombre.Name = "txtBuscarUsuarioNombre";
+            this.txtBuscarUsuarioNombre.Size = new System.Drawing.Size(257, 20);
+            this.txtBuscarUsuarioNombre.TabIndex = 2;
             // 
             // PICagregar
             // 
@@ -117,6 +118,7 @@
             this.PICborrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PICborrar.TabIndex = 7;
             this.PICborrar.TabStop = false;
+            this.PICborrar.Click += new System.EventHandler(this.PICborrar_Click);
             // 
             // PICeditar
             // 
@@ -173,7 +175,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnBuscarUsuario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscarUsuarioNombre;
         private System.Windows.Forms.PictureBox PICagregar;
         private System.Windows.Forms.PictureBox PICborrar;
         private System.Windows.Forms.PictureBox PICeditar;

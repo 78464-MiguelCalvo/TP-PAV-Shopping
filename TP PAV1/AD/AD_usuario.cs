@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using TP_PAV1.Entidades;
 
 namespace TP_PAV1.AD
 {
@@ -124,5 +126,71 @@ namespace TP_PAV1.AD
             }
         }
 
+        public static Usuarios obtenerUsuarioPorNombre(String NombreUsu)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            Usuarios U = new Usuarios();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "BuscarUsuarioPorNombre";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@usuario", NombreUsu);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null && dr.Read())
+                {
+                    U.UsuarioPersona = dr["usuario"].ToString();
+                    U.contraseñaPersona = dr["contraseña"].ToString();
+                    U.correoPersona = dr["correo"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return U;
+        }
+
+        public static void EliminarUsuario(String NombreUsu)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            Usuarios U = new Usuarios();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "EliminarUsuario";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@usuario", NombreUsu);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+           
+        }
     }
 }
