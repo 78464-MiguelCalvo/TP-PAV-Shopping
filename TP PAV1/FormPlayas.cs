@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_PAV1.AD;
 
 namespace TP_PAV1
 {
@@ -21,23 +22,43 @@ namespace TP_PAV1
         private void LimpiarCamposPnlEstacionamientos()
         {
             txtNroEstacionamiento.Text = "";
-            //VER COMBOBOX. selecteditem?
+            cmbPlaya.SelectedValue = -1;
+            //VER COMBOBOX. selecteditem? selectedvalue?
         }
 
         private void LimpiarCamposPnlPlayas()
         {
             txtPlaya.Text = "";
             txtIDPlaya.Text = "";
-
-        }
-
-        private void FormTarjetas_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void FormPlayas_Load(object sender, EventArgs e)
         {
+            LimpiarCamposPnlEstacionamientos();
+            LimpiarCamposPnlPlayas();
+            CargarGrillaEstacionamientos();
+        }
+
+        private void btnNuevoEstacionamiento_Click(object sender, EventArgs e)
+        {
+            TomarDatosEstacionamiento();
+        }
+
+        private void TomarDatosEstacionamiento()
+        {
+
+        }
+
+        private void CargarGrillaEstacionamientos()
+        {
+            try
+            {
+                dgvEstacionamientos.DataSource = AD_PlayasYEstacionamientos.ObtenerEstacionamientosPorPlaya();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener estacionamientos");
+            }
 
         }
     }

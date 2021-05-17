@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD\AD_PlayasYEstacionamientos.cs" />
     <Compile Include="AD\AD_Tarjetas.cs" />
     <Compile Include="AD\AD_usuario.cs" />
+    <Compile Include="Estacionamiento.cs" />
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
     </Compile>

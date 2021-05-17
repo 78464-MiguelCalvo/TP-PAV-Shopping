@@ -169,7 +169,6 @@ namespace TP_PAV1
         private void btnBuscarTarjeta_Click(object sender, EventArgs e)
         {
             string criterio = Convert.ToString(txtBuscarNombreTarjeta.Text);
-
         }
 
         private void btnCancelarBusqueda_Click(object sender, EventArgs e)

@@ -38,20 +38,20 @@
             this.cmbPlaya = new System.Windows.Forms.ComboBox();
             this.txtPlaya = new System.Windows.Forms.TextBox();
             this.dgvEstacionamientos = new System.Windows.Forms.DataGridView();
-            this.Estacionamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarEstacionamiento = new System.Windows.Forms.Button();
             this.txtNroEstacionamiento = new System.Windows.Forms.TextBox();
             this.pnlEstacionamientos = new System.Windows.Forms.GroupBox();
+            this.btnBuscarEstacionamiento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnNuevoEstacionamiento = new System.Windows.Forms.Button();
             this.pnlPlayas = new System.Windows.Forms.GroupBox();
+            this.btnBuscarPlaya = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnNuevaPlaya = new System.Windows.Forms.Button();
             this.txtIDPlaya = new System.Windows.Forms.TextBox();
             this.btnEliminarPlaya = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBuscarEstacionamiento = new System.Windows.Forms.Button();
-            this.btnBuscarPlaya = new System.Windows.Forms.Button();
+            this.Estacionamientos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstacionamientos)).BeginInit();
             this.pnlEstacionamientos.SuspendLayout();
@@ -141,7 +141,7 @@
             this.dgvEstacionamientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvEstacionamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstacionamientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Estacionamiento});
+            this.Estacionamientos});
             this.dgvEstacionamientos.Location = new System.Drawing.Point(259, 25);
             this.dgvEstacionamientos.Name = "dgvEstacionamientos";
             this.dgvEstacionamientos.ReadOnly = true;
@@ -149,15 +149,9 @@
             this.dgvEstacionamientos.Size = new System.Drawing.Size(266, 278);
             this.dgvEstacionamientos.TabIndex = 16;
             // 
-            // Estacionamiento
-            // 
-            this.Estacionamiento.HeaderText = "Estacionamiento";
-            this.Estacionamiento.Name = "Estacionamiento";
-            this.Estacionamiento.ReadOnly = true;
-            this.Estacionamiento.Width = 229;
-            // 
             // btnEliminarEstacionamiento
             // 
+            this.btnEliminarEstacionamiento.Enabled = false;
             this.btnEliminarEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnEliminarEstacionamiento.FlatAppearance.BorderSize = 0;
             this.btnEliminarEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
@@ -200,6 +194,23 @@
             this.pnlEstacionamientos.TabStop = false;
             this.pnlEstacionamientos.Text = "Estacionamientos";
             // 
+            // btnBuscarEstacionamiento
+            // 
+            this.btnBuscarEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnBuscarEstacionamiento.FlatAppearance.BorderSize = 0;
+            this.btnBuscarEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnBuscarEstacionamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEstacionamiento.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarEstacionamiento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEstacionamiento.Image")));
+            this.btnBuscarEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarEstacionamiento.Location = new System.Drawing.Point(134, 127);
+            this.btnBuscarEstacionamiento.Name = "btnBuscarEstacionamiento";
+            this.btnBuscarEstacionamiento.Size = new System.Drawing.Size(113, 50);
+            this.btnBuscarEstacionamiento.TabIndex = 33;
+            this.btnBuscarEstacionamiento.Text = "            Buscar";
+            this.btnBuscarEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarEstacionamiento.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -213,6 +224,7 @@
             // 
             // btnNuevoEstacionamiento
             // 
+            this.btnNuevoEstacionamiento.Enabled = false;
             this.btnNuevoEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnNuevoEstacionamiento.FlatAppearance.BorderSize = 0;
             this.btnNuevoEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
@@ -227,6 +239,7 @@
             this.btnNuevoEstacionamiento.Text = "            Nuevo estacionamiento";
             this.btnNuevoEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevoEstacionamiento.UseVisualStyleBackColor = false;
+            this.btnNuevoEstacionamiento.Click += new System.EventHandler(this.btnNuevoEstacionamiento_Click);
             // 
             // pnlPlayas
             // 
@@ -247,6 +260,23 @@
             this.pnlPlayas.TabIndex = 25;
             this.pnlPlayas.TabStop = false;
             this.pnlPlayas.Text = "Playas";
+            // 
+            // btnBuscarPlaya
+            // 
+            this.btnBuscarPlaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnBuscarPlaya.FlatAppearance.BorderSize = 0;
+            this.btnBuscarPlaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnBuscarPlaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarPlaya.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarPlaya.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarPlaya.Image")));
+            this.btnBuscarPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarPlaya.Location = new System.Drawing.Point(134, 125);
+            this.btnBuscarPlaya.Name = "btnBuscarPlaya";
+            this.btnBuscarPlaya.Size = new System.Drawing.Size(113, 50);
+            this.btnBuscarPlaya.TabIndex = 34;
+            this.btnBuscarPlaya.Text = "            Buscar";
+            this.btnBuscarPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarPlaya.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -311,39 +341,13 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Buscar playa:";
             // 
-            // btnBuscarEstacionamiento
+            // Estacionamientos
             // 
-            this.btnBuscarEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBuscarEstacionamiento.FlatAppearance.BorderSize = 0;
-            this.btnBuscarEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnBuscarEstacionamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEstacionamiento.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarEstacionamiento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEstacionamiento.Image")));
-            this.btnBuscarEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEstacionamiento.Location = new System.Drawing.Point(134, 127);
-            this.btnBuscarEstacionamiento.Name = "btnBuscarEstacionamiento";
-            this.btnBuscarEstacionamiento.Size = new System.Drawing.Size(113, 50);
-            this.btnBuscarEstacionamiento.TabIndex = 33;
-            this.btnBuscarEstacionamiento.Text = "            Buscar";
-            this.btnBuscarEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEstacionamiento.UseVisualStyleBackColor = false;
-            // 
-            // btnBuscarPlaya
-            // 
-            this.btnBuscarPlaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBuscarPlaya.FlatAppearance.BorderSize = 0;
-            this.btnBuscarPlaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnBuscarPlaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPlaya.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPlaya.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarPlaya.Image")));
-            this.btnBuscarPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarPlaya.Location = new System.Drawing.Point(134, 125);
-            this.btnBuscarPlaya.Name = "btnBuscarPlaya";
-            this.btnBuscarPlaya.Size = new System.Drawing.Size(113, 50);
-            this.btnBuscarPlaya.TabIndex = 34;
-            this.btnBuscarPlaya.Text = "            Buscar";
-            this.btnBuscarPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarPlaya.UseVisualStyleBackColor = false;
+            this.Estacionamientos.DataPropertyName = "nro_estacionamiento";
+            this.Estacionamientos.HeaderText = "Estacionamiento";
+            this.Estacionamientos.Name = "Estacionamientos";
+            this.Estacionamientos.ReadOnly = true;
+            this.Estacionamientos.Width = 266;
             // 
             // FormPlayas
             // 
@@ -380,7 +384,6 @@
         private System.Windows.Forms.DataGridView dgvEstacionamientos;
         private System.Windows.Forms.Button btnEliminarEstacionamiento;
         private System.Windows.Forms.TextBox txtNroEstacionamiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento;
         private System.Windows.Forms.GroupBox pnlEstacionamientos;
         private System.Windows.Forms.GroupBox pnlPlayas;
         private System.Windows.Forms.Button btnNuevoEstacionamiento;
@@ -395,5 +398,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscarEstacionamiento;
         private System.Windows.Forms.Button btnBuscarPlaya;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estacionamientos;
     }
 }
