@@ -16,5 +16,11 @@ namespace TP_PAV1
         {
             InitializeComponent();
         }
+
+        private void PICAgregarVehuciulo_Click(object sender, EventArgs e)
+        {
+            AgregarVehiculo VentanaAgregarVehiculo = new AgregarVehiculo();
+            VentanaAgregarVehiculo.Show();
+        }
     }
 }

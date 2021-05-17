@@ -73,6 +73,11 @@ namespace TP_PAV1
             }
 
         }
+
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            grillaUsuarios.DataSource = AD_usuario.CargarUsuariosPorNombre(txtBuscarUsuarioNombre.Text);
+        }
     }
     
 }

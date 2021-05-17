@@ -28,17 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVehiculos));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarPatente = new System.Windows.Forms.TextBox();
+            this.PICBuscar = new System.Windows.Forms.PictureBox();
+            this.GrillaVehiculos = new System.Windows.Forms.DataGridView();
+            this.PICAgregarVehuciulo = new System.Windows.Forms.PictureBox();
+            this.PICEliminarVehiculo = new System.Windows.Forms.PictureBox();
+            this.PICModificarVehiculo = new System.Windows.Forms.PictureBox();
+            this.PICActualizarGrilla = new System.Windows.Forms.PictureBox();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PICBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaVehiculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICAgregarVehuciulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICEliminarVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICModificarVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICActualizarGrilla)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // groupBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(477, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.groupBox1.Controls.Add(this.PICBuscar);
+            this.groupBox1.Controls.Add(this.txtBuscarPatente);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(519, 91);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscador";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(76, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Patente";
+            // 
+            // txtBuscarPatente
+            // 
+            this.txtBuscarPatente.Location = new System.Drawing.Point(145, 36);
+            this.txtBuscarPatente.Name = "txtBuscarPatente";
+            this.txtBuscarPatente.Size = new System.Drawing.Size(242, 25);
+            this.txtBuscarPatente.TabIndex = 1;
+            // 
+            // PICBuscar
+            // 
+            this.PICBuscar.Image = ((System.Drawing.Image)(resources.GetObject("PICBuscar.Image")));
+            this.PICBuscar.Location = new System.Drawing.Point(393, 35);
+            this.PICBuscar.Name = "PICBuscar";
+            this.PICBuscar.Size = new System.Drawing.Size(25, 26);
+            this.PICBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PICBuscar.TabIndex = 2;
+            this.PICBuscar.TabStop = false;
+            // 
+            // GrillaVehiculos
+            // 
+            this.GrillaVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaVehiculos.Location = new System.Drawing.Point(13, 131);
+            this.GrillaVehiculos.Name = "GrillaVehiculos";
+            this.GrillaVehiculos.Size = new System.Drawing.Size(518, 473);
+            this.GrillaVehiculos.TabIndex = 1;
+            // 
+            // PICAgregarVehuciulo
+            // 
+            this.PICAgregarVehuciulo.Image = ((System.Drawing.Image)(resources.GetObject("PICAgregarVehuciulo.Image")));
+            this.PICAgregarVehuciulo.Location = new System.Drawing.Point(13, 611);
+            this.PICAgregarVehuciulo.Name = "PICAgregarVehuciulo";
+            this.PICAgregarVehuciulo.Size = new System.Drawing.Size(40, 50);
+            this.PICAgregarVehuciulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PICAgregarVehuciulo.TabIndex = 2;
+            this.PICAgregarVehuciulo.TabStop = false;
+            this.PICAgregarVehuciulo.Click += new System.EventHandler(this.PICAgregarVehuciulo_Click);
+            // 
+            // PICEliminarVehiculo
+            // 
+            this.PICEliminarVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("PICEliminarVehiculo.Image")));
+            this.PICEliminarVehiculo.Location = new System.Drawing.Point(59, 611);
+            this.PICEliminarVehiculo.Name = "PICEliminarVehiculo";
+            this.PICEliminarVehiculo.Size = new System.Drawing.Size(40, 50);
+            this.PICEliminarVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PICEliminarVehiculo.TabIndex = 3;
+            this.PICEliminarVehiculo.TabStop = false;
+            // 
+            // PICModificarVehiculo
+            // 
+            this.PICModificarVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("PICModificarVehiculo.Image")));
+            this.PICModificarVehiculo.Location = new System.Drawing.Point(105, 611);
+            this.PICModificarVehiculo.Name = "PICModificarVehiculo";
+            this.PICModificarVehiculo.Size = new System.Drawing.Size(40, 50);
+            this.PICModificarVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PICModificarVehiculo.TabIndex = 4;
+            this.PICModificarVehiculo.TabStop = false;
+            // 
+            // PICActualizarGrilla
+            // 
+            this.PICActualizarGrilla.Image = ((System.Drawing.Image)(resources.GetObject("PICActualizarGrilla.Image")));
+            this.PICActualizarGrilla.Location = new System.Drawing.Point(151, 611);
+            this.PICActualizarGrilla.Name = "PICActualizarGrilla";
+            this.PICActualizarGrilla.Size = new System.Drawing.Size(40, 50);
+            this.PICActualizarGrilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PICActualizarGrilla.TabIndex = 5;
+            this.PICActualizarGrilla.TabStop = false;
             // 
             // FormVehiculos
             // 
@@ -46,18 +143,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(555, 684);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PICActualizarGrilla);
+            this.Controls.Add(this.PICModificarVehiculo);
+            this.Controls.Add(this.PICEliminarVehiculo);
+            this.Controls.Add(this.PICAgregarVehuciulo);
+            this.Controls.Add(this.GrillaVehiculos);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(555, 684);
             this.Name = "FormVehiculos";
             this.Text = "FormVehiculos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PICBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaVehiculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICAgregarVehuciulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICEliminarVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICModificarVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PICActualizarGrilla)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox PICBuscar;
+        private System.Windows.Forms.TextBox txtBuscarPatente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView GrillaVehiculos;
+        private System.Windows.Forms.PictureBox PICAgregarVehuciulo;
+        private System.Windows.Forms.PictureBox PICEliminarVehiculo;
+        private System.Windows.Forms.PictureBox PICModificarVehiculo;
+        private System.Windows.Forms.PictureBox PICActualizarGrilla;
     }
 }

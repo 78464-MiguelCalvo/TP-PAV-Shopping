@@ -226,5 +226,79 @@ namespace TP_PAV1.AD
             }
             return result;
         }
+
+        public static Usuarios obtenerNombresDeUsuarios(String NombreUsu)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            Usuarios U = new Usuarios();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "BuscarUsuarioPorNombre";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@usuario", NombreUsu);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null && dr.Read())
+                {
+                    U.IdPersona = (int)dr["id"];
+                    U.UsuarioPersona = dr["usuario"].ToString();
+                    U.contraseñaPersona = dr["contraseña"].ToString();
+                    U.correoPersona = dr["correo"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return U;
+        }
+
+        public static DataTable CargarUsuariosPorNombre(string NombreUsu)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "BuscarUsuarioPorNombre";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@usuario", NombreUsu);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

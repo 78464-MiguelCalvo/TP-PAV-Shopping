@@ -38,6 +38,9 @@
             this.PICborrar = new System.Windows.Forms.PictureBox();
             this.PICeditar = new System.Windows.Forms.PictureBox();
             this.PICreload = new System.Windows.Forms.PictureBox();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICagregar)).BeginInit();
@@ -48,11 +51,17 @@
             // 
             // grillaUsuarios
             // 
-            this.grillaUsuarios.AllowUserToOrderColumns = true;
+            this.grillaUsuarios.AllowUserToAddRows = false;
+            this.grillaUsuarios.AllowUserToDeleteRows = false;
             this.grillaUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grillaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Usuario,
+            this.Contraseña,
+            this.Correo});
             this.grillaUsuarios.Location = new System.Drawing.Point(12, 129);
             this.grillaUsuarios.Name = "grillaUsuarios";
+            this.grillaUsuarios.ReadOnly = true;
             this.grillaUsuarios.RowHeadersVisible = false;
             this.grillaUsuarios.Size = new System.Drawing.Size(514, 466);
             this.grillaUsuarios.TabIndex = 0;
@@ -90,6 +99,7 @@
             this.btnBuscarUsuario.TabIndex = 3;
             this.btnBuscarUsuario.Text = "Buscar";
             this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // txtBuscarUsuarioNombre
             // 
@@ -142,6 +152,30 @@
             this.PICreload.TabStop = false;
             this.PICreload.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // Usuario
+            // 
+            this.Usuario.DataPropertyName = "usuario";
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            this.Usuario.Width = 130;
+            // 
+            // Contraseña
+            // 
+            this.Contraseña.DataPropertyName = "contraseña";
+            this.Contraseña.HeaderText = "Contraseña";
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.ReadOnly = true;
+            this.Contraseña.Width = 130;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 248;
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +215,8 @@
         private System.Windows.Forms.PictureBox PICborrar;
         private System.Windows.Forms.PictureBox PICeditar;
         private System.Windows.Forms.PictureBox PICreload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
     }
 }
