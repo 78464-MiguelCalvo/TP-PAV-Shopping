@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD\AD_Tarjetas.cs" />
     <Compile Include="AD\AD_usuario.cs" />
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
@@ -122,6 +123,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tarjeta_credito.cs" />
     <EmbeddedResource Include="FormArticulos.resx">
       <DependentUpon>FormArticulos.cs</DependentUpon>
     </EmbeddedResource>

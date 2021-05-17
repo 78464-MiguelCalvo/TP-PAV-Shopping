@@ -32,21 +32,34 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTarjetas = new System.Windows.Forms.DataGridView();
             this.pnlBuscarTarjeta = new System.Windows.Forms.GroupBox();
-            this.pnlModificarEliminarTarjeta = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlAgregarTarjeta = new System.Windows.Forms.GroupBox();
-            this.btnCrearTarjeta = new System.Windows.Forms.Button();
-            this.btnEliminarTarjeta = new System.Windows.Forms.Button();
-            this.btnEditarTarjeta = new System.Windows.Forms.Button();
-            this.txtBuscarNombreTarjeta = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnBuscarTarjeta = new System.Windows.Forms.Button();
             this.txtBuscarIDTarjeta = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBuscarNombreTarjeta = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlModificarEliminarTarjeta = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIDTarjeta = new System.Windows.Forms.TextBox();
+            this.txtNombreTarjeta = new System.Windows.Forms.TextBox();
+            this.btnEditarTarjeta = new System.Windows.Forms.Button();
+            this.btnEliminarTarjeta = new System.Windows.Forms.Button();
+            this.pnlAgregarTarjeta = new System.Windows.Forms.GroupBox();
             this.txtNombreNuevaTarjeta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNombreTarjeta = new System.Windows.Forms.TextBox();
-            this.txtIDTarjeta = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnBuscarTarjeta = new System.Windows.Forms.Button();
+            this.btnCrearTarjeta = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBuscarTipoTarjeta = new System.Windows.Forms.TextBox();
+            this.txtTipoTarjeta = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTipoNuevaTarjeta = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIDNuevaTarjeta = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelarBusqueda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarjetas)).BeginInit();
             this.pnlBuscarTarjeta.SuspendLayout();
             this.pnlModificarEliminarTarjeta.SuspendLayout();
@@ -67,14 +80,25 @@
             // 
             // dgvTarjetas
             // 
+            this.dgvTarjetas.AllowUserToAddRows = false;
+            this.dgvTarjetas.AllowUserToDeleteRows = false;
             this.dgvTarjetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTarjetas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Nombre,
+            this.Tipo});
             this.dgvTarjetas.Location = new System.Drawing.Point(294, 57);
             this.dgvTarjetas.Name = "dgvTarjetas";
+            this.dgvTarjetas.ReadOnly = true;
             this.dgvTarjetas.Size = new System.Drawing.Size(249, 615);
             this.dgvTarjetas.TabIndex = 5;
+            this.dgvTarjetas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTarjetas_CellClick);
             // 
             // pnlBuscarTarjeta
             // 
+            this.pnlBuscarTarjeta.Controls.Add(this.btnCancelarBusqueda);
+            this.pnlBuscarTarjeta.Controls.Add(this.txtBuscarTipoTarjeta);
+            this.pnlBuscarTarjeta.Controls.Add(this.label6);
             this.pnlBuscarTarjeta.Controls.Add(this.btnBuscarTarjeta);
             this.pnlBuscarTarjeta.Controls.Add(this.txtBuscarIDTarjeta);
             this.pnlBuscarTarjeta.Controls.Add(this.label3);
@@ -84,13 +108,70 @@
             this.pnlBuscarTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
             this.pnlBuscarTarjeta.Location = new System.Drawing.Point(12, 48);
             this.pnlBuscarTarjeta.Name = "pnlBuscarTarjeta";
-            this.pnlBuscarTarjeta.Size = new System.Drawing.Size(276, 204);
+            this.pnlBuscarTarjeta.Size = new System.Drawing.Size(276, 169);
             this.pnlBuscarTarjeta.TabIndex = 6;
             this.pnlBuscarTarjeta.TabStop = false;
             this.pnlBuscarTarjeta.Text = "Buscar";
             // 
+            // btnBuscarTarjeta
+            // 
+            this.btnBuscarTarjeta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnBuscarTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnBuscarTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnBuscarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarTarjeta.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTarjeta.Image")));
+            this.btnBuscarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTarjeta.Location = new System.Drawing.Point(6, 111);
+            this.btnBuscarTarjeta.Name = "btnBuscarTarjeta";
+            this.btnBuscarTarjeta.Size = new System.Drawing.Size(125, 50);
+            this.btnBuscarTarjeta.TabIndex = 32;
+            this.btnBuscarTarjeta.Text = "            Buscar";
+            this.btnBuscarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTarjeta.UseVisualStyleBackColor = false;
+            this.btnBuscarTarjeta.Click += new System.EventHandler(this.btnBuscarTarjeta_Click);
+            // 
+            // txtBuscarIDTarjeta
+            // 
+            this.txtBuscarIDTarjeta.Location = new System.Drawing.Point(221, 79);
+            this.txtBuscarIDTarjeta.Name = "txtBuscarIDTarjeta";
+            this.txtBuscarIDTarjeta.Size = new System.Drawing.Size(49, 26);
+            this.txtBuscarIDTarjeta.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(188, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 18);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "ID:";
+            // 
+            // txtBuscarNombreTarjeta
+            // 
+            this.txtBuscarNombreTarjeta.Location = new System.Drawing.Point(9, 43);
+            this.txtBuscarNombreTarjeta.Name = "txtBuscarNombreTarjeta";
+            this.txtBuscarNombreTarjeta.Size = new System.Drawing.Size(261, 26);
+            this.txtBuscarNombreTarjeta.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 18);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Nombre de la tarjeta:";
+            // 
             // pnlModificarEliminarTarjeta
             // 
+            this.pnlModificarEliminarTarjeta.Controls.Add(this.label10);
+            this.pnlModificarEliminarTarjeta.Controls.Add(this.txtTipoTarjeta);
+            this.pnlModificarEliminarTarjeta.Controls.Add(this.label7);
             this.pnlModificarEliminarTarjeta.Controls.Add(this.label5);
             this.pnlModificarEliminarTarjeta.Controls.Add(this.txtIDTarjeta);
             this.pnlModificarEliminarTarjeta.Controls.Add(this.txtNombreTarjeta);
@@ -98,26 +179,82 @@
             this.pnlModificarEliminarTarjeta.Controls.Add(this.btnEliminarTarjeta);
             this.pnlModificarEliminarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlModificarEliminarTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.pnlModificarEliminarTarjeta.Location = new System.Drawing.Point(12, 258);
+            this.pnlModificarEliminarTarjeta.Location = new System.Drawing.Point(12, 223);
             this.pnlModificarEliminarTarjeta.Name = "pnlModificarEliminarTarjeta";
-            this.pnlModificarEliminarTarjeta.Size = new System.Drawing.Size(276, 204);
+            this.pnlModificarEliminarTarjeta.Size = new System.Drawing.Size(276, 239);
             this.pnlModificarEliminarTarjeta.TabIndex = 7;
             this.pnlModificarEliminarTarjeta.TabStop = false;
             this.pnlModificarEliminarTarjeta.Text = "Modificar / eliminar";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 18);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Nombre de la tarjeta:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(188, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 18);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "ID:";
+            // 
+            // txtIDTarjeta
+            // 
+            this.txtIDTarjeta.Enabled = false;
+            this.txtIDTarjeta.Location = new System.Drawing.Point(221, 91);
+            this.txtIDTarjeta.Name = "txtIDTarjeta";
+            this.txtIDTarjeta.Size = new System.Drawing.Size(49, 26);
+            this.txtIDTarjeta.TabIndex = 22;
+            // 
+            // txtNombreTarjeta
+            // 
+            this.txtNombreTarjeta.Location = new System.Drawing.Point(3, 59);
+            this.txtNombreTarjeta.Name = "txtNombreTarjeta";
+            this.txtNombreTarjeta.Size = new System.Drawing.Size(261, 26);
+            this.txtNombreTarjeta.TabIndex = 21;
+            // 
+            // btnEditarTarjeta
+            // 
+            this.btnEditarTarjeta.Enabled = false;
+            this.btnEditarTarjeta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnEditarTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnEditarTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnEditarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarTarjeta.ForeColor = System.Drawing.Color.White;
+            this.btnEditarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarTarjeta.Image")));
+            this.btnEditarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarTarjeta.Location = new System.Drawing.Point(6, 183);
+            this.btnEditarTarjeta.Name = "btnEditarTarjeta";
+            this.btnEditarTarjeta.Size = new System.Drawing.Size(264, 50);
+            this.btnEditarTarjeta.TabIndex = 20;
+            this.btnEditarTarjeta.Text = "            Editar tarjeta";
+            this.btnEditarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarTarjeta.UseVisualStyleBackColor = false;
+            this.btnEditarTarjeta.Click += new System.EventHandler(this.btnEditarTarjeta_Click);
+            // 
+            // btnEliminarTarjeta
+            // 
+            this.btnEliminarTarjeta.Enabled = false;
+            this.btnEliminarTarjeta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnEliminarTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnEliminarTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnEliminarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarTarjeta.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarTarjeta.Image")));
+            this.btnEliminarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarTarjeta.Location = new System.Drawing.Point(3, 127);
+            this.btnEliminarTarjeta.Name = "btnEliminarTarjeta";
+            this.btnEliminarTarjeta.Size = new System.Drawing.Size(264, 50);
+            this.btnEliminarTarjeta.TabIndex = 19;
+            this.btnEliminarTarjeta.Text = "            Eliminar tarjeta";
+            this.btnEliminarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarTarjeta.UseVisualStyleBackColor = false;
             // 
             // pnlAgregarTarjeta
             // 
+            this.pnlAgregarTarjeta.Controls.Add(this.txtTipoNuevaTarjeta);
+            this.pnlAgregarTarjeta.Controls.Add(this.label8);
+            this.pnlAgregarTarjeta.Controls.Add(this.label9);
+            this.pnlAgregarTarjeta.Controls.Add(this.txtIDNuevaTarjeta);
             this.pnlAgregarTarjeta.Controls.Add(this.txtNombreNuevaTarjeta);
             this.pnlAgregarTarjeta.Controls.Add(this.label4);
             this.pnlAgregarTarjeta.Controls.Add(this.btnCrearTarjeta);
@@ -129,6 +266,25 @@
             this.pnlAgregarTarjeta.TabIndex = 8;
             this.pnlAgregarTarjeta.TabStop = false;
             this.pnlAgregarTarjeta.Text = "Agregar nueva";
+            // 
+            // txtNombreNuevaTarjeta
+            // 
+            this.txtNombreNuevaTarjeta.Location = new System.Drawing.Point(6, 52);
+            this.txtNombreNuevaTarjeta.Name = "txtNombreNuevaTarjeta";
+            this.txtNombreNuevaTarjeta.Size = new System.Drawing.Size(261, 26);
+            this.txtNombreNuevaTarjeta.TabIndex = 31;
+            this.txtNombreNuevaTarjeta.TextChanged += new System.EventHandler(this.txtNombreNuevaTarjeta_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(6, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(198, 18);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Nombre de la nueva tarjeta:";
             // 
             // btnCrearTarjeta
             // 
@@ -146,127 +302,132 @@
             this.btnCrearTarjeta.Text = "            Crear tarjeta";
             this.btnCrearTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearTarjeta.UseVisualStyleBackColor = false;
+            this.btnCrearTarjeta.Click += new System.EventHandler(this.btnCrearTarjeta_Click);
             // 
-            // btnEliminarTarjeta
+            // label6
             // 
-            this.btnEliminarTarjeta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnEliminarTarjeta.FlatAppearance.BorderSize = 0;
-            this.btnEliminarTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnEliminarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarTarjeta.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarTarjeta.Image")));
-            this.btnEliminarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarTarjeta.Location = new System.Drawing.Point(6, 92);
-            this.btnEliminarTarjeta.Name = "btnEliminarTarjeta";
-            this.btnEliminarTarjeta.Size = new System.Drawing.Size(264, 50);
-            this.btnEliminarTarjeta.TabIndex = 19;
-            this.btnEliminarTarjeta.Text = "            Eliminar tarjeta";
-            this.btnEliminarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarTarjeta.UseVisualStyleBackColor = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(6, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 18);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Tipo:";
             // 
-            // btnEditarTarjeta
+            // txtBuscarTipoTarjeta
             // 
-            this.btnEditarTarjeta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnEditarTarjeta.FlatAppearance.BorderSize = 0;
-            this.btnEditarTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnEditarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarTarjeta.ForeColor = System.Drawing.Color.White;
-            this.btnEditarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarTarjeta.Image")));
-            this.btnEditarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarTarjeta.Location = new System.Drawing.Point(6, 148);
-            this.btnEditarTarjeta.Name = "btnEditarTarjeta";
-            this.btnEditarTarjeta.Size = new System.Drawing.Size(264, 50);
-            this.btnEditarTarjeta.TabIndex = 20;
-            this.btnEditarTarjeta.Text = "            Editar tarjeta";
-            this.btnEditarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarTarjeta.UseVisualStyleBackColor = false;
+            this.txtBuscarTipoTarjeta.Location = new System.Drawing.Point(54, 79);
+            this.txtBuscarTipoTarjeta.Name = "txtBuscarTipoTarjeta";
+            this.txtBuscarTipoTarjeta.Size = new System.Drawing.Size(128, 26);
+            this.txtBuscarTipoTarjeta.TabIndex = 34;
             // 
-            // txtBuscarNombreTarjeta
+            // txtTipoTarjeta
             // 
-            this.txtBuscarNombreTarjeta.Location = new System.Drawing.Point(9, 56);
-            this.txtBuscarNombreTarjeta.Name = "txtBuscarNombreTarjeta";
-            this.txtBuscarNombreTarjeta.Size = new System.Drawing.Size(261, 26);
-            this.txtBuscarNombreTarjeta.TabIndex = 29;
+            this.txtTipoTarjeta.Location = new System.Drawing.Point(54, 91);
+            this.txtTipoTarjeta.Name = "txtTipoTarjeta";
+            this.txtTipoTarjeta.Size = new System.Drawing.Size(128, 26);
+            this.txtTipoTarjeta.TabIndex = 36;
             // 
-            // label3
+            // label7
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(172, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 18);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "ID:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(6, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 18);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Tipo:";
             // 
-            // txtBuscarIDTarjeta
+            // txtTipoNuevaTarjeta
             // 
-            this.txtBuscarIDTarjeta.Location = new System.Drawing.Point(205, 88);
-            this.txtBuscarIDTarjeta.Name = "txtBuscarIDTarjeta";
-            this.txtBuscarIDTarjeta.Size = new System.Drawing.Size(65, 26);
-            this.txtBuscarIDTarjeta.TabIndex = 31;
+            this.txtTipoNuevaTarjeta.Location = new System.Drawing.Point(54, 84);
+            this.txtTipoNuevaTarjeta.Name = "txtTipoNuevaTarjeta";
+            this.txtTipoNuevaTarjeta.Size = new System.Drawing.Size(128, 26);
+            this.txtTipoNuevaTarjeta.TabIndex = 40;
+            this.txtTipoNuevaTarjeta.TextChanged += new System.EventHandler(this.txtTipoNuevaTarjeta_TextChanged);
             // 
-            // txtNombreNuevaTarjeta
+            // label8
             // 
-            this.txtNombreNuevaTarjeta.Location = new System.Drawing.Point(9, 61);
-            this.txtNombreNuevaTarjeta.Name = "txtNombreNuevaTarjeta";
-            this.txtNombreNuevaTarjeta.Size = new System.Drawing.Size(261, 26);
-            this.txtNombreNuevaTarjeta.TabIndex = 31;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(6, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 18);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Tipo:";
             // 
-            // label4
+            // label9
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 18);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Nombre de la nueva tarjeta:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(188, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 18);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "ID:";
             // 
-            // txtNombreTarjeta
+            // txtIDNuevaTarjeta
             // 
-            this.txtNombreTarjeta.Enabled = false;
-            this.txtNombreTarjeta.Location = new System.Drawing.Point(9, 25);
-            this.txtNombreTarjeta.Name = "txtNombreTarjeta";
-            this.txtNombreTarjeta.Size = new System.Drawing.Size(261, 26);
-            this.txtNombreTarjeta.TabIndex = 21;
+            this.txtIDNuevaTarjeta.Enabled = false;
+            this.txtIDNuevaTarjeta.Location = new System.Drawing.Point(221, 84);
+            this.txtIDNuevaTarjeta.Name = "txtIDNuevaTarjeta";
+            this.txtIDNuevaTarjeta.Size = new System.Drawing.Size(46, 26);
+            this.txtIDNuevaTarjeta.TabIndex = 37;
             // 
-            // txtIDTarjeta
+            // label10
             // 
-            this.txtIDTarjeta.Enabled = false;
-            this.txtIDTarjeta.Location = new System.Drawing.Point(205, 57);
-            this.txtIDTarjeta.Name = "txtIDTarjeta";
-            this.txtIDTarjeta.Size = new System.Drawing.Size(65, 26);
-            this.txtIDTarjeta.TabIndex = 22;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(3, 38);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(153, 18);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Nombre de la tarjeta:";
             // 
-            // label5
+            // ID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(172, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 18);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "ID:";
+            this.ID.DataPropertyName = "id_tarjeta";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 30;
             // 
-            // btnBuscarTarjeta
+            // Nombre
             // 
-            this.btnBuscarTarjeta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBuscarTarjeta.FlatAppearance.BorderSize = 0;
-            this.btnBuscarTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnBuscarTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarTarjeta.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTarjeta.Image")));
-            this.btnBuscarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarTarjeta.Location = new System.Drawing.Point(6, 148);
-            this.btnBuscarTarjeta.Name = "btnBuscarTarjeta";
-            this.btnBuscarTarjeta.Size = new System.Drawing.Size(264, 50);
-            this.btnBuscarTarjeta.TabIndex = 32;
-            this.btnBuscarTarjeta.Text = "            Buscar";
-            this.btnBuscarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarTarjeta.UseVisualStyleBackColor = false;
+            this.Nombre.DataPropertyName = "nombre_tarjeta";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Tipo
+            // 
+            this.Tipo.DataPropertyName = "nombre_tipo_tarjeta";
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            // 
+            // btnCancelarBusqueda
+            // 
+            this.btnCancelarBusqueda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnCancelarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnCancelarBusqueda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnCancelarBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarBusqueda.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarBusqueda.Image")));
+            this.btnCancelarBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarBusqueda.Location = new System.Drawing.Point(145, 111);
+            this.btnCancelarBusqueda.Name = "btnCancelarBusqueda";
+            this.btnCancelarBusqueda.Size = new System.Drawing.Size(125, 50);
+            this.btnCancelarBusqueda.TabIndex = 35;
+            this.btnCancelarBusqueda.Text = "         Cancelar";
+            this.btnCancelarBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarBusqueda.UseVisualStyleBackColor = false;
+            this.btnCancelarBusqueda.Click += new System.EventHandler(this.btnCancelarBusqueda_Click);
             // 
             // FormTarjetas
             // 
@@ -316,5 +477,18 @@
         private System.Windows.Forms.TextBox txtIDTarjeta;
         private System.Windows.Forms.TextBox txtNombreTarjeta;
         private System.Windows.Forms.Button btnBuscarTarjeta;
+        private System.Windows.Forms.TextBox txtBuscarTipoTarjeta;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtTipoTarjeta;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtTipoNuevaTarjeta;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIDNuevaTarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.Button btnCancelarBusqueda;
     }
 }
