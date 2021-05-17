@@ -129,6 +129,7 @@
             this.PICeditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PICeditar.TabIndex = 8;
             this.PICeditar.TabStop = false;
+            this.PICeditar.Click += new System.EventHandler(this.PICeditar_Click);
             // 
             // PICreload
             // 

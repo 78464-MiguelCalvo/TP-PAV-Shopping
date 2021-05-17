@@ -8,6 +8,7 @@ namespace TP_PAV1.Entidades
 {
     public class Usuarios
     {
+        private int Id;
         private string NombreUsu;
         private string Contraseña;
         private string Correo;
@@ -23,6 +24,12 @@ namespace TP_PAV1.Entidades
         public Usuarios()
         {
 
+        }
+
+        public int IdPersona
+        {
+            get => Id;
+            set => Id = value;
         }
         public string UsuarioPersona
         {

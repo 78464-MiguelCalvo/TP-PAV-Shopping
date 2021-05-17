@@ -146,6 +146,7 @@ namespace TP_PAV1.AD
 
                 if (dr != null && dr.Read())
                 {
+                    U.IdPersona = (int)dr["id"];
                     U.UsuarioPersona = dr["usuario"].ToString();
                     U.contraseñaPersona = dr["contraseña"].ToString();
                     U.correoPersona = dr["correo"].ToString();
@@ -191,6 +192,39 @@ namespace TP_PAV1.AD
                 cn.Close();
             }
            
+        }
+
+        public static bool ActualizarUsuario(Usuarios U)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool result = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "ModificarUsuario";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@Id", U.IdPersona);
+                cmd.Parameters.AddWithValue("@Usuario", U.UsuarioPersona);
+                cmd.Parameters.AddWithValue("@Contraseña", U.contraseñaPersona);
+                cmd.Parameters.AddWithValue("@Correo", U.correoPersona);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return result;
         }
     }
 }

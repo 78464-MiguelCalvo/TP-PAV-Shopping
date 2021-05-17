@@ -18,6 +18,7 @@ namespace TP_PAV1
         {
             InitializeComponent();
         }
+
         Usuarios Usu = new Usuarios();
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
@@ -56,10 +57,21 @@ namespace TP_PAV1
             {
                 AD_usuario.EliminarUsuario(Usu.UsuarioPersona);
             }
+        }
+
+        private void PICeditar_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Estas seguro que deseas Modificar el usuario " + Usu.UsuarioPersona, "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (DialogResult.Yes == r)
+            {
+                ModificarUsuario VentanaModificarUsuario = new ModificarUsuario(Usu);
+                VentanaModificarUsuario.Show();
+            }
             else
             {
-                MessageBox.Show("gatito");
+
             }
+
         }
     }
     

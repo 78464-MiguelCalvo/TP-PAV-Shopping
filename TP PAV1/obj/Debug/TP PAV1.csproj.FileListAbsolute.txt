@@ -62,3 +62,4 @@ C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.csp
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.exe
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.pdb
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarUsuario.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarUsuario.resources

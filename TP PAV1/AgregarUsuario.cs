@@ -56,5 +56,10 @@ namespace TP_PAV1
             }
             
         }
+
+        private void AgregarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
