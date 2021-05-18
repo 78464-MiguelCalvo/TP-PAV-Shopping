@@ -23,7 +23,7 @@ namespace TP_PAV1
         }
 
 
-        public string IdPlaya
+        public int IdPlaya
         {
             get => IdPlaya;
             set => IdPlaya = value;

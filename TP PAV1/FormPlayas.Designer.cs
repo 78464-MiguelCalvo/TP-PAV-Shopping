@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlayas));
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dgvPlayas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,8 +37,8 @@
             this.cmbPlaya = new System.Windows.Forms.ComboBox();
             this.txtPlaya = new System.Windows.Forms.TextBox();
             this.dgvEstacionamientos = new System.Windows.Forms.DataGridView();
+            this.Estacionamientos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarEstacionamiento = new System.Windows.Forms.Button();
-            this.txtNroEstacionamiento = new System.Windows.Forms.TextBox();
             this.pnlEstacionamientos = new System.Windows.Forms.GroupBox();
             this.btnBuscarEstacionamiento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.txtIDPlaya = new System.Windows.Forms.TextBox();
             this.btnEliminarPlaya = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.Estacionamientos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstacionamientos)).BeginInit();
             this.pnlEstacionamientos.SuspendLayout();
@@ -69,17 +67,6 @@
             this.label2.Size = new System.Drawing.Size(375, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Administrar playas y estacionamientos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "N° de estacionamiento:";
             // 
             // dgvPlayas
             // 
@@ -126,6 +113,7 @@
             this.cmbPlaya.Name = "cmbPlaya";
             this.cmbPlaya.Size = new System.Drawing.Size(238, 28);
             this.cmbPlaya.TabIndex = 13;
+            this.cmbPlaya.SelectedIndexChanged += new System.EventHandler(this.cmbPlaya_SelectedIndexChanged);
             // 
             // txtPlaya
             // 
@@ -149,6 +137,14 @@
             this.dgvEstacionamientos.Size = new System.Drawing.Size(266, 278);
             this.dgvEstacionamientos.TabIndex = 16;
             // 
+            // Estacionamientos
+            // 
+            this.Estacionamientos.DataPropertyName = "nro_estacionamiento";
+            this.Estacionamientos.HeaderText = "Estacionamiento";
+            this.Estacionamientos.Name = "Estacionamientos";
+            this.Estacionamientos.ReadOnly = true;
+            this.Estacionamientos.Width = 266;
+            // 
             // btnEliminarEstacionamiento
             // 
             this.btnEliminarEstacionamiento.Enabled = false;
@@ -167,24 +163,15 @@
             this.btnEliminarEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarEstacionamiento.UseVisualStyleBackColor = false;
             // 
-            // txtNroEstacionamiento
-            // 
-            this.txtNroEstacionamiento.Location = new System.Drawing.Point(182, 95);
-            this.txtNroEstacionamiento.Name = "txtNroEstacionamiento";
-            this.txtNroEstacionamiento.Size = new System.Drawing.Size(65, 26);
-            this.txtNroEstacionamiento.TabIndex = 19;
-            // 
             // pnlEstacionamientos
             // 
             this.pnlEstacionamientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlEstacionamientos.Controls.Add(this.btnBuscarEstacionamiento);
             this.pnlEstacionamientos.Controls.Add(this.label1);
             this.pnlEstacionamientos.Controls.Add(this.btnNuevoEstacionamiento);
-            this.pnlEstacionamientos.Controls.Add(this.txtNroEstacionamiento);
             this.pnlEstacionamientos.Controls.Add(this.btnEliminarEstacionamiento);
             this.pnlEstacionamientos.Controls.Add(this.cmbPlaya);
             this.pnlEstacionamientos.Controls.Add(this.dgvEstacionamientos);
-            this.pnlEstacionamientos.Controls.Add(this.label3);
             this.pnlEstacionamientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlEstacionamientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
             this.pnlEstacionamientos.Location = new System.Drawing.Point(12, 48);
@@ -203,7 +190,7 @@
             this.btnBuscarEstacionamiento.ForeColor = System.Drawing.Color.White;
             this.btnBuscarEstacionamiento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEstacionamiento.Image")));
             this.btnBuscarEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEstacionamiento.Location = new System.Drawing.Point(134, 127);
+            this.btnBuscarEstacionamiento.Location = new System.Drawing.Point(134, 141);
             this.btnBuscarEstacionamiento.Name = "btnBuscarEstacionamiento";
             this.btnBuscarEstacionamiento.Size = new System.Drawing.Size(113, 50);
             this.btnBuscarEstacionamiento.TabIndex = 33;
@@ -341,14 +328,6 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Buscar playa:";
             // 
-            // Estacionamientos
-            // 
-            this.Estacionamientos.DataPropertyName = "nro_estacionamiento";
-            this.Estacionamientos.HeaderText = "Estacionamiento";
-            this.Estacionamientos.Name = "Estacionamientos";
-            this.Estacionamientos.ReadOnly = true;
-            this.Estacionamientos.Width = 266;
-            // 
             // FormPlayas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,13 +356,11 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvPlayas;
         private System.Windows.Forms.ComboBox cmbPlaya;
         private System.Windows.Forms.TextBox txtPlaya;
         private System.Windows.Forms.DataGridView dgvEstacionamientos;
         private System.Windows.Forms.Button btnEliminarEstacionamiento;
-        private System.Windows.Forms.TextBox txtNroEstacionamiento;
         private System.Windows.Forms.GroupBox pnlEstacionamientos;
         private System.Windows.Forms.GroupBox pnlPlayas;
         private System.Windows.Forms.Button btnNuevoEstacionamiento;

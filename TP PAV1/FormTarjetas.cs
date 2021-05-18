@@ -40,8 +40,8 @@ namespace TP_PAV1
             {
                 MessageBox.Show("Error al obtener tarjetas");
             }
-
         }
+
 
         private void CargarGrillaBusqueda(string criterio)
         {
@@ -61,15 +61,12 @@ namespace TP_PAV1
         private void LimpiarCamposBuscarTarjeta()
         {
             txtBuscarNombreTarjeta.Text = "";
-            txtBuscarIDTarjeta.Text = "";
-            txtBuscarTipoTarjeta.Text = "";
         }
 
         private void LimpiarCamposModificarEliminarTarjeta()
         {
             txtNombreTarjeta.Text = "";
             txtIDTarjeta.Text = "";
-            txtBuscarTipoTarjeta.Text = "";
         }
 
         private void LimpiarCamposAgregarTarjeta()
@@ -128,6 +125,10 @@ namespace TP_PAV1
                 LimpiarCamposAgregarTarjeta();
                 CargarGrilla();
             }
+            else
+            {
+                MessageBox.Show("Hubo un error al agregar la tarjeta");
+            }
         }
 
 
@@ -169,11 +170,13 @@ namespace TP_PAV1
         private void btnBuscarTarjeta_Click(object sender, EventArgs e)
         {
             string criterio = Convert.ToString(txtBuscarNombreTarjeta.Text);
+            CargarGrillaBusqueda(criterio);
         }
 
         private void btnCancelarBusqueda_Click(object sender, EventArgs e)
         {
-
+            CargarGrilla();
+            LimpiarCamposBuscarTarjeta();
         }
     }
 }
