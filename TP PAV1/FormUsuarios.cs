@@ -22,8 +22,9 @@ namespace TP_PAV1
         Usuarios Usu = new Usuarios();
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
+            grillaUsuarios.ClearSelection();
             cargarGrilla();
-           
+                   
         }
         private void cargarGrilla()
         {
@@ -66,10 +67,6 @@ namespace TP_PAV1
             {
                 ModificarUsuario VentanaModificarUsuario = new ModificarUsuario(Usu);
                 VentanaModificarUsuario.Show();
-            }
-            else
-            {
-
             }
 
         }

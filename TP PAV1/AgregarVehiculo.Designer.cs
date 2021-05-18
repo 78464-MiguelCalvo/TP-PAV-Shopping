@@ -31,17 +31,17 @@ namespace TP_PAV1
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtNroDoc = new System.Windows.Forms.MaskedTextBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPatenteNueva = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.Cancelar = new System.Windows.Forms.Button();
-            this.txtPatenteNueva = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.txtNroDoc = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,69 +77,37 @@ namespace TP_PAV1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Vehiculo";
             // 
-            // label2
+            // txtNroDoc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(67, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Marca";
+            this.txtNroDoc.Location = new System.Drawing.Point(141, 95);
+            this.txtNroDoc.Mask = "99999999";
+            this.txtNroDoc.Name = "txtNroDoc";
+            this.txtNroDoc.Size = new System.Drawing.Size(235, 26);
+            this.txtNroDoc.TabIndex = 13;
             // 
-            // label3
+            // cmbTipo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(26, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "NroDocumento";
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Location = new System.Drawing.Point(141, 171);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(235, 28);
+            this.cmbTipo.TabIndex = 12;
             // 
-            // label4
+            // cmbMarca
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(17, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tipo Documento";
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(141, 130);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(235, 28);
+            this.cmbMarca.TabIndex = 11;
             // 
-            // btnAceptar
+            // cmbTipoDoc
             // 
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAceptar.Location = new System.Drawing.Point(261, 243);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Cancelar.Location = new System.Drawing.Point(94, 243);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Cancelar.TabIndex = 3;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = true;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
-            // 
-            // txtPatenteNueva
-            // 
-            this.txtPatenteNueva.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPatenteNueva.Location = new System.Drawing.Point(141, 32);
-            this.txtPatenteNueva.Name = "txtPatenteNueva";
-            this.txtPatenteNueva.Size = new System.Drawing.Size(235, 19);
-            this.txtPatenteNueva.TabIndex = 4;
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(141, 61);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.Size = new System.Drawing.Size(235, 28);
+            this.cmbTipoDoc.TabIndex = 10;
             // 
             // label5
             // 
@@ -152,37 +120,70 @@ namespace TP_PAV1
             this.label5.TabIndex = 8;
             this.label5.Text = "Tipo";
             // 
-            // cmbTipoDoc
+            // txtPatenteNueva
             // 
-            this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(141, 61);
-            this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.Size = new System.Drawing.Size(235, 28);
-            this.cmbTipoDoc.TabIndex = 10;
+            this.txtPatenteNueva.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPatenteNueva.Location = new System.Drawing.Point(141, 32);
+            this.txtPatenteNueva.Name = "txtPatenteNueva";
+            this.txtPatenteNueva.Size = new System.Drawing.Size(235, 19);
+            this.txtPatenteNueva.TabIndex = 4;
             // 
-            // cmbMarca
+            // label4
             // 
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(141, 130);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(235, 28);
-            this.cmbMarca.TabIndex = 11;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(17, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tipo Documento";
             // 
-            // cmbTipo
+            // label3
             // 
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(141, 171);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(235, 28);
-            this.cmbTipo.TabIndex = 12;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(26, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "NroDocumento";
             // 
-            // txtNroDoc
+            // label2
             // 
-            this.txtNroDoc.Location = new System.Drawing.Point(141, 95);
-            this.txtNroDoc.Mask = "99999999";
-            this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.Size = new System.Drawing.Size(235, 26);
-            this.txtNroDoc.TabIndex = 13;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(67, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Marca";
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAceptar.Location = new System.Drawing.Point(261, 243);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Cancelar.Location = new System.Drawing.Point(94, 243);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.Cancelar.TabIndex = 3;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // AgregarVehiculo
             // 

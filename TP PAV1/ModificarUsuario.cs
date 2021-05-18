@@ -14,9 +14,11 @@ namespace TP_PAV1
 {
     public partial class ModificarUsuario : Form
     {
-        public ModificarUsuario(Usuarios U)
+        public  ModificarUsuario(Usuarios U)
         {
+           
             InitializeComponent();
+            
             txtUsuarioNuevo.Text = U.UsuarioPersona.ToString();
             txtContraseñaNuevo.Text = U.contraseñaPersona.ToString();
             txtRepetirContraseñaNuevo.Text = U.contraseñaPersona.ToString();

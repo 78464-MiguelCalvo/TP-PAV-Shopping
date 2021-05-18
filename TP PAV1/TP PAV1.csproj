@@ -63,6 +63,7 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="Entidades\Vehiculo.cs" />
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
     </Compile>

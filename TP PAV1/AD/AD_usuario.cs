@@ -185,7 +185,7 @@ namespace TP_PAV1.AD
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Debe seleccionar un usuario antes de eliminarlo");
             }
             finally
             {
@@ -218,7 +218,7 @@ namespace TP_PAV1.AD
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Debe seleccionar el usuario antes de modificarlo");
             }
             finally
             {
