@@ -187,7 +187,6 @@ namespace TP_PAV1.AD
                 string consulta = "BuscarTarjetaPorID";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
-
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
                 cn.Open();
@@ -220,7 +219,7 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-
+                
                 string consulta = "BuscarTarjetasPorNombre";
 
                 cmd.Parameters.Clear();
@@ -245,6 +244,36 @@ namespace TP_PAV1.AD
             {
                 cn.Close();
             }
+        }
+
+
+        public static bool EliminarTarjeta(Tarjeta_credito t)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool res = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "EliminarTarjetaCredito";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", t.IdTarjeta);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                res = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return res;
         }
     }
 }

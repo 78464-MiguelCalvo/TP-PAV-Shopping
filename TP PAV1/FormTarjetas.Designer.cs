@@ -286,13 +286,14 @@
             this.btnEliminarTarjeta.ForeColor = System.Drawing.Color.White;
             this.btnEliminarTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarTarjeta.Image")));
             this.btnEliminarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarTarjeta.Location = new System.Drawing.Point(3, 116);
+            this.btnEliminarTarjeta.Location = new System.Drawing.Point(6, 116);
             this.btnEliminarTarjeta.Name = "btnEliminarTarjeta";
             this.btnEliminarTarjeta.Size = new System.Drawing.Size(264, 50);
             this.btnEliminarTarjeta.TabIndex = 19;
             this.btnEliminarTarjeta.Text = "            Eliminar tarjeta";
             this.btnEliminarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarTarjeta.UseVisualStyleBackColor = false;
+            this.btnEliminarTarjeta.Click += new System.EventHandler(this.btnEliminarTarjeta_Click);
             // 
             // pnlAgregarTarjeta
             // 

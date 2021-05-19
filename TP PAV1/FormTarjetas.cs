@@ -67,6 +67,7 @@ namespace TP_PAV1
         {
             txtNombreTarjeta.Text = "";
             txtIDTarjeta.Text = "";
+            txtTipoTarjeta.Text = "";
         }
 
         private void LimpiarCamposAgregarTarjeta()
@@ -149,14 +150,21 @@ namespace TP_PAV1
 
         private void dgvTarjetas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditarTarjeta.Enabled = true;
-            btnEliminarTarjeta.Enabled = true;
-            int indice = e.RowIndex;
-            DataGridViewRow filaSelected = dgvTarjetas.Rows[indice];
-            string id = filaSelected.Cells["ID"].Value.ToString();
-            Tarjeta_credito tarjetaSelec = AD_Tarjetas.ObtenerTarjetaXID(Convert.ToInt32(id));
-            LimpiarCamposModificarEliminarTarjeta();
-            CargarCamposModifElim(tarjetaSelec);
+            try
+            {
+                btnEditarTarjeta.Enabled = true;
+                btnEliminarTarjeta.Enabled = true;
+                int indice = e.RowIndex;
+                DataGridViewRow filaSelected = dgvTarjetas.Rows[indice];
+                string id = filaSelected.Cells["ID"].Value.ToString();
+                Tarjeta_credito tarjetaSelec = AD_Tarjetas.ObtenerTarjetaXID(Convert.ToInt32(id));
+                LimpiarCamposModificarEliminarTarjeta();
+                CargarCamposModifElim(tarjetaSelec);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione una celda valida");
+            }
         }
 
 
@@ -171,6 +179,10 @@ namespace TP_PAV1
         {
             string criterio = Convert.ToString(txtBuscarNombreTarjeta.Text);
             CargarGrillaBusqueda(criterio);
+            if (dgvTarjetas.RowCount.Equals(0))
+            {
+                MessageBox.Show("No se encontro ninguna tarjeta que coincida con el texto ingresado");
+            }
         }
 
         private void btnCancelarBusqueda_Click(object sender, EventArgs e)
@@ -178,5 +190,19 @@ namespace TP_PAV1
             CargarGrilla();
             LimpiarCamposBuscarTarjeta();
         }
+
+        private void btnEliminarTarjeta_Click(object sender, EventArgs e)
+        {
+            Tarjeta_credito t = ObtenerDatosTarjeta();
+            bool res = AD_Tarjetas.EliminarTarjeta(t);
+            if (res)
+            {
+                MessageBox.Show("La tarjeta fue eliminada con exito");
+                LimpiarCamposModificarEliminarTarjeta();
+                CargarGrilla();
+            }
+        }
+
+  
     }
 }

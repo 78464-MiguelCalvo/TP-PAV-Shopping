@@ -33,27 +33,36 @@
             this.dgvPlayas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadLugares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbPlaya = new System.Windows.Forms.ComboBox();
             this.txtPlaya = new System.Windows.Forms.TextBox();
             this.dgvEstacionamientos = new System.Windows.Forms.DataGridView();
             this.Estacionamientos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPlaya = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarEstacionamiento = new System.Windows.Forms.Button();
             this.pnlEstacionamientos = new System.Windows.Forms.GroupBox();
-            this.btnBuscarEstacionamiento = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIdEstacionamiento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnNuevoEstacionamiento = new System.Windows.Forms.Button();
             this.pnlPlayas = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtIdPlayaSelect = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnModificarPlaya = new System.Windows.Forms.Button();
+            this.txtNombrePlayaSelect = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNombreNuevaPlaya = new System.Windows.Forms.TextBox();
+            this.btnNuevaPlaya = new System.Windows.Forms.Button();
             this.btnBuscarPlaya = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnNuevaPlaya = new System.Windows.Forms.Button();
-            this.txtIDPlaya = new System.Windows.Forms.TextBox();
             this.btnEliminarPlaya = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstacionamientos)).BeginInit();
             this.pnlEstacionamientos.SuspendLayout();
             this.pnlPlayas.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -76,8 +85,7 @@
             this.dgvPlayas.ColumnHeadersHeight = 28;
             this.dgvPlayas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Nombre,
-            this.CantidadLugares});
+            this.Nombre});
             this.dgvPlayas.Location = new System.Drawing.Point(259, 25);
             this.dgvPlayas.Name = "dgvPlayas";
             this.dgvPlayas.ReadOnly = true;
@@ -85,26 +93,23 @@
             this.dgvPlayas.RowHeadersWidth = 20;
             this.dgvPlayas.Size = new System.Drawing.Size(266, 279);
             this.dgvPlayas.TabIndex = 12;
+            this.dgvPlayas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlayas_CellClick);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "id_playa";
             this.ID.HeaderText = "ID ";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 30;
+            this.ID.Width = 50;
             // 
             // Nombre
             // 
+            this.Nombre.DataPropertyName = "nombre_playa";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            // 
-            // CantidadLugares
-            // 
-            this.CantidadLugares.HeaderText = "N° Estac.";
-            this.CantidadLugares.Name = "CantidadLugares";
-            this.CantidadLugares.ReadOnly = true;
-            this.CantidadLugares.Width = 95;
+            this.Nombre.Width = 200;
             // 
             // cmbPlaya
             // 
@@ -117,9 +122,9 @@
             // 
             // txtPlaya
             // 
-            this.txtPlaya.Location = new System.Drawing.Point(6, 61);
+            this.txtPlaya.Location = new System.Drawing.Point(6, 46);
             this.txtPlaya.Name = "txtPlaya";
-            this.txtPlaya.Size = new System.Drawing.Size(241, 26);
+            this.txtPlaya.Size = new System.Drawing.Size(149, 26);
             this.txtPlaya.TabIndex = 15;
             // 
             // dgvEstacionamientos
@@ -129,13 +134,15 @@
             this.dgvEstacionamientos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvEstacionamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstacionamientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Estacionamientos});
+            this.Estacionamientos,
+            this.IdPlaya});
             this.dgvEstacionamientos.Location = new System.Drawing.Point(259, 25);
             this.dgvEstacionamientos.Name = "dgvEstacionamientos";
             this.dgvEstacionamientos.ReadOnly = true;
             this.dgvEstacionamientos.RowHeadersVisible = false;
             this.dgvEstacionamientos.Size = new System.Drawing.Size(266, 278);
             this.dgvEstacionamientos.TabIndex = 16;
+            this.dgvEstacionamientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstacionamientos_CellClick);
             // 
             // Estacionamientos
             // 
@@ -143,7 +150,14 @@
             this.Estacionamientos.HeaderText = "Estacionamiento";
             this.Estacionamientos.Name = "Estacionamientos";
             this.Estacionamientos.ReadOnly = true;
-            this.Estacionamientos.Width = 266;
+            this.Estacionamientos.Width = 150;
+            // 
+            // IdPlaya
+            // 
+            this.IdPlaya.DataPropertyName = "id_playa";
+            this.IdPlaya.HeaderText = "Playa";
+            this.IdPlaya.Name = "IdPlaya";
+            this.IdPlaya.ReadOnly = true;
             // 
             // btnEliminarEstacionamiento
             // 
@@ -162,11 +176,13 @@
             this.btnEliminarEstacionamiento.Text = "            Eliminar estacionamiento";
             this.btnEliminarEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarEstacionamiento.UseVisualStyleBackColor = false;
+            this.btnEliminarEstacionamiento.Click += new System.EventHandler(this.btnEliminarEstacionamiento_Click);
             // 
             // pnlEstacionamientos
             // 
             this.pnlEstacionamientos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlEstacionamientos.Controls.Add(this.btnBuscarEstacionamiento);
+            this.pnlEstacionamientos.Controls.Add(this.label3);
+            this.pnlEstacionamientos.Controls.Add(this.txtIdEstacionamiento);
             this.pnlEstacionamientos.Controls.Add(this.label1);
             this.pnlEstacionamientos.Controls.Add(this.btnNuevoEstacionamiento);
             this.pnlEstacionamientos.Controls.Add(this.btnEliminarEstacionamiento);
@@ -181,22 +197,24 @@
             this.pnlEstacionamientos.TabStop = false;
             this.pnlEstacionamientos.Text = "Estacionamientos";
             // 
-            // btnBuscarEstacionamiento
+            // label3
             // 
-            this.btnBuscarEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBuscarEstacionamiento.FlatAppearance.BorderSize = 0;
-            this.btnBuscarEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnBuscarEstacionamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEstacionamiento.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarEstacionamiento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEstacionamiento.Image")));
-            this.btnBuscarEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEstacionamiento.Location = new System.Drawing.Point(134, 141);
-            this.btnBuscarEstacionamiento.Name = "btnBuscarEstacionamiento";
-            this.btnBuscarEstacionamiento.Size = new System.Drawing.Size(113, 50);
-            this.btnBuscarEstacionamiento.TabIndex = 33;
-            this.btnBuscarEstacionamiento.Text = "            Buscar";
-            this.btnBuscarEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEstacionamiento.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(6, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(226, 18);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Estacionamiento seleccionado:";
+            // 
+            // txtIdEstacionamiento
+            // 
+            this.txtIdEstacionamiento.Enabled = false;
+            this.txtIdEstacionamiento.Location = new System.Drawing.Point(9, 113);
+            this.txtIdEstacionamiento.Name = "txtIdEstacionamiento";
+            this.txtIdEstacionamiento.Size = new System.Drawing.Size(104, 26);
+            this.txtIdEstacionamiento.TabIndex = 34;
             // 
             // label1
             // 
@@ -211,7 +229,6 @@
             // 
             // btnNuevoEstacionamiento
             // 
-            this.btnNuevoEstacionamiento.Enabled = false;
             this.btnNuevoEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnNuevoEstacionamiento.FlatAppearance.BorderSize = 0;
             this.btnNuevoEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
@@ -231,10 +248,14 @@
             // pnlPlayas
             // 
             this.pnlPlayas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlPlayas.Controls.Add(this.label8);
+            this.pnlPlayas.Controls.Add(this.txtIdPlayaSelect);
+            this.pnlPlayas.Controls.Add(this.label7);
+            this.pnlPlayas.Controls.Add(this.btnModificarPlaya);
+            this.pnlPlayas.Controls.Add(this.txtNombrePlayaSelect);
+            this.pnlPlayas.Controls.Add(this.groupBox1);
             this.pnlPlayas.Controls.Add(this.btnBuscarPlaya);
             this.pnlPlayas.Controls.Add(this.label5);
-            this.pnlPlayas.Controls.Add(this.btnNuevaPlaya);
-            this.pnlPlayas.Controls.Add(this.txtIDPlaya);
             this.pnlPlayas.Controls.Add(this.btnEliminarPlaya);
             this.pnlPlayas.Controls.Add(this.label4);
             this.pnlPlayas.Controls.Add(this.dgvPlayas);
@@ -248,33 +269,91 @@
             this.pnlPlayas.TabStop = false;
             this.pnlPlayas.Text = "Playas";
             // 
-            // btnBuscarPlaya
+            // label8
             // 
-            this.btnBuscarPlaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBuscarPlaya.FlatAppearance.BorderSize = 0;
-            this.btnBuscarPlaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnBuscarPlaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPlaya.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPlaya.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarPlaya.Image")));
-            this.btnBuscarPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarPlaya.Location = new System.Drawing.Point(134, 125);
-            this.btnBuscarPlaya.Name = "btnBuscarPlaya";
-            this.btnBuscarPlaya.Size = new System.Drawing.Size(113, 50);
-            this.btnBuscarPlaya.TabIndex = 34;
-            this.btnBuscarPlaya.Text = "            Buscar";
-            this.btnBuscarPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarPlaya.UseVisualStyleBackColor = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(53, 222);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 18);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "ID:";
             // 
-            // label5
+            // txtIdPlayaSelect
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(149, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 18);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "ID:";
+            this.txtIdPlayaSelect.Enabled = false;
+            this.txtIdPlayaSelect.Location = new System.Drawing.Point(86, 218);
+            this.txtIdPlayaSelect.Name = "txtIdPlayaSelect";
+            this.txtIdPlayaSelect.Size = new System.Drawing.Size(90, 26);
+            this.txtIdPlayaSelect.TabIndex = 40;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(12, 190);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 18);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Nombre:";
+            // 
+            // btnModificarPlaya
+            // 
+            this.btnModificarPlaya.Enabled = false;
+            this.btnModificarPlaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnModificarPlaya.FlatAppearance.BorderSize = 0;
+            this.btnModificarPlaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnModificarPlaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarPlaya.ForeColor = System.Drawing.Color.White;
+            this.btnModificarPlaya.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarPlaya.Image")));
+            this.btnModificarPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarPlaya.Location = new System.Drawing.Point(126, 254);
+            this.btnModificarPlaya.Name = "btnModificarPlaya";
+            this.btnModificarPlaya.Size = new System.Drawing.Size(109, 50);
+            this.btnModificarPlaya.TabIndex = 37;
+            this.btnModificarPlaya.Text = "Modificar";
+            this.btnModificarPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarPlaya.UseVisualStyleBackColor = false;
+            this.btnModificarPlaya.Click += new System.EventHandler(this.btnModificarPlaya_Click);
+            // 
+            // txtNombrePlayaSelect
+            // 
+            this.txtNombrePlayaSelect.Location = new System.Drawing.Point(86, 186);
+            this.txtNombrePlayaSelect.Name = "txtNombrePlayaSelect";
+            this.txtNombrePlayaSelect.Size = new System.Drawing.Size(149, 26);
+            this.txtNombrePlayaSelect.TabIndex = 38;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtNombreNuevaPlaya);
+            this.groupBox1.Controls.Add(this.btnNuevaPlaya);
+            this.groupBox1.Location = new System.Drawing.Point(6, 74);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(247, 106);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Agregar Playa";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(6, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Nombre:";
+            // 
+            // txtNombreNuevaPlaya
+            // 
+            this.txtNombreNuevaPlaya.Location = new System.Drawing.Point(80, 24);
+            this.txtNombreNuevaPlaya.Name = "txtNombreNuevaPlaya";
+            this.txtNombreNuevaPlaya.Size = new System.Drawing.Size(149, 26);
+            this.txtNombreNuevaPlaya.TabIndex = 36;
             // 
             // btnNuevaPlaya
             // 
@@ -285,23 +364,46 @@
             this.btnNuevaPlaya.ForeColor = System.Drawing.Color.White;
             this.btnNuevaPlaya.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaPlaya.Image")));
             this.btnNuevaPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaPlaya.Location = new System.Drawing.Point(9, 198);
+            this.btnNuevaPlaya.Location = new System.Drawing.Point(9, 56);
             this.btnNuevaPlaya.Name = "btnNuevaPlaya";
-            this.btnNuevaPlaya.Size = new System.Drawing.Size(238, 50);
+            this.btnNuevaPlaya.Size = new System.Drawing.Size(220, 40);
             this.btnNuevaPlaya.TabIndex = 29;
             this.btnNuevaPlaya.Text = "            Nueva playa";
             this.btnNuevaPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevaPlaya.UseVisualStyleBackColor = false;
+            this.btnNuevaPlaya.Click += new System.EventHandler(this.btnNuevaPlaya_Click);
             // 
-            // txtIDPlaya
+            // btnBuscarPlaya
             // 
-            this.txtIDPlaya.Location = new System.Drawing.Point(182, 93);
-            this.txtIDPlaya.Name = "txtIDPlaya";
-            this.txtIDPlaya.Size = new System.Drawing.Size(65, 26);
-            this.txtIDPlaya.TabIndex = 27;
+            this.btnBuscarPlaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnBuscarPlaya.FlatAppearance.BorderSize = 0;
+            this.btnBuscarPlaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnBuscarPlaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarPlaya.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarPlaya.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarPlaya.Image")));
+            this.btnBuscarPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarPlaya.Location = new System.Drawing.Point(161, 46);
+            this.btnBuscarPlaya.Name = "btnBuscarPlaya";
+            this.btnBuscarPlaya.Size = new System.Drawing.Size(92, 26);
+            this.btnBuscarPlaya.TabIndex = 34;
+            this.btnBuscarPlaya.Text = "       Buscar";
+            this.btnBuscarPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarPlaya.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(149, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 18);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "ID:";
             // 
             // btnEliminarPlaya
             // 
+            this.btnEliminarPlaya.Enabled = false;
             this.btnEliminarPlaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnEliminarPlaya.FlatAppearance.BorderSize = 0;
             this.btnEliminarPlaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
@@ -311,18 +413,19 @@
             this.btnEliminarPlaya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarPlaya.Location = new System.Drawing.Point(9, 254);
             this.btnEliminarPlaya.Name = "btnEliminarPlaya";
-            this.btnEliminarPlaya.Size = new System.Drawing.Size(238, 50);
+            this.btnEliminarPlaya.Size = new System.Drawing.Size(104, 50);
             this.btnEliminarPlaya.TabIndex = 27;
-            this.btnEliminarPlaya.Text = "            Eliminar playa";
+            this.btnEliminarPlaya.Text = "Eliminar";
             this.btnEliminarPlaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarPlaya.UseVisualStyleBackColor = false;
+            this.btnEliminarPlaya.Click += new System.EventHandler(this.btnEliminarPlaya_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 40);
+            this.label4.Location = new System.Drawing.Point(6, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 18);
             this.label4.TabIndex = 27;
@@ -348,6 +451,8 @@
             this.pnlEstacionamientos.PerformLayout();
             this.pnlPlayas.ResumeLayout(false);
             this.pnlPlayas.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,16 +470,24 @@
         private System.Windows.Forms.GroupBox pnlPlayas;
         private System.Windows.Forms.Button btnNuevoEstacionamiento;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadLugares;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnNuevaPlaya;
-        private System.Windows.Forms.TextBox txtIDPlaya;
         private System.Windows.Forms.Button btnEliminarPlaya;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnBuscarEstacionamiento;
         private System.Windows.Forms.Button btnBuscarPlaya;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtIdEstacionamiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estacionamientos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPlaya;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.Button btnModificarPlaya;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNombreNuevaPlaya;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtIdPlayaSelect;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNombrePlayaSelect;
     }
 }

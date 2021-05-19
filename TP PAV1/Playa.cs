@@ -6,23 +6,16 @@ using System.Threading.Tasks;
 
 namespace TP_PAV1
 {
-    public class Estacionamiento
+    public class Playa
     {
-        private int idEstacionamiento;
         private int idPlaya;
+        private string nombrePlaya;
 
-        public Estacionamiento()
+        public Playa()
         {
 
         }
-
-        public int IdEstacionamiento
-        {
-            get => idEstacionamiento;
-            set => idEstacionamiento = value;
-        }
-
-
+            
         public int IdPlaya
         {
             get => idPlaya;
@@ -30,7 +23,11 @@ namespace TP_PAV1
         }
 
 
-
+        public string NombrePlaya
+        {
+            get => nombrePlaya;
+            set => nombrePlaya = value;
+        }
 
     }
 }
