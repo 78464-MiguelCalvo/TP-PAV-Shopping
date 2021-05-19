@@ -41,12 +41,15 @@
             this.btnEliminarBarrio = new System.Windows.Forms.Button();
             this.pnlBuscarBarrio = new System.Windows.Forms.GroupBox();
             this.btnBuscarBarrio = new System.Windows.Forms.Button();
-            this.txtBuscarIDBarrio = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtBuscarNombreBarrio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBarrios = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCancelarBusqueda = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIDNuevoBarrio = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAgregarBarrio.SuspendLayout();
             this.pnlModificarEliminarBarrio.SuspendLayout();
             this.pnlBuscarBarrio.SuspendLayout();
@@ -55,6 +58,8 @@
             // 
             // pnlAgregarBarrio
             // 
+            this.pnlAgregarBarrio.Controls.Add(this.label9);
+            this.pnlAgregarBarrio.Controls.Add(this.txtIDNuevoBarrio);
             this.pnlAgregarBarrio.Controls.Add(this.txtNombreNuevoBarrio);
             this.pnlAgregarBarrio.Controls.Add(this.label4);
             this.pnlAgregarBarrio.Controls.Add(this.btnCrearBarrio);
@@ -65,7 +70,7 @@
             this.pnlAgregarBarrio.Size = new System.Drawing.Size(276, 204);
             this.pnlAgregarBarrio.TabIndex = 13;
             this.pnlAgregarBarrio.TabStop = false;
-            this.pnlAgregarBarrio.Text = "Agregar nueva";
+            this.pnlAgregarBarrio.Text = "Agregar nuevo";
             // 
             // txtNombreNuevoBarrio
             // 
@@ -73,6 +78,7 @@
             this.txtNombreNuevoBarrio.Name = "txtNombreNuevoBarrio";
             this.txtNombreNuevoBarrio.Size = new System.Drawing.Size(261, 26);
             this.txtNombreNuevoBarrio.TabIndex = 31;
+            this.txtNombreNuevoBarrio.TextChanged += new System.EventHandler(this.txtNombreNuevoBarrio_TextChanged);
             // 
             // label4
             // 
@@ -101,6 +107,7 @@
             this.btnCrearBarrio.Text = "            Crear barrio";
             this.btnCrearBarrio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearBarrio.UseVisualStyleBackColor = false;
+            this.btnCrearBarrio.Click += new System.EventHandler(this.btnCrearBarrio_Click);
             // 
             // pnlModificarEliminarBarrio
             // 
@@ -161,6 +168,7 @@
             this.btnEditarBarrio.Text = "            Editar barrio";
             this.btnEditarBarrio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditarBarrio.UseVisualStyleBackColor = false;
+            this.btnEditarBarrio.Click += new System.EventHandler(this.btnEditarBarrio_Click);
             // 
             // btnEliminarBarrio
             // 
@@ -178,12 +186,12 @@
             this.btnEliminarBarrio.Text = "            Eliminar barrio";
             this.btnEliminarBarrio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarBarrio.UseVisualStyleBackColor = false;
+            this.btnEliminarBarrio.Click += new System.EventHandler(this.btnEliminarBarrio_Click);
             // 
             // pnlBuscarBarrio
             // 
+            this.pnlBuscarBarrio.Controls.Add(this.btnCancelarBusqueda);
             this.pnlBuscarBarrio.Controls.Add(this.btnBuscarBarrio);
-            this.pnlBuscarBarrio.Controls.Add(this.txtBuscarIDBarrio);
-            this.pnlBuscarBarrio.Controls.Add(this.label3);
             this.pnlBuscarBarrio.Controls.Add(this.txtBuscarNombreBarrio);
             this.pnlBuscarBarrio.Controls.Add(this.label1);
             this.pnlBuscarBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,29 +214,12 @@
             this.btnBuscarBarrio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarBarrio.Location = new System.Drawing.Point(6, 148);
             this.btnBuscarBarrio.Name = "btnBuscarBarrio";
-            this.btnBuscarBarrio.Size = new System.Drawing.Size(264, 50);
+            this.btnBuscarBarrio.Size = new System.Drawing.Size(133, 50);
             this.btnBuscarBarrio.TabIndex = 32;
             this.btnBuscarBarrio.Text = "            Buscar";
             this.btnBuscarBarrio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarBarrio.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscarIDBarrio
-            // 
-            this.txtBuscarIDBarrio.Location = new System.Drawing.Point(205, 88);
-            this.txtBuscarIDBarrio.Name = "txtBuscarIDBarrio";
-            this.txtBuscarIDBarrio.Size = new System.Drawing.Size(65, 26);
-            this.txtBuscarIDBarrio.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(172, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 18);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "ID:";
+            this.btnBuscarBarrio.Click += new System.EventHandler(this.btnBuscarBarrio_Click);
             // 
             // txtBuscarNombreBarrio
             // 
@@ -250,11 +241,18 @@
             // 
             // dgvBarrios
             // 
+            this.dgvBarrios.AllowUserToAddRows = false;
+            this.dgvBarrios.AllowUserToDeleteRows = false;
             this.dgvBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBarrios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Barrio});
             this.dgvBarrios.Location = new System.Drawing.Point(294, 57);
             this.dgvBarrios.Name = "dgvBarrios";
+            this.dgvBarrios.ReadOnly = true;
             this.dgvBarrios.Size = new System.Drawing.Size(249, 615);
             this.dgvBarrios.TabIndex = 10;
+            this.dgvBarrios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarrios_CellClick);
             // 
             // label2
             // 
@@ -267,6 +265,57 @@
             this.label2.Size = new System.Drawing.Size(192, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "Administrar barrios";
+            // 
+            // btnCancelarBusqueda
+            // 
+            this.btnCancelarBusqueda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnCancelarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnCancelarBusqueda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnCancelarBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarBusqueda.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarBusqueda.Image")));
+            this.btnCancelarBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarBusqueda.Location = new System.Drawing.Point(145, 148);
+            this.btnCancelarBusqueda.Name = "btnCancelarBusqueda";
+            this.btnCancelarBusqueda.Size = new System.Drawing.Size(125, 50);
+            this.btnCancelarBusqueda.TabIndex = 36;
+            this.btnCancelarBusqueda.Text = "         Cancelar";
+            this.btnCancelarBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarBusqueda.UseVisualStyleBackColor = false;
+            this.btnCancelarBusqueda.Click += new System.EventHandler(this.btnCancelarBusqueda_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(191, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 18);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "ID:";
+            // 
+            // txtIDNuevoBarrio
+            // 
+            this.txtIDNuevoBarrio.Enabled = false;
+            this.txtIDNuevoBarrio.Location = new System.Drawing.Point(224, 93);
+            this.txtIDNuevoBarrio.Name = "txtIDNuevoBarrio";
+            this.txtIDNuevoBarrio.Size = new System.Drawing.Size(46, 26);
+            this.txtIDNuevoBarrio.TabIndex = 39;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id_barrio";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Barrio
+            // 
+            this.Barrio.DataPropertyName = "nombre_barrio";
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
             // 
             // FormBarrios
             // 
@@ -310,11 +359,14 @@
         private System.Windows.Forms.Button btnEliminarBarrio;
         private System.Windows.Forms.GroupBox pnlBuscarBarrio;
         private System.Windows.Forms.Button btnBuscarBarrio;
-        private System.Windows.Forms.TextBox txtBuscarIDBarrio;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBuscarNombreBarrio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvBarrios;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCancelarBusqueda;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIDNuevoBarrio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
     }
 }

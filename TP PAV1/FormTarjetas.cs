@@ -17,7 +17,6 @@ namespace TP_PAV1
         {
             InitializeComponent();
         }
-
         private void FormTarjetas_Load(object sender, EventArgs e)
         {
             LimpiarCamposAgregarTarjeta();
@@ -26,10 +25,7 @@ namespace TP_PAV1
             CargarGrilla();
         }
 
-
-
         //Metodos para cargar la grilla principal o la grilla filtrada para la busqueda
-
         private void CargarGrilla()
         {
             try
@@ -41,8 +37,6 @@ namespace TP_PAV1
                 MessageBox.Show("Error al obtener tarjetas");
             }
         }
-
-
         private void CargarGrillaBusqueda(string criterio)
         {
             try
@@ -54,47 +48,28 @@ namespace TP_PAV1
                 MessageBox.Show("Error al obtener las tarjetas buscada");
             }
         }
-
-
+        // --------------
 
         // metodos para limpiar campos del form
         private void LimpiarCamposBuscarTarjeta()
         {
             txtBuscarNombreTarjeta.Text = "";
         }
-
         private void LimpiarCamposModificarEliminarTarjeta()
         {
             txtNombreTarjeta.Text = "";
             txtIDTarjeta.Text = "";
             txtTipoTarjeta.Text = "";
         }
-
         private void LimpiarCamposAgregarTarjeta()
         {
             txtNombreNuevaTarjeta.Text = "";
             txtTipoNuevaTarjeta.Text = "";
             txtIDNuevaTarjeta.Text = "";
         }
-
-
-
-        private void btnEditarTarjeta_Click(object sender, EventArgs e)
-        {
-            Tarjeta_credito t = ObtenerDatosTarjeta();
-            bool res = AD_Tarjetas.ActualizarTarjeta(t);
-            if (res)
-            {
-                MessageBox.Show("La tarjeta fue modificada con exito");
-                LimpiarCamposModificarEliminarTarjeta();
-                CargarGrilla();
-            }
-        }
-
-
+        // --------------
 
         //Metodos para obtener los datos de los textbox de los campos agregar y modificar/eliminar
-
         private Tarjeta_credito ObtenerDatosTarjeta()
         {
             Tarjeta_credito t = new Tarjeta_credito();
@@ -103,8 +78,6 @@ namespace TP_PAV1
             t.IdTipoTarjeta = Convert.ToInt32(txtTipoTarjeta.Text);
             return t;
         }
-
-
         private Tarjeta_credito ObtenerDatosNuevaTarjeta()
         {
             Tarjeta_credito t = new Tarjeta_credito();
@@ -112,9 +85,9 @@ namespace TP_PAV1
             t.IdTipoTarjeta = Convert.ToInt32(txtTipoNuevaTarjeta.Text);
             return t;
         }
+        // --------------
 
-
-
+        //eventos botones
         private void btnCrearTarjeta_Click(object sender, EventArgs e)
         {
             Tarjeta_credito t = ObtenerDatosNuevaTarjeta();
@@ -131,8 +104,43 @@ namespace TP_PAV1
                 MessageBox.Show("Hubo un error al agregar la tarjeta");
             }
         }
-
-
+        private void btnBuscarTarjeta_Click(object sender, EventArgs e)
+        {
+            string criterio = Convert.ToString(txtBuscarNombreTarjeta.Text);
+            CargarGrillaBusqueda(criterio);
+            if (dgvTarjetas.RowCount.Equals(0))
+            {
+                MessageBox.Show("No se encontro ninguna tarjeta que coincida con el texto ingresado");
+            }
+        }
+        private void btnCancelarBusqueda_Click(object sender, EventArgs e)
+        {
+            CargarGrilla();
+            LimpiarCamposBuscarTarjeta();
+        }
+        private void btnEditarTarjeta_Click(object sender, EventArgs e)
+        {
+            Tarjeta_credito t = ObtenerDatosTarjeta();
+            bool res = AD_Tarjetas.ActualizarTarjeta(t);
+            if (res)
+            {
+                MessageBox.Show("La tarjeta fue modificada con exito");
+                LimpiarCamposModificarEliminarTarjeta();
+                CargarGrilla();
+            }
+        }
+        private void btnEliminarTarjeta_Click(object sender, EventArgs e)
+        {
+            Tarjeta_credito t = ObtenerDatosTarjeta();
+            bool res = AD_Tarjetas.EliminarTarjeta(t);
+            if (res)
+            {
+                MessageBox.Show("La tarjeta fue eliminada con exito");
+                LimpiarCamposModificarEliminarTarjeta();
+                CargarGrilla();
+            }
+        }
+        // --------------
 
         //Metodos para que cuando se empiece a cargar una nueva tarjeta se muestre el id que tendra
 
@@ -140,7 +148,6 @@ namespace TP_PAV1
         {
             txtIDNuevaTarjeta.Text = Convert.ToString(AD_Tarjetas.ObtenerIDUltimaTarjeta());
         }
-
         private void txtTipoNuevaTarjeta_TextChanged(object sender, EventArgs e)
         {
             txtIDNuevaTarjeta.Text = Convert.ToString(AD_Tarjetas.ObtenerIDUltimaTarjeta());
@@ -174,35 +181,5 @@ namespace TP_PAV1
             txtNombreTarjeta.Text = t.NombreTarjeta;
             txtTipoTarjeta.Text = Convert.ToString(t.IdTipoTarjeta);
         }
-
-        private void btnBuscarTarjeta_Click(object sender, EventArgs e)
-        {
-            string criterio = Convert.ToString(txtBuscarNombreTarjeta.Text);
-            CargarGrillaBusqueda(criterio);
-            if (dgvTarjetas.RowCount.Equals(0))
-            {
-                MessageBox.Show("No se encontro ninguna tarjeta que coincida con el texto ingresado");
-            }
-        }
-
-        private void btnCancelarBusqueda_Click(object sender, EventArgs e)
-        {
-            CargarGrilla();
-            LimpiarCamposBuscarTarjeta();
-        }
-
-        private void btnEliminarTarjeta_Click(object sender, EventArgs e)
-        {
-            Tarjeta_credito t = ObtenerDatosTarjeta();
-            bool res = AD_Tarjetas.EliminarTarjeta(t);
-            if (res)
-            {
-                MessageBox.Show("La tarjeta fue eliminada con exito");
-                LimpiarCamposModificarEliminarTarjeta();
-                CargarGrilla();
-            }
-        }
-
-  
     }
 }

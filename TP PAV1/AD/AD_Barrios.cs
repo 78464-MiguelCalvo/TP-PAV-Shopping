@@ -5,13 +5,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace TP_PAV1.AD
 {
-    class AD_Tarjetas
+    class AD_Barrios
     {
-        public static DataTable ObtenerTarjetas()
+        public static DataTable ObtenerBarrios()
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -19,7 +18,7 @@ namespace TP_PAV1.AD
             {
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "GetTarjetas";
+                string consulta = "GetBarrios";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -44,43 +43,7 @@ namespace TP_PAV1.AD
             }
         }
 
-        //Obtener tabla inner join con (id_tarjeta, nombre_tarjeta, nombre_tipo_tarjeta)
-        //de las tablas Tarjetas y Tipos_Tarjeta
-        public static DataTable ObtenerTarjetasXTipoTarjeta()
-        {
-            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-
-                string consulta = "GetTarjetatXTipoTarjeta";
-
-                cmd.Parameters.Clear();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = consulta;
-
-                cn.Open();
-                cmd.Connection = cn;
-
-                DataTable tabla = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(tabla);
-
-                return tabla;
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-
-        public static bool ActualizarTarjeta(Tarjeta_credito t)
+        public static bool ActualizarBarrio(Barrio b)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -88,11 +51,10 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "ActualizarTarjeta";
+                string consulta = "ActualizarBarrio";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", t.IdTarjeta);
-                cmd.Parameters.AddWithValue("@nombre", t.NombreTarjeta);
-                cmd.Parameters.AddWithValue("@id_tipo", t.IdTipoTarjeta);
+                cmd.Parameters.AddWithValue("@id", b.IdBarrio);
+                cmd.Parameters.AddWithValue("@nombre", b.NombreBarrio);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
                 cn.Open();
@@ -111,8 +73,7 @@ namespace TP_PAV1.AD
             return res;
         }
 
-
-        public static bool InsertarTarjeta(Tarjeta_credito t)
+        public static bool InsertarBarrio(Barrio b)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -120,10 +81,9 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "InsertTarjeta";
+                string consulta = "InsertBarrio";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@nombre", t.NombreTarjeta);
-                cmd.Parameters.AddWithValue("@idTipo", t.IdTipoTarjeta);
+                cmd.Parameters.AddWithValue("@nombre", b.NombreBarrio);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
                 cn.Open();
@@ -142,8 +102,7 @@ namespace TP_PAV1.AD
             return res;
         }
 
-
-        public static int ObtenerIDUltimaTarjeta()
+        public static int ObtenerIDUltimoBarrio()
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -151,7 +110,7 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "GetUltimaTarjeta";
+                string consulta = "GetUltimoBarrio";
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
@@ -173,52 +132,15 @@ namespace TP_PAV1.AD
             return res;
         }
 
-
-        public static Tarjeta_credito ObtenerTarjetaXID(int id)
-        {
-            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-            Tarjeta_credito t = new Tarjeta_credito();
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                string consulta = "BuscarTarjetaPorID";
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = consulta;
-                cn.Open();
-                cmd.Connection = cn;
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr != null && dr.Read())
-                {
-                    t.IdTarjeta = Convert.ToInt32(dr["id_tarjeta"]);
-                    t.NombreTarjeta = dr["nombre_tarjeta"].ToString();
-                    t.IdTipoTarjeta = Convert.ToInt32(dr["id_tipo_tarjeta"]);
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                cn.Close();
-            }
-            return t;
-        }
-
-
-        public static DataTable BuscarTarjetasPorNombre(string criterio)
+        public static DataTable BuscarBarriosPorNombre(string criterio)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                
-                string consulta = "BuscarTarjetasPorNombre";
+
+                string consulta = "BuscarBarriosPorNombre";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@nombre", criterio);
@@ -244,8 +166,7 @@ namespace TP_PAV1.AD
             }
         }
 
-
-        public static bool EliminarTarjeta(Tarjeta_credito t)
+        public static bool EliminarBarrio(Barrio b)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -253,9 +174,9 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "EliminarTarjetaCredito";
+                string consulta = "EliminarBarrio";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", t.IdTarjeta);
+                cmd.Parameters.AddWithValue("@id", b.IdBarrio);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
                 cn.Open();
