@@ -21,7 +21,7 @@ namespace TP_PAV1.Entidades
             id_tipoDocupmento = tipoDoc;
             nroDocumento = nroDoc;
             id_modelo = idMod;
-            id_tipoVehiculo = id_tipoVehiculo;
+            id_tipoVehiculo = id_tipoVeh;
         }
 
         public Vehiculo()

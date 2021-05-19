@@ -50,6 +50,7 @@
     <Compile Include="AD\AD_usuario.cs" />
     <Compile Include="AD\AD_Varios.cs" />
     <Compile Include="AD\AD_Vehiculo.cs" />
+    <Compile Include="AD\AD_VehiculosXClientes.cs" />
     <Compile Include="AgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,7 @@
     </Compile>
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Entidades\Vehiculo.cs" />
+    <Compile Include="Entidades\VehiculoXCliente.cs" />
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +144,12 @@
     <Compile Include="ModificarUsuario.Designer.cs">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarVehiculo.Designer.cs">
+      <DependentUpon>ModificarVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarUsuario.resx">
@@ -188,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarVehiculo.resx">
+      <DependentUpon>ModificarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

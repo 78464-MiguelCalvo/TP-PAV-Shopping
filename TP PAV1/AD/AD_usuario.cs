@@ -183,7 +183,7 @@ namespace TP_PAV1.AD
                 cmd.ExecuteNonQuery();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Debe seleccionar un usuario antes de eliminarlo");
             }
@@ -215,7 +215,7 @@ namespace TP_PAV1.AD
                 cmd.ExecuteNonQuery();
                 result = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 MessageBox.Show("Debe seleccionar el usuario antes de modificarlo");

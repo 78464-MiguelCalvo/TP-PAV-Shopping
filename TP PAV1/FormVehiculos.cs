@@ -14,16 +14,16 @@ namespace TP_PAV1
 {
     public partial class FormVehiculos : Form
     {
-       
+
         public FormVehiculos()
         {
             InitializeComponent();
-            
+
         }
         private void FormVehiculos_Load(object sender, EventArgs e)
         {
             cargarGrilla();
-           
+
         }
         Vehiculo ClaseVehiculo = new Vehiculo();
 
@@ -38,7 +38,16 @@ namespace TP_PAV1
             DialogResult r = MessageBox.Show("Estas seguro que deseas borrar el Vehiculo?" + ClaseVehiculo.patenteVehiculo, "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (DialogResult.Yes == r)
             {
-                AD_Vehiculo.EliminarVehiculo(ClaseVehiculo.patenteVehiculo);
+
+                bool rtdo = AD_Vehiculo.EliminarVehiculo(ClaseVehiculo.patenteVehiculo);
+                if (rtdo)
+                {
+                    MessageBox.Show("vehiculo Eliminado con exito!");
+                }
+                else
+                {
+                    MessageBox.Show("Error al borrar el vehiculo");
+                }
             }
         }
 
@@ -49,10 +58,20 @@ namespace TP_PAV1
 
         private void GrillaVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int indice = e.RowIndex;
-            DataGridViewRow filaSeleccionada = GrillaVehiculos.Rows[indice];
-            string patente = filaSeleccionada.Cells["patente"].Value.ToString();
-            ClaseVehiculo = AD_Vehiculo.obtenerVehiculoPorPatente(patente);
+            try
+            {
+                int indice = e.RowIndex;
+                if (indice > -1)
+                {
+                    DataGridViewRow filaSeleccionada = GrillaVehiculos.Rows[indice];
+                    string patente = filaSeleccionada.Cells["patente"].Value.ToString();
+                    ClaseVehiculo = AD_Vehiculo.obtenerVehiculoPorPatente(patente);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void PICActualizarGrilla_Click(object sender, EventArgs e)
@@ -62,11 +81,17 @@ namespace TP_PAV1
 
         private void PICModificarVehiculo_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Estas seguro que deseas Modificar el vehiculo " + ClaseVehiculo.patenteVehiculo , "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult r = MessageBox.Show("Estas seguro que deseas Modificar el vehiculo " + ClaseVehiculo.patenteVehiculo, "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (DialogResult.Yes == r)
             {
-                MessageBox.Show("en esa");
+                ModificarVehiculo VentanaModificarVehiculo = new ModificarVehiculo(ClaseVehiculo);
+                VentanaModificarVehiculo.ShowDialog();
             }
+        }
+
+        private void PICBuscar_Click(object sender, EventArgs e)
+        {
+            GrillaVehiculos.DataSource = AD_Vehiculo.CargarVehiculoPorPatente(txtBuscarPatente.Text);
         }
     }
 }

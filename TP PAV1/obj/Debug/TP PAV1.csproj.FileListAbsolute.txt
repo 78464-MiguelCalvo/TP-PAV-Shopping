@@ -64,3 +64,4 @@ C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.pdb
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarUsuario.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarUsuario.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarVehiculo.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarVehiculo.resources

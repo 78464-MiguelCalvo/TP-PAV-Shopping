@@ -27,9 +27,25 @@ namespace TP_PAV1
 
         private void AgregarVehiculo_Load(object sender, EventArgs e)
         {
-            CargarCombosTipoDocumento();
+            CargarCombo(cmbTipoDoc,AD_Varios.ObtenerTiposDeDocumentos(),"nombre_tipo_documento","id_tipo_documento",1) ;
+            //CargarCombosTipoDocumento();
             CargarCombosMarcas();
             CargarCombosTipoVehiculo();
+        }
+
+        private void CargarCombo(ComboBox cmb, DataTable dt,string display, string value, int index =-1)
+        {
+            try
+            {
+                cmb.DataSource = dt;
+                cmb.DisplayMember = display;
+                cmb.ValueMember = value;
+                cmb.SelectedIndex = index;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(string.Format("Ocurrió un error al cargar el combo de '{0}'",display));;
+            }
         }
 
         private void CargarCombosTipoDocumento()
@@ -85,13 +101,13 @@ namespace TP_PAV1
             }
             else
             {
-                string patenteVehiculo = txtPatenteNueva.Text;
+                string patenteVehiculo = txtPatenteNueva.Text.Trim();
                 int modeloVehiculo = (int)cmbMarca.SelectedValue;
-                string nroDocVehiculo = txtNroDoc.Text;
+                string nroDocVehiculo = txtNroDoc.Text.Trim();
                 int tipoDocVehiculo = (int)cmbTipoDoc.SelectedValue;
                 int tipoVehiculo = (int)cmbTipo.SelectedValue;
 
-                bool resultado = AD_Vehiculo.InsertarVehiculo(patenteVehiculo,tipoDocVehiculo,nroDocVehiculo,modeloVehiculo,tipoVehiculo);
+                bool resultado = AD_Vehiculo.InsertarVehiculo(patenteVehiculo, tipoDocVehiculo, nroDocVehiculo, modeloVehiculo, tipoVehiculo);
                 if (resultado)
                 {
                     MessageBox.Show("Vehiculo Nuevo Agregado con Exito!");
@@ -99,7 +115,7 @@ namespace TP_PAV1
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar nuevo usuario");
+                    MessageBox.Show("Error al agregar nuevo Vehiculo");
                 }
             }
             

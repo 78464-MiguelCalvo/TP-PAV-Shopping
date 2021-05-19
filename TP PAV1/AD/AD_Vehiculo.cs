@@ -47,8 +47,9 @@ namespace TP_PAV1.AD
             }
         }
 
-        public static void EliminarVehiculo(String Patente)
+        public static bool EliminarVehiculo(String Patente)
         {
+            bool rtdo = false;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             Vehiculo v = new Vehiculo();
@@ -64,7 +65,7 @@ namespace TP_PAV1.AD
                 cn.Open();
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
-
+                rtdo = true;
             }
             catch (Exception ex)
             {
@@ -74,6 +75,7 @@ namespace TP_PAV1.AD
             {
                 cn.Close();
             }
+            return rtdo;
 
         }
 
@@ -98,10 +100,10 @@ namespace TP_PAV1.AD
                 if (dr != null && dr.Read())
                 {
                     veh.patenteVehiculo= dr["patente"].ToString();
-                    veh.tipoDocVehiculo = (int)dr["id_tipo_documento"];
-                    veh.nroDocVehiculo = dr["nro_documento"].ToString();
-                    veh.modeloVehiculo = (int)dr["id_marca_vehiculo"];
                     veh.tipoVehiculo = (int)dr["id_tipo_vehiculo"];
+                    veh.modeloVehiculo = (int)dr["id_modelo_vehiculo"];                   
+                    veh.tipoDocVehiculo = (int)dr["tipo_documento"];
+                    veh.nroDocVehiculo = dr["nro_documento"].ToString();
                 }
 
             }
@@ -116,7 +118,7 @@ namespace TP_PAV1.AD
             return veh;
         }
 
-        public static bool InsertarVehiculo(string Patente, int idTipoDoc, string nroDoc,int idMarcaVehiculo,int idTipoVehiculo)
+        public static bool InsertarVehiculo(string Patente, int idDoc, string nroDoc, int idMarcaVehiculo,int idTipoVehiculo)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -124,25 +126,26 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "InsertNuevoVehiculo";
+                string consulta = "InsertVehiculo";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@patente", Patente);
-                cmd.Parameters.AddWithValue("@idTipoDoc", idTipoDoc);
-                cmd.Parameters.AddWithValue("@nroDoc", nroDoc);
                 cmd.Parameters.AddWithValue("@idMarcaVehiculo", idMarcaVehiculo);
                 cmd.Parameters.AddWithValue("@idTipoVehiculo", idTipoVehiculo);
+                cmd.Parameters.AddWithValue("@idDni", idDoc);
+                cmd.Parameters.AddWithValue("@NroDni", nroDoc);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
                 cn.Open();
                 cmd.Connection = cn;
+                
                 cmd.ExecuteNonQuery();
                 result = true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                MessageBox.Show(e.Message);
             }
             finally
             {
@@ -150,6 +153,76 @@ namespace TP_PAV1.AD
             }
             return result;
 
+        }
+
+        public static bool ActualizarVehiculoPorCliente(Vehiculo V)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool result = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "ActualizarVehiculoo";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@patente", V.patenteVehiculo);
+                cmd.Parameters.AddWithValue("@tipo_documento", V.tipoDocVehiculo);
+                cmd.Parameters.AddWithValue("@nro_documento", V.nroDocVehiculo);
+                cmd.Parameters.AddWithValue("@id_tipo_vehiculo", V.tipoVehiculo);
+                cmd.Parameters.AddWithValue("@id_modelo_vehiculo", V.modeloVehiculo);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return result;
+        }
+
+        public static DataTable CargarVehiculoPorPatente(string Patente)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "BuscarVehiculoPorText";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@patente", Patente);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }
