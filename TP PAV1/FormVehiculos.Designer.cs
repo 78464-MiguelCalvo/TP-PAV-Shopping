@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVehiculos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PICBuscar = new System.Windows.Forms.PictureBox();
@@ -38,11 +39,12 @@
             this.PICEliminarVehiculo = new System.Windows.Forms.PictureBox();
             this.PICModificarVehiculo = new System.Windows.Forms.PictureBox();
             this.PICActualizarGrilla = new System.Windows.Forms.PictureBox();
-            this.patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_vehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nro_dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_vehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaVehiculos)).BeginInit();
@@ -50,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PICEliminarVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PICModificarVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PICActualizarGrilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -160,26 +163,16 @@
             this.PICActualizarGrilla.TabStop = false;
             this.PICActualizarGrilla.Click += new System.EventHandler(this.PICActualizarGrilla_Click);
             // 
-            // patente
+            // vehiculoBindingSource
             // 
-            this.patente.DataPropertyName = "patente";
-            this.patente.HeaderText = "Patente";
-            this.patente.Name = "patente";
-            this.patente.ReadOnly = true;
+            this.vehiculoBindingSource.DataSource = typeof(TP_PAV1.Entidades.Vehiculo);
             // 
-            // tipo_modelo
+            // nro_dni
             // 
-            this.tipo_modelo.DataPropertyName = "id_modelo_vehiculo";
-            this.tipo_modelo.HeaderText = "Modelo";
-            this.tipo_modelo.Name = "tipo_modelo";
-            this.tipo_modelo.ReadOnly = true;
-            // 
-            // tipo_vehiculo
-            // 
-            this.tipo_vehiculo.DataPropertyName = "id_tipo_vehiculo";
-            this.tipo_vehiculo.HeaderText = "Tipo";
-            this.tipo_vehiculo.Name = "tipo_vehiculo";
-            this.tipo_vehiculo.ReadOnly = true;
+            this.nro_dni.DataPropertyName = "nro_documento";
+            this.nro_dni.HeaderText = "Nro DNI";
+            this.nro_dni.Name = "nro_dni";
+            this.nro_dni.ReadOnly = true;
             // 
             // tipo_dni
             // 
@@ -188,12 +181,26 @@
             this.tipo_dni.Name = "tipo_dni";
             this.tipo_dni.ReadOnly = true;
             // 
-            // nro_dni
+            // tipo_vehiculo
             // 
-            this.nro_dni.DataPropertyName = "nro_documento";
-            this.nro_dni.HeaderText = "Nro DNI";
-            this.nro_dni.Name = "nro_dni";
-            this.nro_dni.ReadOnly = true;
+            this.tipo_vehiculo.DataPropertyName = "id_tipo_vehiculo";
+            this.tipo_vehiculo.HeaderText = "Tipo";
+            this.tipo_vehiculo.Name = "tipo_vehiculo";
+            this.tipo_vehiculo.ReadOnly = true;
+            // 
+            // tipo_modelo
+            // 
+            this.tipo_modelo.DataPropertyName = "id_modelo_vehiculo";
+            this.tipo_modelo.HeaderText = "Modelo";
+            this.tipo_modelo.Name = "tipo_modelo";
+            this.tipo_modelo.ReadOnly = true;
+            // 
+            // patente
+            // 
+            this.patente.DataPropertyName = "patente";
+            this.patente.HeaderText = "Patente";
+            this.patente.Name = "patente";
+            this.patente.ReadOnly = true;
             // 
             // FormVehiculos
             // 
@@ -220,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PICEliminarVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PICModificarVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PICActualizarGrilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,6 +243,7 @@
         private System.Windows.Forms.PictureBox PICEliminarVehiculo;
         private System.Windows.Forms.PictureBox PICModificarVehiculo;
         private System.Windows.Forms.PictureBox PICActualizarGrilla;
+        private System.Windows.Forms.BindingSource vehiculoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_vehiculo;

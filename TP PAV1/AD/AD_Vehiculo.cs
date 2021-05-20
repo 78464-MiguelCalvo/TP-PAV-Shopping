@@ -99,9 +99,9 @@ namespace TP_PAV1.AD
 
                 if (dr != null && dr.Read())
                 {
-                    veh.patenteVehiculo= dr["patente"].ToString();
+                    veh.patenteVehiculo = dr["patente"].ToString();
                     veh.tipoVehiculo = (int)dr["id_tipo_vehiculo"];
-                    veh.modeloVehiculo = (int)dr["id_modelo_vehiculo"];                   
+                    veh.modeloVehiculo = (int)dr["id_modelo_vehiculo"];
                     veh.tipoDocVehiculo = (int)dr["tipo_documento"];
                     veh.nroDocVehiculo = dr["nro_documento"].ToString();
                 }
@@ -118,7 +118,42 @@ namespace TP_PAV1.AD
             return veh;
         }
 
-        public static bool InsertarVehiculo(string Patente, int idDoc, string nroDoc, int idMarcaVehiculo,int idTipoVehiculo)
+        public static string ObtenerDescripcion(string primaryKey, string nombrePkTabla, string nombreDescripcion, string tabla)
+        {
+            SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"]);
+            cn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand("SELECT TOP 1 " + nombreDescripcion + " FROM " + tabla + " WHERE " + nombrePkTabla + " = " + primaryKey + ";", cn);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        var valor = reader.GetString(0);
+                        return valor;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No rows found.");
+                }
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return null;
+        }
+
+        public static bool InsertarVehiculo(string Patente, int idDoc, string nroDoc, int idMarcaVehiculo, int idTipoVehiculo)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -138,7 +173,7 @@ namespace TP_PAV1.AD
 
                 cn.Open();
                 cmd.Connection = cn;
-                
+
                 cmd.ExecuteNonQuery();
                 result = true;
             }
@@ -154,7 +189,6 @@ namespace TP_PAV1.AD
             return result;
 
         }
-
         public static bool ActualizarVehiculoPorCliente(Vehiculo V)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
@@ -188,7 +222,6 @@ namespace TP_PAV1.AD
             }
             return result;
         }
-
         public static DataTable CargarVehiculoPorPatente(string Patente)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];

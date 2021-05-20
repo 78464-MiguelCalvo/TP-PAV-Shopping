@@ -50,10 +50,24 @@ namespace TP_PAV1
                 }
             }
         }
-
+        
         private void cargarGrilla()
         {
-            GrillaVehiculos.DataSource = AD_Vehiculo.obtenerVehiculos();
+            try
+            {
+                DataTable vehiculos = AD_Vehiculo.obtenerVehiculos();
+                for (int i = 0; i < vehiculos.Rows.Count; i++)
+                {
+                    string tipoAuto = AD_Vehiculo.ObtenerDescripcion(vehiculos.Rows[i][1].ToString(), "id_tipo_vehiculo", "nombre_tipo", "tipo_vehiculo");
+                    string modelo = AD_Vehiculo.ObtenerDescripcion(vehiculos.Rows[i][2].ToString(), "id_modelo_automovil", "nombre_modelo_automovil", "modelo_automovil");
+                    string tipoDoc = AD_Vehiculo.ObtenerDescripcion(vehiculos.Rows[i][3].ToString(), "id_tipo_documento", "nombre_tipo_documento", "tipo_documento");
+                    GrillaVehiculos.Rows.Add(vehiculos.Rows[i][0],tipoAuto,modelo,tipoDoc,vehiculos.Rows[i][4]);
+                }                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al cargar la grilla de vehiculos!"+ ex.Message); ;
+            }
         }
 
         private void GrillaVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
