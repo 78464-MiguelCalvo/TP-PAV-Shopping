@@ -16,6 +16,14 @@ namespace TP_PAV1
 
         }
 
+        //esto agregue:
+        public Barrio(string nombre, int id)
+        {
+            idBarrio = id;
+            Nombre = nombre;
+        }
+        //----
+
         public int IdBarrio
         {
             get => idBarrio;

@@ -43,6 +43,40 @@ namespace TP_PAV1.AD
             }
         }
 
+        public static Barrio ObtenerBarrioXID(int id)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            Barrio b = new Barrio();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "SELECT * FROM barrios WHERE id_barrio LIKE @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null && dr.Read())
+                {
+                    b.IdBarrio = Convert.ToInt32(dr["id_barrio"]);
+                    b.NombreBarrio = Convert.ToString(dr["nombre_barrio"]);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return b;
+        }
+
         public static bool ActualizarBarrio(Barrio b)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
@@ -83,7 +117,7 @@ namespace TP_PAV1.AD
                 SqlCommand cmd = new SqlCommand();
                 string consulta = "InsertBarrio";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@nombre", b.NombreBarrio);
+                cmd.Parameters.AddWithValue("@nombreBarrio", b.NombreBarrio);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
                 cn.Open();
@@ -143,7 +177,7 @@ namespace TP_PAV1.AD
                 string consulta = "BuscarBarriosPorNombre";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@nombre", criterio);
+                cmd.Parameters.AddWithValue("@nombreBarrio", criterio);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 

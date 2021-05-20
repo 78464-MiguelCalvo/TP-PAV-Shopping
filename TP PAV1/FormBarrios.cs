@@ -29,7 +29,6 @@ namespace TP_PAV1
         private void LimpiarCampospnlBuscarBarrio()
         {
             txtBuscarNombreBarrio.Text = "";
-         //   txtBuscarIDBarrio.Text = ""; VER ESTO - borré el textbox? if si then borrarlinea else nose
         }
         private void LimpiarCampospnlModificarEliminarBarrio()
         {
@@ -150,10 +149,11 @@ namespace TP_PAV1
             {
                 btnEditarBarrio.Enabled = true;
                 btnEliminarBarrio.Enabled = true;
+                txtNombreBarrio.Enabled = true;
                 int indice = e.RowIndex;
                 DataGridViewRow filaSelected = dgvBarrios.Rows[indice];
                 string id = filaSelected.Cells["ID"].Value.ToString();
-                Barrio barrioSelec = AD_Barrios.ObtenerBarrios(Convert.ToInt32(id));
+                Barrio barrioSelec = AD_Barrios.ObtenerBarrioXID(Convert.ToInt32(id));
                 LimpiarCampospnlModificarEliminarBarrio();
                 CargarCamposModifElim(barrioSelec);
             }
@@ -165,8 +165,8 @@ namespace TP_PAV1
 
         private void CargarCamposModifElim(Barrio b)
         {
-            txtIDBarrio.Text = Convert.ToString(b.IdBarrio);
-            txtNombreBarrio.Text = b.NombreBarrio;
+            txtIDBarrio.Text = b.IdBarrio.ToString();
+            txtNombreBarrio.Text = b.NombreBarrio.ToString();
         }
 
         // --------------
