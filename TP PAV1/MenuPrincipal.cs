@@ -159,7 +159,7 @@ namespace TP_PAV1
         {
             //nuestro codigo
             EsconderSubmenu();
-            AbrirFormularioHijo(new FormLocales());
+            AbrirFormularioHijo(new FormArticulos());
             this.Text = ("BUY ALL - Artículos");
         }
 
