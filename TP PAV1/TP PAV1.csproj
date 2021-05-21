@@ -47,25 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD\AD_Barrios.cs" />
+    <Compile Include="AD\AD_PlayasYEstacionamientos.cs" />
+    <Compile Include="AD\AD_Tarjetas.cs" />
     <Compile Include="AD\AD_usuario.cs" />
-    <Compile Include="AD\AD_Varios.cs" />
-    <Compile Include="AD\AD_Vehiculo.cs" />
-    <Compile Include="AD\AD_VehiculosXClientes.cs" />
-    <Compile Include="AgregarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarUsuario.Designer.cs">
-      <DependentUpon>AgregarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarVehiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarVehiculo.Designer.cs">
-      <DependentUpon>AgregarVehiculo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Entidades\Usuarios.cs" />
-    <Compile Include="Entidades\Vehiculo.cs" />
-    <Compile Include="Entidades\VehiculoXCliente.cs" />
+    <Compile Include="Barrio.cs" />
+    <Compile Include="Estacionamiento.cs" />
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,26 +125,10 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModificarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarUsuario.Designer.cs">
-      <DependentUpon>ModificarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarVehiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarVehiculo.Designer.cs">
-      <DependentUpon>ModificarVehiculo.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Playa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgregarUsuario.resx">
-      <DependentUpon>AgregarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarVehiculo.resx">
-      <DependentUpon>AgregarVehiculo.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Tarjeta_credito.cs" />
     <EmbeddedResource Include="FormArticulos.resx">
       <DependentUpon>FormArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,17 +165,10 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModificarUsuario.resx">
-      <DependentUpon>ModificarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarVehiculo.resx">
-      <DependentUpon>ModificarVehiculo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\TP_PAV1.Entidades.Vehiculo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
