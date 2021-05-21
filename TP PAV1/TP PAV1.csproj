@@ -47,7 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD\AD_Cliente.cs" />
+    <Compile Include="AD\AD_Profesiones.cs" />
     <Compile Include="AD\AD_usuario.cs" />
+    <Compile Include="AD\AD_VariosXFede.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Profesion.cs" />
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
