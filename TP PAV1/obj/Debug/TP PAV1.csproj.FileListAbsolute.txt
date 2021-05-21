@@ -107,3 +107,9 @@ C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.Agr
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarVehiculo.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarUsuario.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarVehiculo.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarArticulo.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarLocal.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.EliminarArticulo.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.EliminarLocal.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarLocal.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarArticulo.resources
