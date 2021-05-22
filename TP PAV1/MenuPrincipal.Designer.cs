@@ -37,7 +37,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pnlSistemaSubmenu = new System.Windows.Forms.Panel();
-            this.btnCambiarContrasenas = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSistema = new System.Windows.Forms.Button();
             this.pnlParkingSubmenu = new System.Windows.Forms.Panel();
@@ -145,7 +144,7 @@
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 977);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 992);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -187,32 +186,12 @@
             // pnlSistemaSubmenu
             // 
             this.pnlSistemaSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(19)))));
-            this.pnlSistemaSubmenu.Controls.Add(this.btnCambiarContrasenas);
             this.pnlSistemaSubmenu.Controls.Add(this.btnUsuarios);
             this.pnlSistemaSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSistemaSubmenu.Location = new System.Drawing.Point(0, 586);
             this.pnlSistemaSubmenu.Name = "pnlSistemaSubmenu";
             this.pnlSistemaSubmenu.Size = new System.Drawing.Size(265, 79);
             this.pnlSistemaSubmenu.TabIndex = 7;
-            // 
-            // btnCambiarContrasenas
-            // 
-            this.btnCambiarContrasenas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCambiarContrasenas.FlatAppearance.BorderSize = 0;
-            this.btnCambiarContrasenas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnCambiarContrasenas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarContrasenas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarContrasenas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnCambiarContrasenas.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarContrasenas.Image")));
-            this.btnCambiarContrasenas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContrasenas.Location = new System.Drawing.Point(0, 38);
-            this.btnCambiarContrasenas.Name = "btnCambiarContrasenas";
-            this.btnCambiarContrasenas.Size = new System.Drawing.Size(265, 38);
-            this.btnCambiarContrasenas.TabIndex = 3;
-            this.btnCambiarContrasenas.Text = "        Cambiar contraseñas";
-            this.btnCambiarContrasenas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContrasenas.UseVisualStyleBackColor = true;
-            this.btnCambiarContrasenas.Click += new System.EventHandler(this.btnCambiarContraseñas_Click);
             // 
             // btnUsuarios
             // 
@@ -629,7 +608,6 @@
         private System.Windows.Forms.Panel pnlSalir;
         private System.Windows.Forms.PictureBox pctLogoFondo;
         private System.Windows.Forms.Panel pnlFormularioHijo;
-        private System.Windows.Forms.Button btnCambiarContrasenas;
         private System.Windows.Forms.Button btnSalirOK;
         private System.Windows.Forms.Button btnCerrarSesionOK;
         private System.Windows.Forms.Panel panel1;

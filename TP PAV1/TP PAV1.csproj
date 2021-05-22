@@ -48,10 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AD\AD_Barrios.cs" />
+    <Compile Include="AD\AD_Cliente.cs" />
     <Compile Include="AD\AD_PlayasYEstacionamientos.cs" />
+    <Compile Include="AD\AD_Profesiones.cs" />
     <Compile Include="AD\AD_Tarjetas.cs" />
     <Compile Include="AD\AD_usuario.cs" />
     <Compile Include="AD\AD_Varios.cs" />
+    <Compile Include="AD\AD_VariosXFede.cs" />
     <Compile Include="AD\AD_Vehiculo.cs" />
     <Compile Include="AgregarArticulo.cs">
       <SubType>Form</SubType>
@@ -78,6 +81,7 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Barrio.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +197,7 @@
       <DependentUpon>ModificarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Playa.cs" />
+    <Compile Include="Entidades\Profesion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tarjeta_credito.cs" />

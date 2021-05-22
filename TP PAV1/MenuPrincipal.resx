@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCambiarContrasenas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAXRJREFUSEu1lTFLw0AYhqOi4qro5KqLm0WTXNLNxU0EBwdHf4DuajedtPkSEH+A
-        Dh2d3IXaehdFiSC4uIiLQ0FxEuN38CnXmOHS9B544eh793xNGhpLl8qJGPaj9qyMXNPH5VmGp1EG4gDT
-        waSUjheIfdnRtt5wD5vjKEsUcTaJ3EPbi4OCs4zwX/BKTml7MfwgrnTLeNMObmfkb+CGoqV2TiTm6Zg+
-        LBDbqsSDuEqVJdddXci3qNLHA7GrSvBbr1AlB6xmuh2q9GEB31AlmBcG8aYMDn9VOxf4Oh3Thx3fTeHh
-        T1WUFxfERxVuJulYMVgY7+VJ1fR0e/5I0wEX4jBPjPn2gB/RznI4wJcy8jdWv16gujyLUXsiM+CRqv6B
-        0iujA/BRPDc2wA+Er8gNXEEtHUSpuVs0V3sYQem9sQF+Xdgo/TI2QILSC2MD8N/TUeQyCVX9Ya3RGELp
-        Jcnf5VNFVf+woTWN8mcj8l/wBT9GS00s6wfQgoFfMt6M6QAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnUsuarios.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
