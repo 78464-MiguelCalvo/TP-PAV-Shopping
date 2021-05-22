@@ -85,5 +85,10 @@ namespace TP_PAV1
         {
             btnIngresar.Focus();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
