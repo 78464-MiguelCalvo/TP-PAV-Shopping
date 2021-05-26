@@ -1,6 +1,7 @@
-﻿namespace TP_PAV1
+﻿
+namespace TP_PAV1
 {
-    partial class MenuPrincipal
+    partial class MenuPrincipalLocal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalLocal));
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrarSesionOK = new System.Windows.Forms.Button();
@@ -37,8 +38,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pnlSistemaSubmenu = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.btnSistema = new System.Windows.Forms.Button();
             this.pnlParkingSubmenu = new System.Windows.Forms.Panel();
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnPlayas = new System.Windows.Forms.Button();
@@ -48,8 +47,6 @@
             this.btnLocales = new System.Windows.Forms.Button();
             this.btnComercios = new System.Windows.Forms.Button();
             this.pnlClientesSubmenu = new System.Windows.Forms.Panel();
-            this.btnBarrios = new System.Windows.Forms.Button();
-            this.btnProfesiones = new System.Windows.Forms.Button();
             this.btnTarjetas = new System.Windows.Forms.Button();
             this.btnABMClientes = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -57,19 +54,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.pctLogoFondo = new System.Windows.Forms.PictureBox();
             this.pnlFormularioHijo = new System.Windows.Forms.Panel();
+            this.pctLogoFondo = new System.Windows.Forms.PictureBox();
             this.pnlMenuPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlSalir.SuspendLayout();
-            this.pnlSistemaSubmenu.SuspendLayout();
             this.pnlParkingSubmenu.SuspendLayout();
             this.pnlComerciosSubmenu.SuspendLayout();
             this.pnlClientesSubmenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogoFondo)).BeginInit();
             this.pnlFormularioHijo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogoFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuPrincipal
@@ -79,7 +75,6 @@
             this.pnlMenuPrincipal.Controls.Add(this.panel1);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSalir);
             this.pnlMenuPrincipal.Controls.Add(this.pnlSistemaSubmenu);
-            this.pnlMenuPrincipal.Controls.Add(this.btnSistema);
             this.pnlMenuPrincipal.Controls.Add(this.pnlParkingSubmenu);
             this.pnlMenuPrincipal.Controls.Add(this.btnParking);
             this.pnlMenuPrincipal.Controls.Add(this.pnlComerciosSubmenu);
@@ -90,15 +85,15 @@
             this.pnlMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
-            this.pnlMenuPrincipal.Size = new System.Drawing.Size(265, 684);
-            this.pnlMenuPrincipal.TabIndex = 0;
+            this.pnlMenuPrincipal.Size = new System.Drawing.Size(265, 450);
+            this.pnlMenuPrincipal.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCerrarSesionOK);
             this.panel1.Controls.Add(this.btnSalirOK);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 665);
+            this.panel1.Location = new System.Drawing.Point(0, 551);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 34);
             this.panel1.TabIndex = 11;
@@ -119,7 +114,6 @@
             this.btnCerrarSesionOK.TabIndex = 9;
             this.btnCerrarSesionOK.Text = "Cerrar sesión";
             this.btnCerrarSesionOK.UseVisualStyleBackColor = false;
-            this.btnCerrarSesionOK.Click += new System.EventHandler(this.btnCerrarSesionOK_Click);
             // 
             // btnSalirOK
             // 
@@ -137,14 +131,13 @@
             this.btnSalirOK.TabIndex = 10;
             this.btnSalirOK.Text = "Salir";
             this.btnSalirOK.UseVisualStyleBackColor = false;
-            this.btnSalirOK.Click += new System.EventHandler(this.btnSalirOK_Click);
             // 
             // pnlSalir
             // 
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 1007);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 1406);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -164,7 +157,6 @@
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCerrarSesion
             // 
@@ -181,57 +173,15 @@
             this.btnCerrarSesion.TabIndex = 8;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pnlSistemaSubmenu
             // 
             this.pnlSistemaSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(19)))));
-            this.pnlSistemaSubmenu.Controls.Add(this.btnUsuarios);
             this.pnlSistemaSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSistemaSubmenu.Location = new System.Drawing.Point(0, 586);
+            this.pnlSistemaSubmenu.Location = new System.Drawing.Point(0, 472);
             this.pnlSistemaSubmenu.Name = "pnlSistemaSubmenu";
             this.pnlSistemaSubmenu.Size = new System.Drawing.Size(265, 79);
             this.pnlSistemaSubmenu.TabIndex = 7;
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(265, 38);
-            this.btnUsuarios.TabIndex = 2;
-            this.btnUsuarios.Text = "        Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // btnSistema
-            // 
-            this.btnSistema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnSistema.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSistema.FlatAppearance.BorderSize = 0;
-            this.btnSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSistema.ForeColor = System.Drawing.Color.White;
-            this.btnSistema.Image = ((System.Drawing.Image)(resources.GetObject("btnSistema.Image")));
-            this.btnSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistema.Location = new System.Drawing.Point(0, 548);
-            this.btnSistema.Name = "btnSistema";
-            this.btnSistema.Size = new System.Drawing.Size(265, 38);
-            this.btnSistema.TabIndex = 6;
-            this.btnSistema.Text = "      Sistema";
-            this.btnSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistema.UseVisualStyleBackColor = false;
-            this.btnSistema.Click += new System.EventHandler(this.btnSistema_Click);
             // 
             // pnlParkingSubmenu
             // 
@@ -239,7 +189,7 @@
             this.pnlParkingSubmenu.Controls.Add(this.btnVehiculos);
             this.pnlParkingSubmenu.Controls.Add(this.btnPlayas);
             this.pnlParkingSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlParkingSubmenu.Location = new System.Drawing.Point(0, 464);
+            this.pnlParkingSubmenu.Location = new System.Drawing.Point(0, 388);
             this.pnlParkingSubmenu.Name = "pnlParkingSubmenu";
             this.pnlParkingSubmenu.Size = new System.Drawing.Size(265, 84);
             this.pnlParkingSubmenu.TabIndex = 5;
@@ -258,10 +208,9 @@
             this.btnVehiculos.Name = "btnVehiculos";
             this.btnVehiculos.Size = new System.Drawing.Size(265, 38);
             this.btnVehiculos.TabIndex = 3;
-            this.btnVehiculos.Text = "        Vehiculos";
+            this.btnVehiculos.Text = "        Egreso de vehiculo";
             this.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculos.UseVisualStyleBackColor = true;
-            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
             // 
             // btnPlayas
             // 
@@ -277,10 +226,9 @@
             this.btnPlayas.Name = "btnPlayas";
             this.btnPlayas.Size = new System.Drawing.Size(265, 38);
             this.btnPlayas.TabIndex = 2;
-            this.btnPlayas.Text = "        Playas y Estacionamientos";
+            this.btnPlayas.Text = "        Ingreso de vehiculo";
             this.btnPlayas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlayas.UseVisualStyleBackColor = true;
-            this.btnPlayas.Click += new System.EventHandler(this.btnPlayas_Click);
             // 
             // btnParking
             // 
@@ -294,14 +242,13 @@
             this.btnParking.ForeColor = System.Drawing.Color.White;
             this.btnParking.Image = ((System.Drawing.Image)(resources.GetObject("btnParking.Image")));
             this.btnParking.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParking.Location = new System.Drawing.Point(0, 426);
+            this.btnParking.Location = new System.Drawing.Point(0, 350);
             this.btnParking.Name = "btnParking";
             this.btnParking.Size = new System.Drawing.Size(265, 38);
             this.btnParking.TabIndex = 4;
             this.btnParking.Text = "      Parking";
             this.btnParking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnParking.UseVisualStyleBackColor = false;
-            this.btnParking.Click += new System.EventHandler(this.btnParking_Click);
             // 
             // pnlComerciosSubmenu
             // 
@@ -309,7 +256,7 @@
             this.pnlComerciosSubmenu.Controls.Add(this.btnArticulos);
             this.pnlComerciosSubmenu.Controls.Add(this.btnLocales);
             this.pnlComerciosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlComerciosSubmenu.Location = new System.Drawing.Point(0, 342);
+            this.pnlComerciosSubmenu.Location = new System.Drawing.Point(0, 266);
             this.pnlComerciosSubmenu.Name = "pnlComerciosSubmenu";
             this.pnlComerciosSubmenu.Size = new System.Drawing.Size(265, 84);
             this.pnlComerciosSubmenu.TabIndex = 3;
@@ -328,10 +275,9 @@
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(265, 38);
             this.btnArticulos.TabIndex = 3;
-            this.btnArticulos.Text = "        Artículos";
+            this.btnArticulos.Text = "        Reportes";
             this.btnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArticulos.UseVisualStyleBackColor = true;
-            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
             // 
             // btnLocales
             // 
@@ -347,10 +293,9 @@
             this.btnLocales.Name = "btnLocales";
             this.btnLocales.Size = new System.Drawing.Size(265, 38);
             this.btnLocales.TabIndex = 2;
-            this.btnLocales.Text = "        Locales";
+            this.btnLocales.Text = "        Listados";
             this.btnLocales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLocales.UseVisualStyleBackColor = true;
-            this.btnLocales.Click += new System.EventHandler(this.btnLocales_Click);
             // 
             // btnComercios
             // 
@@ -364,65 +309,25 @@
             this.btnComercios.ForeColor = System.Drawing.Color.White;
             this.btnComercios.Image = ((System.Drawing.Image)(resources.GetObject("btnComercios.Image")));
             this.btnComercios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComercios.Location = new System.Drawing.Point(0, 304);
+            this.btnComercios.Location = new System.Drawing.Point(0, 228);
             this.btnComercios.Name = "btnComercios";
             this.btnComercios.Size = new System.Drawing.Size(265, 38);
             this.btnComercios.TabIndex = 2;
-            this.btnComercios.Text = "      Comercios";
+            this.btnComercios.Text = "      Listado/Reportes";
             this.btnComercios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComercios.UseVisualStyleBackColor = false;
-            this.btnComercios.Click += new System.EventHandler(this.btnComercios_Click);
+            this.btnComercios.Click += new System.EventHandler(this.btnComercios_Click_1);
             // 
             // pnlClientesSubmenu
             // 
             this.pnlClientesSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(19)))));
-            this.pnlClientesSubmenu.Controls.Add(this.btnBarrios);
-            this.pnlClientesSubmenu.Controls.Add(this.btnProfesiones);
             this.pnlClientesSubmenu.Controls.Add(this.btnTarjetas);
             this.pnlClientesSubmenu.Controls.Add(this.btnABMClientes);
             this.pnlClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlClientesSubmenu.Location = new System.Drawing.Point(0, 144);
             this.pnlClientesSubmenu.Name = "pnlClientesSubmenu";
-            this.pnlClientesSubmenu.Size = new System.Drawing.Size(265, 160);
+            this.pnlClientesSubmenu.Size = new System.Drawing.Size(265, 84);
             this.pnlClientesSubmenu.TabIndex = 1;
-            // 
-            // btnBarrios
-            // 
-            this.btnBarrios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBarrios.FlatAppearance.BorderSize = 0;
-            this.btnBarrios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnBarrios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBarrios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBarrios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnBarrios.Image = ((System.Drawing.Image)(resources.GetObject("btnBarrios.Image")));
-            this.btnBarrios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBarrios.Location = new System.Drawing.Point(0, 114);
-            this.btnBarrios.Name = "btnBarrios";
-            this.btnBarrios.Size = new System.Drawing.Size(265, 38);
-            this.btnBarrios.TabIndex = 5;
-            this.btnBarrios.Text = "        Barrios";
-            this.btnBarrios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBarrios.UseVisualStyleBackColor = true;
-            this.btnBarrios.Click += new System.EventHandler(this.btnBarrios_Click);
-            // 
-            // btnProfesiones
-            // 
-            this.btnProfesiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfesiones.FlatAppearance.BorderSize = 0;
-            this.btnProfesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnProfesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfesiones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnProfesiones.Image = ((System.Drawing.Image)(resources.GetObject("btnProfesiones.Image")));
-            this.btnProfesiones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfesiones.Location = new System.Drawing.Point(0, 76);
-            this.btnProfesiones.Name = "btnProfesiones";
-            this.btnProfesiones.Size = new System.Drawing.Size(265, 38);
-            this.btnProfesiones.TabIndex = 4;
-            this.btnProfesiones.Text = "        Profesiones";
-            this.btnProfesiones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfesiones.UseVisualStyleBackColor = true;
-            this.btnProfesiones.Click += new System.EventHandler(this.btnProfesiones_Click);
             // 
             // btnTarjetas
             // 
@@ -438,10 +343,9 @@
             this.btnTarjetas.Name = "btnTarjetas";
             this.btnTarjetas.Size = new System.Drawing.Size(265, 38);
             this.btnTarjetas.TabIndex = 3;
-            this.btnTarjetas.Text = "        Tarjetas de crédito";
+            this.btnTarjetas.Text = "        Historial";
             this.btnTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTarjetas.UseVisualStyleBackColor = true;
-            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
             // 
             // btnABMClientes
             // 
@@ -457,10 +361,10 @@
             this.btnABMClientes.Name = "btnABMClientes";
             this.btnABMClientes.Size = new System.Drawing.Size(265, 38);
             this.btnABMClientes.TabIndex = 2;
-            this.btnABMClientes.Text = "        ABM Clientes";
+            this.btnABMClientes.Text = "        Ventas";
             this.btnABMClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnABMClientes.UseVisualStyleBackColor = true;
-            this.btnABMClientes.Click += new System.EventHandler(this.btnABMClientes_Click);
+            this.btnABMClientes.Click += new System.EventHandler(this.btnABMClientes_Click_1);
             // 
             // btnClientes
             // 
@@ -478,10 +382,10 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(265, 38);
             this.btnClientes.TabIndex = 1;
-            this.btnClientes.Text = "      Clientes";
+            this.btnClientes.Text = "      Ventas";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click_1);
             // 
             // pnlLogo
             // 
@@ -527,55 +431,47 @@
             this.pctLogo.TabIndex = 0;
             this.pctLogo.TabStop = false;
             // 
-            // pctLogoFondo
-            // 
-            this.pctLogoFondo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pctLogoFondo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogoFondo.Image")));
-            this.pctLogoFondo.Location = new System.Drawing.Point(99, 163);
-            this.pctLogoFondo.Name = "pctLogoFondo";
-            this.pctLogoFondo.Size = new System.Drawing.Size(350, 350);
-            this.pctLogoFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctLogoFondo.TabIndex = 1;
-            this.pctLogoFondo.TabStop = false;
-            // 
             // pnlFormularioHijo
             // 
             this.pnlFormularioHijo.Controls.Add(this.pctLogoFondo);
             this.pnlFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormularioHijo.Location = new System.Drawing.Point(265, 0);
             this.pnlFormularioHijo.Name = "pnlFormularioHijo";
-            this.pnlFormularioHijo.Size = new System.Drawing.Size(555, 684);
-            this.pnlFormularioHijo.TabIndex = 2;
+            this.pnlFormularioHijo.Size = new System.Drawing.Size(535, 450);
+            this.pnlFormularioHijo.TabIndex = 3;
             // 
-            // MenuPrincipal
+            // pctLogoFondo
+            // 
+            this.pctLogoFondo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pctLogoFondo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogoFondo.Image")));
+            this.pctLogoFondo.Location = new System.Drawing.Point(89, 46);
+            this.pctLogoFondo.Name = "pctLogoFondo";
+            this.pctLogoFondo.Size = new System.Drawing.Size(350, 350);
+            this.pctLogoFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctLogoFondo.TabIndex = 1;
+            this.pctLogoFondo.TabStop = false;
+            // 
+            // MenuPrincipalLocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(820, 684);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlFormularioHijo);
             this.Controls.Add(this.pnlMenuPrincipal);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(836, 723);
-            this.Name = "MenuPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Name = "MenuPrincipalLocal";
             this.Text = "Menu Principal";
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.pnlMenuPrincipal.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlSalir.ResumeLayout(false);
-            this.pnlSistemaSubmenu.ResumeLayout(false);
             this.pnlParkingSubmenu.ResumeLayout(false);
             this.pnlComerciosSubmenu.ResumeLayout(false);
             this.pnlClientesSubmenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogoFondo)).EndInit();
             this.pnlFormularioHijo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogoFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,17 +479,13 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMenuPrincipal;
-        private System.Windows.Forms.Panel pnlClientesSubmenu;
-        private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBarrios;
-        private System.Windows.Forms.Button btnProfesiones;
-        private System.Windows.Forms.Button btnTarjetas;
-        private System.Windows.Forms.Button btnABMClientes;
-        private System.Windows.Forms.Button btnSistema;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCerrarSesionOK;
+        private System.Windows.Forms.Button btnSalirOK;
+        private System.Windows.Forms.Panel pnlSalir;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel pnlSistemaSubmenu;
         private System.Windows.Forms.Panel pnlParkingSubmenu;
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Button btnPlayas;
@@ -602,15 +494,15 @@
         private System.Windows.Forms.Button btnArticulos;
         private System.Windows.Forms.Button btnLocales;
         private System.Windows.Forms.Button btnComercios;
-        private System.Windows.Forms.Panel pnlSistemaSubmenu;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Panel pnlSalir;
-        private System.Windows.Forms.PictureBox pctLogoFondo;
+        private System.Windows.Forms.Panel pnlClientesSubmenu;
+        private System.Windows.Forms.Button btnTarjetas;
+        private System.Windows.Forms.Button btnABMClientes;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Panel pnlLogo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Panel pnlFormularioHijo;
-        private System.Windows.Forms.Button btnSalirOK;
-        private System.Windows.Forms.Button btnCerrarSesionOK;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pctLogoFondo;
     }
 }

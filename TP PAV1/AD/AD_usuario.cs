@@ -150,6 +150,7 @@ namespace TP_PAV1.AD
                     U.UsuarioPersona = dr["usuario"].ToString();
                     U.contraseñaPersona = dr["contraseña"].ToString();
                     U.correoPersona = dr["correo"].ToString();
+                    U.idPerfil = (int)dr["idPerfil"];
                 }
 
             }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_PAV1.AD;
+using TP_PAV1.Entidades;
 
 namespace TP_PAV1
 {
@@ -44,9 +45,26 @@ namespace TP_PAV1
 
                 if (resultado)
                 {
-                    MenuPrincipal ventana = new MenuPrincipal();
-                    ventana.Show();
-                    ventana.WindowState = FormWindowState.Maximized;
+                    Usuarios U = AD_usuario.obtenerUsuarioPorNombre(nombreUsuario);
+                    if (U.idPerfil ==1)
+                    {
+                        MenuPrincipal ventana = new MenuPrincipal();
+                        ventana.Show();                      
+                    }
+                    else
+                    {
+                        if (U.idPerfil == 2)
+                        {
+                                MenuPrincipalLocal ventanaPrueba = new MenuPrincipalLocal();
+                                ventanaPrueba.Show();
+                        }
+                        else
+                        {
+
+                        }
+
+                    }
+                    
                     this.Hide();
                 }
                 else

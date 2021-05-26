@@ -12,7 +12,7 @@ namespace TP_PAV1.Entidades
         private string NombreUsu;
         private string Contraseña;
         private string Correo;
-
+        private int Perfil;
 
         public Usuarios(string usuario, string contraseña, string correo)
         {
@@ -47,6 +47,12 @@ namespace TP_PAV1.Entidades
         {
             get => Correo;
             set => Correo = value;
+        }
+
+        public int idPerfil
+        {
+            get => Perfil;
+            set => Perfil = value;
         }
     }
 }
