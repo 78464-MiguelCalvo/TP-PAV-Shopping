@@ -157,6 +157,54 @@ namespace TP_PAV1.AD
 
             return resultado;
         }
-    
+
+        public static Cliente ObtenerClienteXDNI(string nroDni)
+        {
+            Cliente Cli = new Cliente();
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "obtenerClientesPorNombre";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@nroDocumento", nroDni);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null && dr.Read())
+                {
+                    Cli.TipoDocumentoCliente = (int)dr["tipo_documento"];
+                    Cli.DocumentoCliente = dr["nro_documento"].ToString();
+                    Cli.NombreCliente = dr["nombre"].ToString();
+                    Cli.ApellidoCliente = dr["apellido"].ToString();
+                    Cli.CalleCliente = dr["calle"].ToString();
+                    Cli.NroCasaCliente =(int) dr["calle_nro"];
+                    Cli.BarrioCliente = (int)dr["id_barrio"];
+                    Cli.FechaNacimientoCliente = Convert.ToDateTime(dr["fecha_nacimiento"]);
+                    Cli.SexoCliente = (int)dr["id_sexo"];
+                    Cli.EstadoCivilCliente = (int)dr["id_estado_civil"];
+                }
+
+                return Cli;
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
     }
 }

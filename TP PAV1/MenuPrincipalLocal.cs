@@ -225,18 +225,12 @@ namespace TP_PAV1
             }
         }
 
-        private void btnSalirOK_Click(object sender, EventArgs e)
+        private void btnVentas_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resultado == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void btnABMClientes_Click_1(object sender, EventArgs e)
-        {
-
+            //nuestro codigo
+            EsconderSubmenu();
+            AbrirFormularioHijo(new FormVentas());
+            this.Text = ("BUY ALL - Ventas");
         }
     }
 }

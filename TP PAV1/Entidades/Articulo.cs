@@ -10,6 +10,7 @@ namespace TP_PAV1.Entidades
     {
         private string Articulos;
         private int ID;
+        private int Precio;
 
         public Articulo()
         {
@@ -30,6 +31,12 @@ namespace TP_PAV1.Entidades
         {
             get => ID;
             set => ID = value;
+        }
+
+        public int Precio_articulo
+        {
+            get => Precio;
+            set => Precio = value;
         }
     }
 

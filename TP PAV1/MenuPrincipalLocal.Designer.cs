@@ -48,7 +48,7 @@ namespace TP_PAV1
             this.btnComercios = new System.Windows.Forms.Button();
             this.pnlClientesSubmenu = new System.Windows.Forms.Panel();
             this.btnTarjetas = new System.Windows.Forms.Button();
-            this.btnABMClientes = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -137,7 +137,7 @@ namespace TP_PAV1
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 1406);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 1541);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -322,7 +322,7 @@ namespace TP_PAV1
             // 
             this.pnlClientesSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(19)))));
             this.pnlClientesSubmenu.Controls.Add(this.btnTarjetas);
-            this.pnlClientesSubmenu.Controls.Add(this.btnABMClientes);
+            this.pnlClientesSubmenu.Controls.Add(this.btnVentas);
             this.pnlClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlClientesSubmenu.Location = new System.Drawing.Point(0, 144);
             this.pnlClientesSubmenu.Name = "pnlClientesSubmenu";
@@ -347,24 +347,24 @@ namespace TP_PAV1
             this.btnTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTarjetas.UseVisualStyleBackColor = true;
             // 
-            // btnABMClientes
+            // btnVentas
             // 
-            this.btnABMClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnABMClientes.FlatAppearance.BorderSize = 0;
-            this.btnABMClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnABMClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnABMClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnABMClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnABMClientes.Image")));
-            this.btnABMClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnABMClientes.Location = new System.Drawing.Point(0, 0);
-            this.btnABMClientes.Name = "btnABMClientes";
-            this.btnABMClientes.Size = new System.Drawing.Size(265, 38);
-            this.btnABMClientes.TabIndex = 2;
-            this.btnABMClientes.Text = "        Ventas";
-            this.btnABMClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnABMClientes.UseVisualStyleBackColor = true;
-            this.btnABMClientes.Click += new System.EventHandler(this.btnABMClientes_Click_1);
+            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
+            this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(0, 0);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(265, 38);
+            this.btnVentas.TabIndex = 2;
+            this.btnVentas.Text = "        Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnClientes
             // 
@@ -496,7 +496,7 @@ namespace TP_PAV1
         private System.Windows.Forms.Button btnComercios;
         private System.Windows.Forms.Panel pnlClientesSubmenu;
         private System.Windows.Forms.Button btnTarjetas;
-        private System.Windows.Forms.Button btnABMClientes;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label label2;
