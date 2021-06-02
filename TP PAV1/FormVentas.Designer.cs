@@ -42,28 +42,17 @@ namespace TP_PAV1
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.grillaArticulosAgregados = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.dgvVentas = new System.Windows.Forms.DataGridView();
-            this.Nro_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nro_local = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.id_articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaArticulosAgregados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +60,7 @@ namespace TP_PAV1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(37, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 32);
             this.label1.TabIndex = 1;
@@ -80,9 +69,9 @@ namespace TP_PAV1
             // cmbLocales
             // 
             this.cmbLocales.FormattingEnabled = true;
-            this.cmbLocales.Location = new System.Drawing.Point(92, 22);
+            this.cmbLocales.Location = new System.Drawing.Point(108, 28);
             this.cmbLocales.Name = "cmbLocales";
-            this.cmbLocales.Size = new System.Drawing.Size(121, 21);
+            this.cmbLocales.Size = new System.Drawing.Size(167, 21);
             this.cmbLocales.TabIndex = 2;
             this.cmbLocales.SelectedIndexChanged += new System.EventHandler(this.cmbLocales_SelectedIndexChanged);
             // 
@@ -91,7 +80,7 @@ namespace TP_PAV1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(12, 60);
+            this.label2.Location = new System.Drawing.Point(15, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 32);
             this.label2.TabIndex = 3;
@@ -99,14 +88,14 @@ namespace TP_PAV1
             // 
             // txtNroDni
             // 
-            this.txtNroDni.Location = new System.Drawing.Point(92, 64);
+            this.txtNroDni.Location = new System.Drawing.Point(108, 66);
             this.txtNroDni.Name = "txtNroDni";
             this.txtNroDni.Size = new System.Drawing.Size(100, 20);
             this.txtNroDni.TabIndex = 4;
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(209, 63);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 64);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(55, 23);
             this.btnBuscarCliente.TabIndex = 5;
@@ -119,7 +108,7 @@ namespace TP_PAV1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(280, 60);
+            this.label3.Location = new System.Drawing.Point(293, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 32);
             this.label3.TabIndex = 6;
@@ -128,9 +117,9 @@ namespace TP_PAV1
             // txtNombreCliente
             // 
             this.txtNombreCliente.Enabled = false;
-            this.txtNombreCliente.Location = new System.Drawing.Point(356, 66);
+            this.txtNombreCliente.Location = new System.Drawing.Point(369, 64);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(187, 20);
+            this.txtNombreCliente.Size = new System.Drawing.Size(145, 20);
             this.txtNombreCliente.TabIndex = 7;
             // 
             // label4
@@ -138,7 +127,7 @@ namespace TP_PAV1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(5, 104);
+            this.label4.Location = new System.Drawing.Point(18, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 32);
             this.label4.TabIndex = 8;
@@ -147,7 +136,7 @@ namespace TP_PAV1
             // cmbArticulos
             // 
             this.cmbArticulos.FormattingEnabled = true;
-            this.cmbArticulos.Location = new System.Drawing.Point(80, 110);
+            this.cmbArticulos.Location = new System.Drawing.Point(108, 104);
             this.cmbArticulos.Name = "cmbArticulos";
             this.cmbArticulos.Size = new System.Drawing.Size(166, 21);
             this.cmbArticulos.TabIndex = 9;
@@ -158,7 +147,7 @@ namespace TP_PAV1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(-3, 131);
+            this.label5.Location = new System.Drawing.Point(10, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 32);
             this.label5.TabIndex = 10;
@@ -166,16 +155,16 @@ namespace TP_PAV1
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(80, 137);
+            this.txtCantidad.Location = new System.Drawing.Point(108, 143);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(55, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(167, 20);
             this.txtCantidad.TabIndex = 11;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(141, 137);
+            this.btnAgregar.Location = new System.Drawing.Point(353, 155);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(105, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(148, 46);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -191,130 +180,12 @@ namespace TP_PAV1
             this.Articulo,
             this.Cantidad,
             this.Precio});
-            this.grillaArticulosAgregados.Location = new System.Drawing.Point(252, 110);
+            this.grillaArticulosAgregados.Location = new System.Drawing.Point(24, 220);
             this.grillaArticulosAgregados.Name = "grillaArticulosAgregados";
             this.grillaArticulosAgregados.ReadOnly = true;
             this.grillaArticulosAgregados.RowHeadersVisible = false;
-            this.grillaArticulosAgregados.Size = new System.Drawing.Size(291, 79);
+            this.grillaArticulosAgregados.Size = new System.Drawing.Size(477, 147);
             this.grillaArticulosAgregados.TabIndex = 13;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(125, 200);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(121, 23);
-            this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(3, 200);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(116, 23);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // dgvVentas
-            // 
-            this.dgvVentas.AllowUserToAddRows = false;
-            this.dgvVentas.AllowUserToDeleteRows = false;
-            this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nro_Compra,
-            this.Nro_local,
-            this.tipo_documento,
-            this.documento,
-            this.fecha,
-            this.monto});
-            this.dgvVentas.Location = new System.Drawing.Point(10, 240);
-            this.dgvVentas.Name = "dgvVentas";
-            this.dgvVentas.ReadOnly = true;
-            this.dgvVentas.RowHeadersVisible = false;
-            this.dgvVentas.Size = new System.Drawing.Size(533, 186);
-            this.dgvVentas.TabIndex = 16;
-            // 
-            // Nro_Compra
-            // 
-            this.Nro_Compra.DataPropertyName = "nro_compra";
-            this.Nro_Compra.HeaderText = "Nro_Compra";
-            this.Nro_Compra.Name = "Nro_Compra";
-            this.Nro_Compra.ReadOnly = true;
-            this.Nro_Compra.Width = 40;
-            // 
-            // Nro_local
-            // 
-            this.Nro_local.DataPropertyName = "nro_local";
-            this.Nro_local.HeaderText = "Nro_local";
-            this.Nro_local.Name = "Nro_local";
-            this.Nro_local.ReadOnly = true;
-            // 
-            // tipo_documento
-            // 
-            this.tipo_documento.DataPropertyName = "tipo_documento";
-            this.tipo_documento.HeaderText = "tipo_documento";
-            this.tipo_documento.Name = "tipo_documento";
-            this.tipo_documento.ReadOnly = true;
-            this.tipo_documento.Width = 40;
-            // 
-            // documento
-            // 
-            this.documento.DataPropertyName = "nro_documento";
-            this.documento.HeaderText = "documento";
-            this.documento.Name = "documento";
-            this.documento.ReadOnly = true;
-            // 
-            // fecha
-            // 
-            this.fecha.DataPropertyName = "fecha_compra";
-            this.fecha.HeaderText = "fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            // 
-            // monto
-            // 
-            this.monto.DataPropertyName = "monto";
-            this.monto.HeaderText = "monto";
-            this.monto.Name = "monto";
-            this.monto.ReadOnly = true;
-            // 
-            // dgvDetalleVenta
-            // 
-            this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleVenta.Location = new System.Drawing.Point(286, 432);
-            this.dgvDetalleVenta.Name = "dgvDetalleVenta";
-            this.dgvDetalleVenta.Size = new System.Drawing.Size(257, 120);
-            this.dgvDetalleVenta.TabIndex = 17;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(163, 443);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(117, 23);
-            this.btnBorrar.TabIndex = 18;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(80, 163);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(55, 20);
-            this.txtPrecio.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(18, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 32);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Precio";
             // 
             // id_articulo
             // 
@@ -343,10 +214,48 @@ namespace TP_PAV1
             this.Precio.ReadOnly = true;
             this.Precio.Width = 70;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(306, 459);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(152, 49);
+            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(108, 459);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(138, 49);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Location = new System.Drawing.Point(108, 175);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(166, 20);
+            this.txtPrecio.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(31, 169);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 32);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Precio";
+            // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(422, 202);
+            this.textBox1.Location = new System.Drawing.Point(380, 390);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 22;
@@ -357,7 +266,7 @@ namespace TP_PAV1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(329, 196);
+            this.label7.Location = new System.Drawing.Point(267, 384);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 32);
             this.label7.TabIndex = 21;
@@ -374,9 +283,6 @@ namespace TP_PAV1
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.dgvDetalleVenta);
-            this.Controls.Add(this.dgvVentas);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.grillaArticulosAgregados);
@@ -398,8 +304,6 @@ namespace TP_PAV1
             this.Text = "FormVentas";
             this.Load += new System.EventHandler(this.FormVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaArticulosAgregados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,17 +326,8 @@ namespace TP_PAV1
         private System.Windows.Forms.DataGridView grillaArticulosAgregados;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DataGridView dgvVentas;
-        private System.Windows.Forms.DataGridView dgvDetalleVenta;
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nro_Compra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nro_local;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_articulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Articulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;

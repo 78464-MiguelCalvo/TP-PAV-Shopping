@@ -26,15 +26,12 @@ namespace TP_PAV1
         private void FormVentas_Load(object sender, EventArgs e)
         {
             CargarComboLocales();
-            CargarGrillaVentas();
             
         }
 
         Cliente Cli = new Cliente();
-        private void CargarGrillaVentas()
-        {
-            dgvVentas.DataSource = AD_Ventas.obtenerListadoVentas();
-        }
+
+
 
 
 
@@ -139,7 +136,6 @@ namespace TP_PAV1
             {
                 MessageBox.Show("error");
             }
-            CargarGrillaVentas();
         }
 
         private int ObtenerUltimaIdCompra()
