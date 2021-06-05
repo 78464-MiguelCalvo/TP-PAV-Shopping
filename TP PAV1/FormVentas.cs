@@ -17,7 +17,8 @@ namespace TP_PAV1
         bool ban = false;
         bool ban2 = false;
         Articulo art = new Articulo();
-
+        int monto = 0;
+       
         public FormVentas()
         {
             InitializeComponent();
@@ -84,9 +85,13 @@ namespace TP_PAV1
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            cmbLocales.Enabled = false;
+            txtNroDni.Enabled = false;
             string nomArticulo = art.NombreArticulo;
             int cantidad = Convert.ToInt32(txtCantidad.Text);
             int precio = Convert.ToInt32(txtPrecio.Text);
+            monto = monto + (cantidad * precio);
+            txtMontoTotal.Text = monto.ToString();
 
             // Fila nueva
             DataGridViewRow fila = new DataGridViewRow();
@@ -126,11 +131,14 @@ namespace TP_PAV1
                 ListaArticulos.Add(int.Parse(grillaArticulosAgregados.Rows[i].Cells[0].Value.ToString()));
             }
 
-            bool resultado = AD_Ventas.altaNuevaCompra(ObtenerUltimaIdCompra(),(int)cmbLocales.SelectedValue,Cli.TipoDocumentoCliente,Cli.DocumentoCliente,DateTime.Now,(Convert.ToInt32(txtCantidad.Text)*Convert.ToInt32(txtPrecio.Text)),ListaArticulos,Convert.ToInt32(txtCantidad.Text));
+
+            bool resultado = AD_Ventas.altaNuevaCompra(ObtenerUltimaIdCompra(),(int)cmbLocales.SelectedValue,Cli.TipoDocumentoCliente,Cli.DocumentoCliente,DateTime.Now,monto,ListaArticulos,Convert.ToInt32(txtCantidad.Text));
 
             if (resultado)
             {
                 MessageBox.Show("Completado!");
+                monto = 0;
+                LimpiarCampos();
             }
             else
             {
@@ -152,6 +160,23 @@ namespace TP_PAV1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void LimpiarCampos()
+        {
+            cmbLocales.SelectedIndex = -1;
+            txtNroDni.Text = "";
+            txtNombreCliente.Text = "";
+            cmbArticulos.SelectedIndex = -1;
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
+            grillaArticulosAgregados.Rows.Clear();
+            cmbLocales.Enabled = true;
+            txtNroDni.Enabled = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

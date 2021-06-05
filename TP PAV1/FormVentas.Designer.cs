@@ -50,7 +50,7 @@ namespace TP_PAV1
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaArticulosAgregados)).BeginInit();
             this.SuspendLayout();
@@ -232,6 +232,7 @@ namespace TP_PAV1
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtPrecio
             // 
@@ -252,14 +253,14 @@ namespace TP_PAV1
             this.label6.TabIndex = 20;
             this.label6.Text = "Precio";
             // 
-            // textBox1
+            // txtMontoTotal
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(380, 390);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtMontoTotal.Enabled = false;
+            this.txtMontoTotal.Location = new System.Drawing.Point(380, 390);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(121, 20);
+            this.txtMontoTotal.TabIndex = 22;
+            this.txtMontoTotal.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
@@ -279,7 +280,7 @@ namespace TP_PAV1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(555, 684);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPrecio);
@@ -332,7 +333,7 @@ namespace TP_PAV1
         private System.Windows.Forms.DataGridViewTextBoxColumn Articulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMontoTotal;
         private System.Windows.Forms.Label label7;
     }
 }
