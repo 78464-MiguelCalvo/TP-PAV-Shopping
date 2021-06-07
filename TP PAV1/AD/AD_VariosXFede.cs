@@ -20,7 +20,8 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "INSERT INTO clientes (tipo_documento, nro_documento, nombre, apellido, calle, calle_nro, id_barrio,fecha_Nacimiento, id_Sexo, id_estado_civil) VALUES(@tipo_documento, @nroDocumento, @nombre, @apellido,  @calle, @calle_nro, @id_barrio, @fechaNacimiento, @idSexo, @id_estado_civil)";
+                //string consulta = "INSERT INTO clientes (tipo_documento, nro_documento, nombre, apellido, calle, calle_nro, id_barrio,fecha_Nacimiento, id_Sexo, id_estado_civil) VALUES(@tipo_documento, @nroDocumento, @nombre, @apellido,  @calle, @calle_nro, @id_barrio, @fechaNacimiento, @idSexo, @id_estado_civil)";
+                string consulta = "InsertarCliente";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@tipo_documento", cli.TipoDocumentoCliente);
                 cmd.Parameters.AddWithValue("@nroDocumento", cli.DocumentoCliente);
@@ -33,7 +34,7 @@ namespace TP_PAV1.AD
                 cmd.Parameters.AddWithValue("@idSexo", cli.SexoCliente);
                 cmd.Parameters.AddWithValue("@id_estado_civil", cli.EstadoCivilCliente);
                 
-                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
                 cn.Open();

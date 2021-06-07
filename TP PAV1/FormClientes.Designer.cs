@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,14 +57,15 @@
             this.rdBtnCasado = new System.Windows.Forms.RadioButton();
             this.rdBtnSoltero = new System.Windows.Forms.RadioButton();
             this.grdClientes = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnLimpiarDatos = new System.Windows.Forms.Button();
-            this.btnGuardarCliente = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiarDatos = new System.Windows.Forms.Button();
+            this.btnGuardarCliente = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnNuevoEstacionamiento = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,7 +80,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.label2.Location = new System.Drawing.Point(338, 9);
+            this.label2.Location = new System.Drawing.Point(167, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 24);
             this.label2.TabIndex = 4;
@@ -125,11 +127,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 104);
+            this.label4.Location = new System.Drawing.Point(72, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 20);
+            this.label4.Size = new System.Drawing.Size(114, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Fecha de nacimiento:";
+            this.label4.Text = "Fecha de nac.:";
             // 
             // txtFechaNacimiento
             // 
@@ -372,53 +374,13 @@
             this.nombre,
             this.tipoDoc,
             this.nroDoc});
-            this.grdClientes.Location = new System.Drawing.Point(404, 74);
+            this.grdClientes.Location = new System.Drawing.Point(12, 460);
             this.grdClientes.Name = "grdClientes";
             this.grdClientes.ReadOnly = true;
-            this.grdClientes.Size = new System.Drawing.Size(447, 444);
+            this.grdClientes.Size = new System.Drawing.Size(487, 212);
             this.grdClientes.TabIndex = 26;
             this.grdClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdClientes_CellClick);
             this.grdClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdClientes_CellContentClick);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(113, 474);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 44);
-            this.btnEliminar.TabIndex = 27;
-            this.btnEliminar.Text = "Eliminar Cliente";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnLimpiarDatos
-            // 
-            this.btnLimpiarDatos.Location = new System.Drawing.Point(12, 474);
-            this.btnLimpiarDatos.Name = "btnLimpiarDatos";
-            this.btnLimpiarDatos.Size = new System.Drawing.Size(75, 44);
-            this.btnLimpiarDatos.TabIndex = 28;
-            this.btnLimpiarDatos.Text = "Limpiar Datos";
-            this.btnLimpiarDatos.UseVisualStyleBackColor = true;
-            this.btnLimpiarDatos.Click += new System.EventHandler(this.btnLimpiarDatos_Click);
-            // 
-            // btnGuardarCliente
-            // 
-            this.btnGuardarCliente.Location = new System.Drawing.Point(293, 474);
-            this.btnGuardarCliente.Name = "btnGuardarCliente";
-            this.btnGuardarCliente.Size = new System.Drawing.Size(75, 44);
-            this.btnGuardarCliente.TabIndex = 27;
-            this.btnGuardarCliente.Text = "Guardar Cliente";
-            this.btnGuardarCliente.UseVisualStyleBackColor = true;
-            this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(204, 474);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 44);
-            this.btnActualizar.TabIndex = 29;
-            this.btnActualizar.Text = "Actualizar Cliente";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // apellido
             // 
@@ -450,14 +412,73 @@
             this.nroDoc.Name = "nroDoc";
             this.nroDoc.ReadOnly = true;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(424, 299);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 44);
+            this.btnEliminar.TabIndex = 27;
+            this.btnEliminar.Text = "Eliminar Cliente";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnLimpiarDatos
+            // 
+            this.btnLimpiarDatos.Location = new System.Drawing.Point(424, 383);
+            this.btnLimpiarDatos.Name = "btnLimpiarDatos";
+            this.btnLimpiarDatos.Size = new System.Drawing.Size(75, 44);
+            this.btnLimpiarDatos.TabIndex = 28;
+            this.btnLimpiarDatos.Text = "Limpiar Datos";
+            this.btnLimpiarDatos.UseVisualStyleBackColor = true;
+            this.btnLimpiarDatos.Click += new System.EventHandler(this.btnLimpiarDatos_Click);
+            // 
+            // btnGuardarCliente
+            // 
+            this.btnGuardarCliente.Location = new System.Drawing.Point(424, 153);
+            this.btnGuardarCliente.Name = "btnGuardarCliente";
+            this.btnGuardarCliente.Size = new System.Drawing.Size(75, 44);
+            this.btnGuardarCliente.TabIndex = 27;
+            this.btnGuardarCliente.Text = "Guardar Cliente";
+            this.btnGuardarCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(424, 220);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 44);
+            this.btnActualizar.TabIndex = 29;
+            this.btnActualizar.Text = "Actualizar Cliente";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnNuevoEstacionamiento
+            // 
+            this.btnNuevoEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnNuevoEstacionamiento.FlatAppearance.BorderSize = 0;
+            this.btnNuevoEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnNuevoEstacionamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoEstacionamiento.ForeColor = System.Drawing.Color.White;
+            this.btnNuevoEstacionamiento.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEstacionamiento.Image")));
+            this.btnNuevoEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoEstacionamiento.Location = new System.Drawing.Point(298, 44);
+            this.btnNuevoEstacionamiento.Name = "btnNuevoEstacionamiento";
+            this.btnNuevoEstacionamiento.Size = new System.Drawing.Size(226, 50);
+            this.btnNuevoEstacionamiento.TabIndex = 30;
+            this.btnNuevoEstacionamiento.Text = "            Nuevo estacionamiento";
+            this.btnNuevoEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoEstacionamiento.UseVisualStyleBackColor = false;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(896, 684);
+            this.ClientSize = new System.Drawing.Size(555, 684);
+            this.Controls.Add(this.btnNuevoEstacionamiento);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnLimpiarDatos);
+            this.Controls.Add(this.grdClientes);
             this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox4);
@@ -471,7 +492,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.grdClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(555, 684);
             this.Name = "FormClientes";
@@ -531,5 +551,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroDoc;
+        private System.Windows.Forms.Button btnNuevoEstacionamiento;
     }
 }

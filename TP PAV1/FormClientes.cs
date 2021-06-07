@@ -57,6 +57,8 @@ namespace TP_PAV1
             LimpiarCampos();
             btnEliminar.Enabled = false;
             btnGuardarCliente.Enabled = true;
+            cmbTipoDoc.Enabled = true;
+            txtNroDoc.Enabled = true;
 
         }
 
