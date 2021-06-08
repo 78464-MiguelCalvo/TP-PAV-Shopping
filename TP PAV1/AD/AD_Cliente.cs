@@ -11,6 +11,7 @@ namespace TP_PAV1.AD
 {
     public class AD_Cliente
     {
+        // VER SI SE ACTUALIZO LA BASE DE DATOS
         public static DataTable ObtenerTabla(string nombreTabla)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
@@ -55,10 +56,10 @@ namespace TP_PAV1.AD
             {
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "SELECT apellido, nombre, tipo_documento, nro_documento FROM clientes";
+                string consulta = "GetClientesReducido";
 
                 cmd.Parameters.Clear();
-                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
                 cn.Open();
@@ -68,8 +69,6 @@ namespace TP_PAV1.AD
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(tabla);
-
-
                 return tabla;
 
 
@@ -93,7 +92,8 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "UPDATE clientes SET nombre = @nombre, apellido = @apellido, calle = @calle, calle_nro = @calle_nro, id_barrio = @id_barrio, fecha_Nacimiento = @fechaNacimiento,  id_sexo = @idSexo,  id_estado_civil = @id_estado_civil WHERE tipo_documento = @tipo_documento AND nro_documento = @nroDocumento";
+                //string consulta = "UPDATE clientes SET nombre = @nombre, apellido = @apellido, calle = @calle, calle_nro = @calle_nro, id_barrio = @id_barrio, fecha_Nacimiento = @fechaNacimiento,  id_sexo = @idSexo,  id_estado_civil = @id_estado_civil WHERE tipo_documento = @tipo_documento AND nro_documento = @nroDocumento";
+                string consulta = "ActualizarCliente";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@tipo_documento", cli.TipoDocumentoCliente);
                 cmd.Parameters.AddWithValue("@nroDocumento", cli.DocumentoCliente);
@@ -105,7 +105,7 @@ namespace TP_PAV1.AD
                 cmd.Parameters.AddWithValue("@fechaNacimiento", cli.FechaNacimientoCliente);
                 cmd.Parameters.AddWithValue("@idSexo", cli.SexoCliente);
                 cmd.Parameters.AddWithValue("@id_estado_civil", cli.EstadoCivilCliente);
-                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
                 cn.Open();
@@ -134,11 +134,11 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "DELETE FROM clientes WHERE tipo_documento = @tipo_documento AND nro_documento = @nroDocumento";
+                string consulta = "EliminarCliente";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@tipo_documento", cli.TipoDocumentoCliente);
                 cmd.Parameters.AddWithValue("@nroDocumento", cli.DocumentoCliente);
-                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
                 cn.Open();

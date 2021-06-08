@@ -148,3 +148,4 @@ C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.csproj.GenerateR
 C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.csproj.CoreCompileInputs.cache
 C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.exe
 C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.pdb
+C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.HistorialVentas.resources

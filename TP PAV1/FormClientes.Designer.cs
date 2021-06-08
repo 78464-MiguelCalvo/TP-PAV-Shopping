@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,9 +62,8 @@
             this.nroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiarDatos = new System.Windows.Forms.Button();
-            this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnNuevoEstacionamiento = new System.Windows.Forms.Button();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -432,16 +430,6 @@
             this.btnLimpiarDatos.UseVisualStyleBackColor = true;
             this.btnLimpiarDatos.Click += new System.EventHandler(this.btnLimpiarDatos_Click);
             // 
-            // btnGuardarCliente
-            // 
-            this.btnGuardarCliente.Location = new System.Drawing.Point(424, 153);
-            this.btnGuardarCliente.Name = "btnGuardarCliente";
-            this.btnGuardarCliente.Size = new System.Drawing.Size(75, 44);
-            this.btnGuardarCliente.TabIndex = 27;
-            this.btnGuardarCliente.Text = "Guardar Cliente";
-            this.btnGuardarCliente.UseVisualStyleBackColor = true;
-            this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
-            // 
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(424, 220);
@@ -452,22 +440,15 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // btnNuevoEstacionamiento
+            // btnAgregarCliente
             // 
-            this.btnNuevoEstacionamiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnNuevoEstacionamiento.FlatAppearance.BorderSize = 0;
-            this.btnNuevoEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnNuevoEstacionamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoEstacionamiento.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoEstacionamiento.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEstacionamiento.Image")));
-            this.btnNuevoEstacionamiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoEstacionamiento.Location = new System.Drawing.Point(298, 44);
-            this.btnNuevoEstacionamiento.Name = "btnNuevoEstacionamiento";
-            this.btnNuevoEstacionamiento.Size = new System.Drawing.Size(226, 50);
-            this.btnNuevoEstacionamiento.TabIndex = 30;
-            this.btnNuevoEstacionamiento.Text = "            Nuevo estacionamiento";
-            this.btnNuevoEstacionamiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoEstacionamiento.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(424, 152);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(75, 44);
+            this.btnAgregarCliente.TabIndex = 31;
+            this.btnAgregarCliente.Text = "Agregar Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
             // 
             // FormClientes
             // 
@@ -475,11 +456,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(555, 684);
-            this.Controls.Add(this.btnNuevoEstacionamiento);
+            this.Controls.Add(this.btnAgregarCliente);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnLimpiarDatos);
             this.Controls.Add(this.grdClientes);
-            this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -545,12 +525,11 @@
         private System.Windows.Forms.DataGridView grdClientes;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnLimpiarDatos;
-        private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroDoc;
-        private System.Windows.Forms.Button btnNuevoEstacionamiento;
+        private System.Windows.Forms.Button btnAgregarCliente;
     }
 }

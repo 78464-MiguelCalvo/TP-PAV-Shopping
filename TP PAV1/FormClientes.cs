@@ -48,6 +48,7 @@ namespace TP_PAV1
 
             rdBtnSoltero.Checked = false;
             rdBtnCasado.Checked = false;
+            cmbBarrio.SelectedIndex = -1;
 
           
         }
@@ -56,7 +57,7 @@ namespace TP_PAV1
         {
             LimpiarCampos();
             btnEliminar.Enabled = false;
-            btnGuardarCliente.Enabled = true;
+            btnAgregarCliente.Enabled = true;
             cmbTipoDoc.Enabled = true;
             txtNroDoc.Enabled = true;
 
@@ -171,16 +172,16 @@ namespace TP_PAV1
             {
                 btnActualizar.Enabled = true;
                 btnEliminar.Enabled = true;
-                btnGuardarCliente.Enabled = false;
+                btnAgregarCliente.Enabled = false;
                 cmbTipoDoc.Enabled = false;
                 txtNroDoc.Enabled = false;
 
 
                 DataGridViewRow filaSeleccionada = grdClientes.Rows[indice];
                 string nroDoc = filaSeleccionada.Cells["nroDoc"].Value.ToString();
-                string tipoDoc = filaSeleccionada.Cells["tipoDoc"].Value.ToString();
+                int tipoDoc = int.Parse(filaSeleccionada.Cells["tipoDoc"].Value.ToString());
 
-                Cliente c = AD_VariosXFede.ObtenerIdClienteXDocumento(nroDoc);
+                Cliente c = AD_VariosXFede.ObtenerIdClienteXDocumento(nroDoc, tipoDoc);
 
                 LimpiarCampos();
                 CargarCampos(c);
@@ -290,7 +291,7 @@ namespace TP_PAV1
             }
             else
             {
-                MessageBox.Show("Error al actualizar Cliente");
+                MessageBox.Show("Error al eliminar el Cliente");
             }
         }
     }

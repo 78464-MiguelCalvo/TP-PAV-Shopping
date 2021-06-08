@@ -54,7 +54,7 @@ namespace TP_PAV1.AD
             return resultado;
         }
 
-        public static Cliente ObtenerIdClienteXDocumento(string nroDoc)
+        public static Cliente ObtenerIdClienteXDocumento(string nroDoc, int tipoDoc)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -62,11 +62,12 @@ namespace TP_PAV1.AD
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "SELECT * FROM clientes WHERE nro_documento like @nro_documento";
+                string consulta = "GetClientexTipoYDoc";
                 cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@tipo_documento", tipoDoc);
                 cmd.Parameters.AddWithValue("@nro_documento", nroDoc);
 
-                cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
                 cn.Open();
