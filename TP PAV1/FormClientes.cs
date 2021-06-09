@@ -256,6 +256,7 @@ namespace TP_PAV1
                
                 CargarComboTiposDocumentos();
                 btnActualizar.Enabled = false;
+                btnAgregarCliente.Enabled = true;
             }
             else
             {
@@ -288,6 +289,8 @@ namespace TP_PAV1
 
                 CargarComboTiposDocumentos();
                 btnActualizar.Enabled = false;
+                btnAgregarCliente.Enabled = true;
+                btnEliminar.Enabled = false;
             }
             else
             {
