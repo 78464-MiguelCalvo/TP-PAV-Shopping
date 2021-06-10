@@ -115,3 +115,16 @@ C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.Mod
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarArticulo.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.MenuPrincipalLocal.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormVentas.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarArticulo.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarLocal.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarUsuario.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.AgregarVehiculo.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.EliminarArticulo.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.EliminarLocal.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormVentas.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormIngresoVehiculo.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarArticulo.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarLocal.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarUsuario.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarVehiculo.resources
+C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.MenuPrincipalLocal.resources
