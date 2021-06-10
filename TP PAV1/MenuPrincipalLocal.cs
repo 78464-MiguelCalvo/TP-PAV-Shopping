@@ -242,5 +242,10 @@ namespace TP_PAV1
         {
 
         }
+
+        private void btnTarjetas_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

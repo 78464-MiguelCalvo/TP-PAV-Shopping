@@ -83,10 +83,6 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Barrio.cs" />
-    <Compile Include="ej.cs" />
-    <Compile Include="ej.Designer.cs">
-      <DependentUpon>ej.cs</DependentUpon>
-    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -237,9 +233,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ej.resx">
-      <DependentUpon>ej.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarArticulo.resx">
       <DependentUpon>EliminarArticulo.cs</DependentUpon>

@@ -127,7 +127,7 @@ namespace TP_PAV1
         {
             //nuestro codigo
             EsconderSubmenu();
-            AbrirFormularioHijo(new HistorialVentas());
+            AbrirFormularioHijo(new FormTarjetas());
             this.Text = ("BUY ALL - Tarjetas de crédito");
         }
 
