@@ -137,7 +137,7 @@ namespace TP_PAV1
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 1541);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 1676);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -346,6 +346,7 @@ namespace TP_PAV1
             this.btnTarjetas.Text = "        Historial";
             this.btnTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTarjetas.UseVisualStyleBackColor = true;
+            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click_1);
             // 
             // btnVentas
             // 

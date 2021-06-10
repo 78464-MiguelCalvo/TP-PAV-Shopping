@@ -110,6 +110,7 @@ namespace TP_PAV1
 
         private Cliente ObtenerDatosCliente()
         {
+           
             Cliente c = new Cliente();
             c.NombreCliente = txtNombre.Text.Trim();
             c.ApellidoCliente = txtApellido.Text.Trim();
@@ -147,8 +148,80 @@ namespace TP_PAV1
             return c;
         }
 
+        private string validarCampos()
+        {
+            string encabezado = "Los siguientes campos deben ser completados:\n";
+            string resultado = "";
+
+            if(txtNombre.Text == "")
+            {
+                resultado += "- Nombre\n";
+            };
+            
+            if(txtApellido.Text == "")
+            {
+                resultado += "- Apellido\n";
+            };
+           
+            if (txtFechaNacimiento.Text == "  /  /")
+            {
+                resultado += "- Fecha de nacimiento\n";
+            }
+
+            if (cmbTipoDoc.SelectedIndex == -1)
+                {
+                    resultado += "- Tipo de documento\n";
+                };
+
+            if (txtNroDoc.Text == "")
+            {
+                resultado += "- Numero de documento\n";
+            }
+
+           
+            if(!rdBtnFemenino.Checked && !rdBtnMasculino.Checked && !rdBtnOtro.Checked)
+            {
+                resultado += "- Sexo\n";
+            }
+            
+            if (cmbBarrio.SelectedIndex == -1)
+            {
+                resultado += "- Barrio\n";
+            }
+
+            if (txtCalle.Text == "")
+            {
+                resultado += "- Calle\n";
+            }
+
+            if (txtNroDomicilio.Text == "")
+            {
+                resultado += "- Numero de domicilio\n";
+            }
+         
+            if (!rdBtnSoltero.Checked && !rdBtnCasado.Checked)
+            {
+                resultado += "- Estado civil\n";
+            }
+
+            if(resultado != "")
+            {
+                encabezado += resultado;
+                resultado = encabezado;
+            }
+
+            return resultado;
+
+        }
+
         private void btnGuardarCliente_Click(object sender, EventArgs e)
         {
+            string validacionResultado = validarCampos();
+            if (validacionResultado != "")
+            {
+                MessageBox.Show(validacionResultado, "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Cliente c = ObtenerDatosCliente();
             bool resultado = AD_VariosXFede.AgregaClienteABD(c);
             if (resultado)
@@ -243,6 +316,12 @@ namespace TP_PAV1
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            string validacionResultado = validarCampos();
+            if (validacionResultado != "")
+            {
+                MessageBox.Show(validacionResultado, "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string doc = grdClientes.CurrentRow.Cells["nroDoc"].Value.ToString();
             string tipoDoc = grdClientes.CurrentRow.Cells["tipoDoc"].Value.ToString();
             Cliente cli = ObtenerDatosCliente();
