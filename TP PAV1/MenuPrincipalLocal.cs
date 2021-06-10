@@ -243,9 +243,12 @@ namespace TP_PAV1
 
         }
 
-        private void btnTarjetas_Click_1(object sender, EventArgs e)
+        private void btnHistorial_Click(object sender, EventArgs e)
         {
-
+            //nuestro codigo
+            EsconderSubmenu();
+            AbrirFormularioHijo(new HistorialVentas());
+            this.Text = ("BUY ALL - Ventas");
         }
     }
 }

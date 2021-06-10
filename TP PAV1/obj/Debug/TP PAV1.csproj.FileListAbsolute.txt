@@ -129,3 +129,4 @@ C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.Modifica
 C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.ModificarVehiculo.resources
 C:\Users\Nahuel Ebner\Desktop\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.MenuPrincipalLocal.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormIngresoVehiculo.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.HistorialVentas.resources

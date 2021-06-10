@@ -47,7 +47,7 @@ namespace TP_PAV1
             this.btnLocales = new System.Windows.Forms.Button();
             this.btnComercios = new System.Windows.Forms.Button();
             this.pnlClientesSubmenu = new System.Windows.Forms.Panel();
-            this.btnTarjetas = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -137,7 +137,7 @@ namespace TP_PAV1
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 1946);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 2081);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -324,7 +324,7 @@ namespace TP_PAV1
             // pnlClientesSubmenu
             // 
             this.pnlClientesSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(19)))));
-            this.pnlClientesSubmenu.Controls.Add(this.btnTarjetas);
+            this.pnlClientesSubmenu.Controls.Add(this.btnHistorial);
             this.pnlClientesSubmenu.Controls.Add(this.btnVentas);
             this.pnlClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlClientesSubmenu.Location = new System.Drawing.Point(0, 144);
@@ -332,24 +332,24 @@ namespace TP_PAV1
             this.pnlClientesSubmenu.Size = new System.Drawing.Size(265, 84);
             this.pnlClientesSubmenu.TabIndex = 1;
             // 
-            // btnTarjetas
+            // btnHistorial
             // 
-            this.btnTarjetas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTarjetas.FlatAppearance.BorderSize = 0;
-            this.btnTarjetas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
-            this.btnTarjetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTarjetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTarjetas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnTarjetas.Image = ((System.Drawing.Image)(resources.GetObject("btnTarjetas.Image")));
-            this.btnTarjetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTarjetas.Location = new System.Drawing.Point(0, 38);
-            this.btnTarjetas.Name = "btnTarjetas";
-            this.btnTarjetas.Size = new System.Drawing.Size(265, 38);
-            this.btnTarjetas.TabIndex = 3;
-            this.btnTarjetas.Text = "        Historial";
-            this.btnTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTarjetas.UseVisualStyleBackColor = true;
-            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click_1);
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(187)))), ((int)(((byte)(227)))));
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
+            this.btnHistorial.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorial.Image")));
+            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.Location = new System.Drawing.Point(0, 38);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(265, 38);
+            this.btnHistorial.TabIndex = 3;
+            this.btnHistorial.Text = "        Historial";
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnVentas
             // 
@@ -499,7 +499,7 @@ namespace TP_PAV1
         private System.Windows.Forms.Button btnLocales;
         private System.Windows.Forms.Button btnComercios;
         private System.Windows.Forms.Panel pnlClientesSubmenu;
-        private System.Windows.Forms.Button btnTarjetas;
+        private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Panel pnlLogo;

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AD\AD_Barrios.cs" />
     <Compile Include="AD\AD_Cliente.cs" />
+    <Compile Include="AD\AD_HistorialVentas.cs" />
     <Compile Include="AD\AD_PlayasYEstacionamientos.cs" />
     <Compile Include="AD\AD_Profesiones.cs" />
     <Compile Include="AD\AD_RegistroEstacionamiento_Ingreso.cs" />
@@ -169,6 +170,12 @@
     <Compile Include="FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialVentas.Designer.cs">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="IngresoVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialVentas.resx">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoVehiculo.resx">
       <DependentUpon>IngresoVehiculo.cs</DependentUpon>
