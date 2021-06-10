@@ -211,6 +211,7 @@ namespace TP_PAV1
             this.btnVehiculos.Text = "        Egreso de vehiculo";
             this.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculos.UseVisualStyleBackColor = true;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click_2);
             // 
             // btnPlayas
             // 

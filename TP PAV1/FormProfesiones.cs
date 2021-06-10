@@ -113,6 +113,9 @@ namespace TP_PAV1
                 MessageBox.Show("Profesion actualizada con exito");
                 LimpiarCampos();
                 CargarGrilla();
+                btnGuardar.Enabled = true;
+                btnEliminar.Enabled = false;
+                btnActualizar.Enabled = false;
 
                
                 
@@ -141,8 +144,11 @@ namespace TP_PAV1
                 MessageBox.Show("Cliente Eliminado exitosamente");
                 LimpiarCampos();
                 CargarGrilla();
+                btnGuardar.Enabled = true;
+                btnEliminar.Enabled = false;
+                btnActualizar.Enabled = false;
 
-                
+
             }
             else
             {

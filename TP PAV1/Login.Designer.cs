@@ -76,7 +76,7 @@ namespace TP_PAV1
             this.txtUsuario.Size = new System.Drawing.Size(171, 18);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Tag = "Username";
-            this.txtUsuario.Text = "Username";
+            this.txtUsuario.Text = "nahuel";
             this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
             // 
             // panel1
@@ -106,7 +106,7 @@ namespace TP_PAV1
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(171, 18);
             this.txtContraseña.TabIndex = 5;
-            this.txtContraseña.Text = "Password";
+            this.txtContraseña.Text = "ebner";
             this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
             // 
             // pictureBox3
