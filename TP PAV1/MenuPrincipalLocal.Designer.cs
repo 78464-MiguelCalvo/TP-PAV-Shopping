@@ -137,7 +137,7 @@ namespace TP_PAV1
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 1541);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 1811);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -211,6 +211,7 @@ namespace TP_PAV1
             this.btnVehiculos.Text = "        Egreso de vehiculo";
             this.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculos.UseVisualStyleBackColor = true;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click_1);
             // 
             // btnPlayas
             // 
@@ -229,6 +230,7 @@ namespace TP_PAV1
             this.btnPlayas.Text = "        Ingreso de vehiculo";
             this.btnPlayas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlayas.UseVisualStyleBackColor = true;
+            this.btnPlayas.Click += new System.EventHandler(this.btnPlayas_Click);
             // 
             // btnParking
             // 
@@ -249,6 +251,7 @@ namespace TP_PAV1
             this.btnParking.Text = "      Parking";
             this.btnParking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnParking.UseVisualStyleBackColor = false;
+            this.btnParking.Click += new System.EventHandler(this.btnParking_Click);
             // 
             // pnlComerciosSubmenu
             // 

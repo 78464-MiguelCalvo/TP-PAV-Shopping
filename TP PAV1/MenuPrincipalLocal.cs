@@ -165,7 +165,7 @@ namespace TP_PAV1
         {
             //nuestro codigo
             EsconderSubmenu();
-            AbrirFormularioHijo(new FormPlayas());
+            AbrirFormularioHijo(new FormIngresoVehiculo());
             this.Text = ("BUY ALL - Playas y Estacionamiento");
         }
 
@@ -231,6 +231,11 @@ namespace TP_PAV1
             EsconderSubmenu();
             AbrirFormularioHijo(new FormVentas());
             this.Text = ("BUY ALL - Ventas");
+        }
+
+        private void btnVehiculos_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
