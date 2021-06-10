@@ -42,16 +42,16 @@ namespace TP_PAV1
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.grillaArticulosAgregados = new System.Windows.Forms.DataGridView();
-            this.id_articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMontoTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.id_articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaArticulosAgregados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,12 +95,14 @@ namespace TP_PAV1
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 64);
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnBuscarCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(220, 62);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(55, 23);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(78, 26);
             this.btnBuscarCliente.TabIndex = 5;
             this.btnBuscarCliente.Text = "Buscar";
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // label3
@@ -108,18 +110,18 @@ namespace TP_PAV1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(293, 60);
+            this.label3.Location = new System.Drawing.Point(304, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 32);
+            this.label3.Size = new System.Drawing.Size(74, 32);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Nombre";
+            this.label3.Text = "Nombre:";
             // 
             // txtNombreCliente
             // 
             this.txtNombreCliente.Enabled = false;
-            this.txtNombreCliente.Location = new System.Drawing.Point(369, 64);
+            this.txtNombreCliente.Location = new System.Drawing.Point(374, 66);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(145, 20);
+            this.txtNombreCliente.Size = new System.Drawing.Size(120, 20);
             this.txtNombreCliente.TabIndex = 7;
             // 
             // label4
@@ -138,7 +140,7 @@ namespace TP_PAV1
             this.cmbArticulos.FormattingEnabled = true;
             this.cmbArticulos.Location = new System.Drawing.Point(108, 104);
             this.cmbArticulos.Name = "cmbArticulos";
-            this.cmbArticulos.Size = new System.Drawing.Size(166, 21);
+            this.cmbArticulos.Size = new System.Drawing.Size(190, 21);
             this.cmbArticulos.TabIndex = 9;
             this.cmbArticulos.SelectedIndexChanged += new System.EventHandler(this.cmbArticulos_SelectedIndexChanged);
             // 
@@ -157,17 +159,19 @@ namespace TP_PAV1
             // 
             this.txtCantidad.Location = new System.Drawing.Point(108, 143);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(167, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(190, 20);
             this.txtCantidad.TabIndex = 11;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(353, 155);
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregar.Location = new System.Drawing.Point(374, 156);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(148, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(137, 45);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // grillaArticulosAgregados
@@ -180,12 +184,76 @@ namespace TP_PAV1
             this.Articulo,
             this.Cantidad,
             this.Precio});
-            this.grillaArticulosAgregados.Location = new System.Drawing.Point(24, 220);
+            this.grillaArticulosAgregados.Location = new System.Drawing.Point(37, 219);
             this.grillaArticulosAgregados.Name = "grillaArticulosAgregados";
             this.grillaArticulosAgregados.ReadOnly = true;
             this.grillaArticulosAgregados.RowHeadersVisible = false;
-            this.grillaArticulosAgregados.Size = new System.Drawing.Size(477, 147);
+            this.grillaArticulosAgregados.Size = new System.Drawing.Size(474, 155);
             this.grillaArticulosAgregados.TabIndex = 13;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(110)))), ((int)(((byte)(204)))));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGuardar.Location = new System.Drawing.Point(263, 459);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(190, 49);
+            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(50, 459);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(192, 49);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Location = new System.Drawing.Point(108, 181);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(31, 175);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 32);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Precio";
+            // 
+            // txtMontoTotal
+            // 
+            this.txtMontoTotal.Enabled = false;
+            this.txtMontoTotal.Location = new System.Drawing.Point(134, 396);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(134, 20);
+            this.txtMontoTotal.TabIndex = 22;
+            this.txtMontoTotal.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(31, 390);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 32);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Monto total:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // id_articulo
             // 
@@ -205,74 +273,12 @@ namespace TP_PAV1
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 60;
             // 
             // Precio
             // 
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
-            this.Precio.Width = 70;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(306, 459);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(152, 49);
-            this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(108, 459);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(138, 49);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(108, 175);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(166, 20);
-            this.txtPrecio.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(31, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 32);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Precio";
-            // 
-            // txtMontoTotal
-            // 
-            this.txtMontoTotal.Enabled = false;
-            this.txtMontoTotal.Location = new System.Drawing.Point(380, 390);
-            this.txtMontoTotal.Name = "txtMontoTotal";
-            this.txtMontoTotal.Size = new System.Drawing.Size(121, 20);
-            this.txtMontoTotal.TabIndex = 22;
-            this.txtMontoTotal.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(267, 384);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 32);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Monto total:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // FormVentas
             // 
@@ -329,11 +335,11 @@ namespace TP_PAV1
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtMontoTotal;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_articulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Articulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.TextBox txtMontoTotal;
-        private System.Windows.Forms.Label label7;
     }
 }

@@ -110,6 +110,10 @@ namespace TP_PAV1
             celdaPrecio.Value = cantidad * precio;
             fila.Cells.Add(celdaPrecio);
             grillaArticulosAgregados.Rows.Add(fila);
+
+            cmbArticulos.SelectedIndex = -1;
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
         }
 
         private void cmbArticulos_SelectedIndexChanged(object sender, EventArgs e)
@@ -172,6 +176,7 @@ namespace TP_PAV1
             grillaArticulosAgregados.Rows.Clear();
             cmbLocales.Enabled = true;
             txtNroDni.Enabled = true;
+            txtMontoTotal.Text = "";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
