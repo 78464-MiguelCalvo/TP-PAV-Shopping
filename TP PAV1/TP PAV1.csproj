@@ -51,6 +51,7 @@
     <Compile Include="AD\AD_Cliente.cs" />
     <Compile Include="AD\AD_PlayasYEstacionamientos.cs" />
     <Compile Include="AD\AD_Profesiones.cs" />
+    <Compile Include="AD\AD_RegistroEstacionamiento.cs" />
     <Compile Include="AD\AD_Tarjetas.cs" />
     <Compile Include="AD\AD_usuario.cs" />
     <Compile Include="AD\AD_Varios.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Entidades\Articulo.cs" />
     <Compile Include="Entidades\Compra.cs" />
     <Compile Include="Entidades\Local.cs" />
+    <Compile Include="Entidades\RegistroEstacionamiento.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Entidades\Vehiculo.cs" />
     <Compile Include="Entidades\VehiculoXCliente.cs" />
@@ -156,11 +158,11 @@
     <Compile Include="FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVehiculos.cs">
+    <Compile Include="FormRegistroEgresos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVehiculos.Designer.cs">
-      <DependentUpon>FormVehiculos.cs</DependentUpon>
+    <Compile Include="FormRegistroEgresos.Designer.cs">
+      <DependentUpon>FormRegistroEgresos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVentas.cs">
       <SubType>Form</SubType>
@@ -260,8 +262,8 @@
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVehiculos.resx">
-      <DependentUpon>FormVehiculos.cs</DependentUpon>
+    <EmbeddedResource Include="FormRegistroEgresos.resx">
+      <DependentUpon>FormRegistroEgresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>

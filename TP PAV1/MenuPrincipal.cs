@@ -175,8 +175,8 @@ namespace TP_PAV1
         {
             //nuestro codigo
             EsconderSubmenu();
-            AbrirFormularioHijo(new FormVehiculos());
-            this.Text = ("BUY ALL - Vehículos");
+            //AbrirFormularioHijo(new FormVehiculos());
+            this.Text = ("BUY ALL - Registro Egresos");
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -234,6 +234,11 @@ namespace TP_PAV1
             {
                 this.Close();
             }
+        }
+
+        private void pnlFormularioHijo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

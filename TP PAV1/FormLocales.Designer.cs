@@ -36,10 +36,10 @@
             this.modificarLocal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.grillaLocales = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Label();
             this.nombreLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_tipo_comercios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buscarLocal = new System.Windows.Forms.TextBox();
@@ -141,21 +141,7 @@
             this.grillaLocales.RowTemplate.Height = 24;
             this.grillaLocales.Size = new System.Drawing.Size(704, 336);
             this.grillaLocales.TabIndex = 9;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.AutoSize = true;
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.btnActualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActualizar.Location = new System.Drawing.Point(12, 692);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(132, 22);
-            this.btnActualizar.TabIndex = 15;
-            this.btnActualizar.Text = "Actualizar datos";
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.grillaLocales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaLocales_CellContentClick);
             // 
             // nombreLocal
             // 
@@ -180,6 +166,21 @@
             this.nombre_tipo_comercios.MinimumWidth = 6;
             this.nombre_tipo_comercios.Name = "nombre_tipo_comercios";
             this.nombre_tipo_comercios.Width = 139;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.AutoSize = true;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
+            this.btnActualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnActualizar.Location = new System.Drawing.Point(12, 692);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(132, 22);
+            this.btnActualizar.TabIndex = 15;
+            this.btnActualizar.Text = "Actualizar datos";
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label3
             // 

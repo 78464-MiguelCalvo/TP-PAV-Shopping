@@ -135,5 +135,10 @@ namespace TP_PAV1
         {
             cargarGrilla();
         }
+
+        private void grillaLocales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
