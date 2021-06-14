@@ -267,6 +267,11 @@
       <DependentUpon>TablasTPShopping.xsd</DependentUpon>
     </Compile>
     <Compile Include="Tarjeta_credito.cs" />
+    <Compile Include="VehiculosPorModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarArticulo.resx">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +390,17 @@
     </None>
     <None Include="TablasTPShopping.xss">
       <DependentUpon>TablasTPShopping.xsd</DependentUpon>
+    </None>
+    <None Include="VehiculosPorModelo.xsc">
+      <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
+    </None>
+    <None Include="VehiculosPorModelo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehiculosPorModelo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VehiculosPorModelo.xss">
+      <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
