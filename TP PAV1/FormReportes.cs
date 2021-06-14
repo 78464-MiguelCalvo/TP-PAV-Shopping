@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_PAV1.AD;
 
 namespace TP_PAV1
 {
@@ -41,6 +43,24 @@ namespace TP_PAV1
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void reportViewer8_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reportViewer7_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.obtenerVentasPorArticulo();
+
+            ReportDataSource ds = new ReportDataSource("ProcedimientoVentasXArticulo", tabla);
+
+            DataSet dts = new DataSet();
+            reportViewer7.LocalReport.DataSources.Clear();
+            reportViewer7.LocalReport.DataSources.Add(ds);
+            reportViewer7.LocalReport.Refresh();
         }
     }
 }
