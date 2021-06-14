@@ -245,5 +245,21 @@ namespace TP_PAV1
             AbrirFormularioHijo(new HistorialVentas());
             this.Text = ("BUY ALL - Ventas");
         }
+
+        private void btnListados_Click(object sender, EventArgs e)
+        {
+            //nuestro codigo
+            EsconderSubmenu();
+            AbrirFormularioHijo(new FormReportes());
+            this.Text = ("BUY ALL - Ventas");
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            //nuestro codigo
+            EsconderSubmenu();
+            AbrirFormularioHijo(new HistorialVentas());
+            this.Text = ("BUY ALL - Ventas");
+        }
     }
 }
