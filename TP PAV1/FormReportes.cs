@@ -41,7 +41,14 @@ namespace TP_PAV1
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
+            DataTable tabla = new DataTable();
+            tabla = AD.AD_Profesiones.obtenerCantClienteXProfesion();
 
+            ReportDataSource ds = new ReportDataSource("ClientesXProfesiones", tabla);
+
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(ds);
+            reportViewer1.LocalReport.Refresh();
         }
 
         private void reportViewer2_Load(object sender, EventArgs e)

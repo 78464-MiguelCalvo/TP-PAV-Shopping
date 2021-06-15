@@ -103,6 +103,14 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Barrio.cs" />
+    <Compile Include="CantClientesXProfesiones.cs">
+      <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CantClientesXProfesiones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -370,6 +378,17 @@
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorTarjeta.rdlc" />
+    <None Include="CantClientesXProfesiones.xsc">
+      <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
+    </None>
+    <None Include="CantClientesXProfesiones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CantClientesXProfesiones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CantClientesXProfesiones.xss">
+      <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
