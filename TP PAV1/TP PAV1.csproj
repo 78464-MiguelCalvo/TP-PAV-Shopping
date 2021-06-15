@@ -103,10 +103,25 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Barrio.cs" />
+    <Compile Include="BD3K7G12_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K7G12_2021DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G12_2021DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetVentasPorProducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetVentasPorProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetVentasPorX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVentasPorX.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
@@ -375,6 +390,28 @@
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorTarjeta.rdlc" />
+    <None Include="BD3K7G12_2021DataSet.xsc">
+      <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G12_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G12_2021DataSet.xss">
+      <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet1.xsc">
+      <DependentUpon>BD3K7G12_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G12_2021DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G12_2021DataSet1.xss">
+      <DependentUpon>BD3K7G12_2021DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="DataSetVentasPorProducto.xsc">
       <DependentUpon>DataSetVentasPorProducto.xsd</DependentUpon>
     </None>
@@ -385,6 +422,17 @@
     </None>
     <None Include="DataSetVentasPorProducto.xss">
       <DependentUpon>DataSetVentasPorProducto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetVentasPorX.xsc">
+      <DependentUpon>DataSetVentasPorX.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetVentasPorX.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVentasPorX.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetVentasPorX.xss">
+      <DependentUpon>DataSetVentasPorX.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="ProcedimientosAlmacenados.xsc">

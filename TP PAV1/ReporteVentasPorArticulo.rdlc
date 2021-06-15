@@ -11,7 +11,7 @@
               <TextRun>
                 <Value>Ventas por Articulo</Value>
                 <Style>
-                  <FontSize>15pt</FontSize>
+                  <FontSize>25pt</FontSize>
                   <Color>MidnightBlue</Color>
                 </Style>
               </TextRun>
@@ -29,10 +29,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.42842cm</Top>
-        <Left>5.84412cm</Left>
-        <Height>0.73229cm</Height>
-        <Width>4.56375cm</Width>
+        <Top>0.28731cm</Top>
+        <Left>4.40183cm</Left>
+        <Height>1.12916cm</Height>
+        <Width>7.81812cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -44,10 +44,9 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>1.19599cm</Top>
-        <Left>5.84412cm</Left>
+        <Top>1.41647cm</Top>
         <Height>0cm</Height>
-        <Width>4.56375cm</Width>
+        <Width>16.51cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -60,15 +59,15 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.90771cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.90771cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.81167cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -80,7 +79,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Articulo</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>15pt</FontSize>
+                                <Color>MidnightBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -110,7 +112,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Vendidos</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>15pt</FontSize>
+                                <Color>MidnightBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -133,7 +138,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.81167cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -217,9 +222,9 @@
         </TablixRowHierarchy>
         <DataSetName>ProcedimientoVentasXArticulo</DataSetName>
         <Top>2.24578cm</Top>
-        <Left>3.43641cm</Left>
-        <Height>1.2cm</Height>
-        <Width>5cm</Width>
+        <Left>2.96016cm</Left>
+        <Height>1.62333cm</Height>
+        <Width>9.81542cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -231,8 +236,49 @@
     <Height>4.08333in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.57675in</Width>
   <Page>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>1.13454cm</Top>
+          <Left>13.25245cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
