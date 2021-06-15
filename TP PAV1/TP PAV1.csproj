@@ -68,6 +68,7 @@
     <Compile Include="AD\AD_Barrios.cs" />
     <Compile Include="AD\AD_Cliente.cs" />
     <Compile Include="AD\AD_HistorialVentas.cs" />
+    <Compile Include="AD\AD_Locales.cs" />
     <Compile Include="AD\AD_PlayasYEstacionamientos.cs" />
     <Compile Include="AD\AD_Profesiones.cs" />
     <Compile Include="AD\AD_RegistroEstacionamiento_Ingreso.cs" />
@@ -103,6 +104,11 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Barrio.cs" />
+    <Compile Include="BD3K7G12_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -365,6 +371,17 @@
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorTarjeta.rdlc" />
+    <None Include="BD3K7G12_2021DataSet.xsc">
+      <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G12_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G12_2021DataSet.xss">
+      <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
