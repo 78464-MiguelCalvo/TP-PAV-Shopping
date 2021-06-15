@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_PAV1.AD;
 
 namespace TP_PAV1
 {
@@ -63,5 +64,32 @@ namespace TP_PAV1
             reportViewer2.LocalReport.Refresh();
 
         }
+
+        private void reportViewer8_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.obtenerVentasPorCliente();
+
+            ReportDataSource ds = new ReportDataSource("ProcedimientosAlmacenados", tabla);
+
+            //DataSet dts = new DataSet();
+            reportViewer8.LocalReport.DataSources.Clear();
+            reportViewer8.LocalReport.DataSources.Add(ds);
+            reportViewer8.LocalReport.Refresh();
+        }
+
+        private void reportViewer7_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.obtenerVentasPorArticulo();
+        
+            ReportDataSource ds = new ReportDataSource("ProcedimientoVentasXArticulo", tabla);
+        
+            reportViewer7.LocalReport.DataSources.Clear();
+            reportViewer7.LocalReport.DataSources.Add(ds);
+            reportViewer7.LocalReport.Refresh();
+        }
+                     
+        
     }
 }
