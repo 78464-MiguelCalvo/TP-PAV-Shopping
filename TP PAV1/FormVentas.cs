@@ -112,7 +112,6 @@ namespace TP_PAV1
             grillaArticulosAgregados.Rows.Add(fila);
 
             cmbArticulos.SelectedIndex = -1;
-            txtCantidad.Text = "";
             txtPrecio.Text = "";
         }
 

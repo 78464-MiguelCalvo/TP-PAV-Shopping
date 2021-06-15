@@ -260,6 +260,11 @@
     </Compile>
     <Compile Include="Playa.cs" />
     <Compile Include="Entidades\Profesion.cs" />
+    <Compile Include="ProcedimientosVentasX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcedimientosVentasX.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MenuPrincipalLocal.cs">
@@ -377,7 +382,7 @@
     <EmbeddedResource Include="ReporteVehiculosPorMes.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
-    <EmbeddedResource Include="ReporteVentasPorTarjeta.rdlc" />
+    <EmbeddedResource Include="ReporteCantVentasPorCliente.rdlc" />
     <None Include="CantClientesXProfesiones.xsc">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </None>
@@ -390,6 +395,17 @@
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="ProcedimientosVentasX.xsc">
+      <DependentUpon>ProcedimientosVentasX.xsd</DependentUpon>
+    </None>
+    <None Include="ProcedimientosVentasX.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProcedimientosVentasX.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProcedimientosVentasX.xss">
+      <DependentUpon>ProcedimientosVentasX.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

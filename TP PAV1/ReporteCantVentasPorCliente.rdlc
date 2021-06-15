@@ -45,23 +45,23 @@
           </Border>
         </Style>
       </Line>
-      <Tablix Name="Tablix5">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>6.5349cm</Width>
+              <Width>5.97281cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.91552cm</Width>
+              <Width>4.7225cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.93073cm</Height>
+              <Height>0.81167cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox29">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -78,7 +78,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox29</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -94,7 +94,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox36">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -111,7 +111,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox36</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -128,7 +128,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.93073cm</Height>
+              <Height>0.81167cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -212,9 +212,9 @@
         </TablixRowHierarchy>
         <DataSetName>ProcedimientosAlmacenados</DataSetName>
         <Top>2.2987cm</Top>
-        <Left>2.74849cm</Left>
-        <Height>1.86146cm</Height>
-        <Width>10.45042cm</Width>
+        <Left>2.86724cm</Left>
+        <Height>1.62333cm</Height>
+        <Width>10.69531cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -226,7 +226,7 @@
     <Height>3.47917in</Height>
     <Style />
   </Body>
-  <Width>6.64942in</Width>
+  <Width>6.64943in</Width>
   <Page>
     <PageFooter>
       <Height>2.54cm</Height>
@@ -305,8 +305,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BD3K7G12_2021DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\geryo\OneDrive\Desktop\Facultad\Programacion de Aplicaciones Visuales\TP-PAV-Shopping\TP PAV1\BD3K7G12_2021DataSet1.xsd</rd:SchemaPath>
+        <rd:DataSetName>ProcedimientosVentasX</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\geryo\OneDrive\Desktop\Facultad\Programacion de Aplicaciones Visuales\TP-PAV-Shopping\TP PAV1\ProcedimientosVentasX.xsd</rd:SchemaPath>
         <rd:TableName>VentasPorCliente</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

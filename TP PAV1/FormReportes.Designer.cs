@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label2 = new System.Windows.Forms.Label();
             this.ReporteCantidadArticulosPorTipo = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -50,6 +52,9 @@
             this.reportViewer9 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.reportViewer10 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
+            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.VentasPorClienteTableAdapter = new TP_PAV1.ProcedimientosVentasXTableAdapters.VentasPorClienteTableAdapter();
             this.ReporteCantidadArticulosPorTipo.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -61,6 +66,8 @@
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -221,6 +228,7 @@
             this.reportViewer6.ServerReport.BearerToken = null;
             this.reportViewer6.Size = new System.Drawing.Size(517, 586);
             this.reportViewer6.TabIndex = 0;
+            this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
             // 
             // tabPage7
             // 
@@ -242,6 +250,7 @@
             this.reportViewer7.ServerReport.BearerToken = null;
             this.reportViewer7.Size = new System.Drawing.Size(517, 586);
             this.reportViewer7.TabIndex = 0;
+            this.reportViewer7.Load += new System.EventHandler(this.reportViewer7_Load_1);
             // 
             // tabPage8
             // 
@@ -251,18 +260,22 @@
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(523, 592);
             this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Ventas por tarjetas";
+            this.tabPage8.Text = "Cantidad de ventas por Cliente";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // reportViewer8
             // 
             this.reportViewer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorTarjeta.rdlc";
+            reportDataSource1.Name = "ProcedimientosAlmacenados";
+            reportDataSource1.Value = this.VentasPorClienteBindingSource;
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantVentasPorCliente.rdlc";
             this.reportViewer8.Location = new System.Drawing.Point(3, 3);
             this.reportViewer8.Name = "reportViewer8";
             this.reportViewer8.ServerReport.BearerToken = null;
             this.reportViewer8.Size = new System.Drawing.Size(517, 586);
             this.reportViewer8.TabIndex = 0;
+            this.reportViewer8.Load += new System.EventHandler(this.reportViewer8_Load_1);
             // 
             // tabPage9
             // 
@@ -306,6 +319,20 @@
             this.reportViewer10.Size = new System.Drawing.Size(517, 586);
             this.reportViewer10.TabIndex = 0;
             // 
+            // ProcedimientosVentasX
+            // 
+            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
+            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // VentasPorClienteBindingSource
+            // 
+            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
+            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
+            // 
+            // VentasPorClienteTableAdapter
+            // 
+            this.VentasPorClienteTableAdapter.ClearBeforeFill = true;
+            // 
             // FormReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +357,8 @@
             this.tabPage8.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +388,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer8;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer9;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer10;
+        private System.Windows.Forms.BindingSource VentasPorClienteBindingSource;
+        private ProcedimientosVentasX ProcedimientosVentasX;
+        private ProcedimientosVentasXTableAdapters.VentasPorClienteTableAdapter VentasPorClienteTableAdapter;
     }
 }

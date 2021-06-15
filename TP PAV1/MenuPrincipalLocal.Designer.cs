@@ -85,7 +85,7 @@ namespace TP_PAV1
             this.pnlMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
-            this.pnlMenuPrincipal.Size = new System.Drawing.Size(265, 450);
+            this.pnlMenuPrincipal.Size = new System.Drawing.Size(265, 684);
             this.pnlMenuPrincipal.TabIndex = 1;
             // 
             // panel1
@@ -93,7 +93,7 @@ namespace TP_PAV1
             this.panel1.Controls.Add(this.btnCerrarSesionOK);
             this.panel1.Controls.Add(this.btnSalirOK);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 551);
+            this.panel1.Location = new System.Drawing.Point(0, 650);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 34);
             this.panel1.TabIndex = 11;
@@ -137,7 +137,7 @@ namespace TP_PAV1
             this.pnlSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSalir.Controls.Add(this.btnSalir);
             this.pnlSalir.Controls.Add(this.btnCerrarSesion);
-            this.pnlSalir.Location = new System.Drawing.Point(0, 2325);
+            this.pnlSalir.Location = new System.Drawing.Point(0, 2559);
             this.pnlSalir.Name = "pnlSalir";
             this.pnlSalir.Size = new System.Drawing.Size(265, 45);
             this.pnlSalir.TabIndex = 8;
@@ -443,14 +443,14 @@ namespace TP_PAV1
             this.pnlFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormularioHijo.Location = new System.Drawing.Point(265, 0);
             this.pnlFormularioHijo.Name = "pnlFormularioHijo";
-            this.pnlFormularioHijo.Size = new System.Drawing.Size(535, 450);
+            this.pnlFormularioHijo.Size = new System.Drawing.Size(555, 684);
             this.pnlFormularioHijo.TabIndex = 3;
             // 
             // pctLogoFondo
             // 
             this.pctLogoFondo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pctLogoFondo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogoFondo.Image")));
-            this.pctLogoFondo.Location = new System.Drawing.Point(89, 46);
+            this.pctLogoFondo.Location = new System.Drawing.Point(99, 163);
             this.pctLogoFondo.Name = "pctLogoFondo";
             this.pctLogoFondo.Size = new System.Drawing.Size(350, 350);
             this.pctLogoFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -462,9 +462,10 @@ namespace TP_PAV1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(820, 684);
             this.Controls.Add(this.pnlFormularioHijo);
             this.Controls.Add(this.pnlMenuPrincipal);
+            this.MinimumSize = new System.Drawing.Size(836, 723);
             this.Name = "MenuPrincipalLocal";
             this.Text = "Menu Principal";
             this.pnlMenuPrincipal.ResumeLayout(false);

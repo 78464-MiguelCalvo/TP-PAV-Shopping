@@ -59,10 +59,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.90771cm</Width>
+              <Width>4.55052cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.90771cm</Width>
+              <Width>4.55052cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -71,7 +71,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox26">
+                    <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -88,7 +88,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox26</rd:DefaultName>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -104,7 +104,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox28">
+                    <Textbox Name="Textbox4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -121,7 +121,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -142,7 +142,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Articulo">
+                    <Textbox Name="Articulo1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -156,7 +156,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Articulo</rd:DefaultName>
+                      <rd:DefaultName>Articulo1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -172,7 +172,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Vendidos">
+                    <Textbox Name="Vendidos1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -186,7 +186,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Vendidos</rd:DefaultName>
+                      <rd:DefaultName>Vendidos1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -220,11 +220,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ProcedimientoVentasXArticulo</DataSetName>
+        <DataSetName>ProcedimientosVentas</DataSetName>
         <Top>2.24578cm</Top>
-        <Left>2.96016cm</Left>
-        <Height>1.62333cm</Height>
-        <Width>9.81542cm</Width>
+        <Left>3.55516cm</Left>
+        <Height>1.62334cm</Height>
+        <Width>9.10104cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -299,7 +299,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ProcedimientoVentasXArticulo">
+    <DataSet Name="ProcedimientosVentas">
       <Query>
         <DataSourceName>ProcedimientosAlmacenados</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -315,8 +315,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ProcedimientosAlmacenados</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\geryo\OneDrive\Desktop\Facultad\Programacion de Aplicaciones Visuales\TP-PAV-Shopping\TP PAV1\ProcedimientosAlmacenados.xsd</rd:SchemaPath>
+        <rd:DataSetName>ProcedimientosVentasX</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\geryo\OneDrive\Desktop\Facultad\Programacion de Aplicaciones Visuales\TP-PAV-Shopping\TP PAV1\ProcedimientosVentasX.xsd</rd:SchemaPath>
         <rd:TableName>VentasPorArticulo</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

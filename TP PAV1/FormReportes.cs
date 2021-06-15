@@ -27,6 +27,8 @@ namespace TP_PAV1
 
         private void FormReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ProcedimientosVentasX.VentasPorCliente' Puede moverla o quitarla según sea necesario.
+            this.VentasPorClienteTableAdapter.Fill(this.ProcedimientosVentasX.VentasPorCliente);
 
             this.reportViewer1.RefreshReport();
             this.reportViewer2.RefreshReport();
@@ -65,7 +67,25 @@ namespace TP_PAV1
 
         }
 
-        private void reportViewer8_Load(object sender, EventArgs e)
+
+        private void reportViewer6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer7_Load_1(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.obtenerVentasPorArticulo();
+
+            ReportDataSource ds = new ReportDataSource("ProcedimientosVentas", tabla);
+
+            reportViewer7.LocalReport.DataSources.Clear();
+            reportViewer7.LocalReport.DataSources.Add(ds);
+            reportViewer7.LocalReport.Refresh();
+        }
+
+        private void reportViewer8_Load_1(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
             tabla = AD_Ventas.obtenerVentasPorCliente();
@@ -77,19 +97,5 @@ namespace TP_PAV1
             reportViewer8.LocalReport.DataSources.Add(ds);
             reportViewer8.LocalReport.Refresh();
         }
-
-        private void reportViewer7_Load(object sender, EventArgs e)
-        {
-            DataTable tabla = new DataTable();
-            tabla = AD_Ventas.obtenerVentasPorArticulo();
-        
-            ReportDataSource ds = new ReportDataSource("ProcedimientoVentasXArticulo", tabla);
-        
-            reportViewer7.LocalReport.DataSources.Clear();
-            reportViewer7.LocalReport.DataSources.Add(ds);
-            reportViewer7.LocalReport.Refresh();
-        }
-                     
-        
     }
 }
