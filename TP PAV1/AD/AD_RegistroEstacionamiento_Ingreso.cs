@@ -117,6 +117,43 @@ namespace TP_PAV1.AD
             return resultado;
         }
 
-        
+        public static DataTable ObtenerEstadisticasRegistros()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT p.nombre_playa as Playa, " +
+                    "COUNT (re.patente) as Cantidad " +
+                    "FROM registro_estacionamiento re " +
+                    "INNER JOIN playa p ON re.id_playa = p.id_playa " +
+                    "GROUP BY p.nombre_playa";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

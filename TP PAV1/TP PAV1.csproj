@@ -111,6 +111,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CantIngresosPorPlaya.cs">
+      <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CantIngresosPorPlaya.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -221,6 +229,11 @@
     </Compile>
     <Compile Include="IngresoVehiculo.Designer.cs">
       <DependentUpon>IngresoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalesPorTipoLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -393,6 +406,28 @@
     </None>
     <None Include="CantClientesXProfesiones.xss">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
+    </None>
+    <None Include="CantIngresosPorPlaya.xsc">
+      <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </None>
+    <None Include="CantIngresosPorPlaya.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CantIngresosPorPlaya.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CantIngresosPorPlaya.xss">
+      <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </None>
+    <None Include="LocalesPorTipoLocal.xsc">
+      <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
+    </None>
+    <None Include="LocalesPorTipoLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalesPorTipoLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LocalesPorTipoLocal.xss">
+      <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="ProcedimientosVentasX.xsc">

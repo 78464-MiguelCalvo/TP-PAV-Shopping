@@ -67,10 +67,16 @@ namespace TP_PAV1
 
         }
 
-
         private void reportViewer6_Load(object sender, EventArgs e)
         {
+            DataTable tabla = new DataTable();
+            tabla = AD_Varios.obtenerEstadisticasLocales();
 
+            ReportDataSource ds = new ReportDataSource("DatosTiposLocal", tabla);
+
+            reportViewer6.LocalReport.DataSources.Clear();
+            reportViewer6.LocalReport.DataSources.Add(ds);
+            reportViewer6.LocalReport.Refresh();
         }
 
         private void reportViewer7_Load_1(object sender, EventArgs e)
@@ -96,6 +102,17 @@ namespace TP_PAV1
             reportViewer8.LocalReport.DataSources.Clear();
             reportViewer8.LocalReport.DataSources.Add(ds);
             reportViewer8.LocalReport.Refresh();
+        }
+
+        private void reportViewer5_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_RegistroEstacionamiento_Ingreso.ObtenerEstadisticasRegistros();
+            ReportDataSource ds = new ReportDataSource("DatosRegistrosEstacionamiento", tabla);
+
+            reportViewer5.LocalReport.DataSources.Clear();
+            reportViewer5.LocalReport.DataSources.Add(ds);
+            reportViewer5.LocalReport.Refresh();
         }
     }
 }

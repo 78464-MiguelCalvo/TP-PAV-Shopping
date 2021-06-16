@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
             this.label2 = new System.Windows.Forms.Label();
             this.ReporteCantidadArticulosPorTipo = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -52,9 +54,9 @@
             this.reportViewer9 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.reportViewer10 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
-            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VentasPorClienteTableAdapter = new TP_PAV1.ProcedimientosVentasXTableAdapters.VentasPorClienteTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
             this.ReporteCantidadArticulosPorTipo.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -66,9 +68,17 @@
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // VentasPorClienteBindingSource
+            // 
+            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
+            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
+            // 
+            // ProcedimientosVentasX
+            // 
+            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
+            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -207,6 +217,7 @@
             this.reportViewer5.ServerReport.BearerToken = null;
             this.reportViewer5.Size = new System.Drawing.Size(517, 586);
             this.reportViewer5.TabIndex = 0;
+            this.reportViewer5.Load += new System.EventHandler(this.reportViewer5_Load);
             // 
             // tabPage6
             // 
@@ -319,16 +330,6 @@
             this.reportViewer10.Size = new System.Drawing.Size(517, 586);
             this.reportViewer10.TabIndex = 0;
             // 
-            // ProcedimientosVentasX
-            // 
-            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
-            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // VentasPorClienteBindingSource
-            // 
-            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
-            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
-            // 
             // VentasPorClienteTableAdapter
             // 
             this.VentasPorClienteTableAdapter.ClearBeforeFill = true;
@@ -346,6 +347,8 @@
             this.Name = "FormReportes";
             this.Text = "FormReportes";
             this.Load += new System.EventHandler(this.FormReportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
             this.ReporteCantidadArticulosPorTipo.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -357,8 +360,6 @@
             this.tabPage8.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

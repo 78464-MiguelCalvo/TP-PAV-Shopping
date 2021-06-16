@@ -154,6 +154,45 @@ namespace TP_PAV1.AD
             }
         }
 
+        public static DataTable obtenerEstadisticasLocales()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT tl.nombre_tipo_comercios as Rubro, " +
+                    "COUNT (lo.nro_local) as Cantidad FROM locales_comerciales lo " +
+                    "INNER JOIN tipo_comercio tl ON lo.id_tipo_comercio = tl.id_tipo_comercios " +
+                    "GROUP BY tl.nombre_tipo_comercios";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public static DataTable obtenerArticulosPorLocal(int nroLocal)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaTP1"];
