@@ -27,6 +27,8 @@ namespace TP_PAV1
 
         private void FormReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'BD3K7G12_2021DataSet1.ArticulosXLocal' Puede moverla o quitarla según sea necesario.
+            this.ArticulosXLocalTableAdapter.Fill(this.BD3K7G12_2021DataSet1.ArticulosXLocal);
             // TODO: esta línea de código carga datos en la tabla 'BD3K7G12_2021DataSet.LocalesXTipoComercio' Puede moverla o quitarla según sea necesario.
             this.LocalesXTipoComercioTableAdapter.Fill(this.BD3K7G12_2021DataSet.LocalesXTipoComercio);
 
@@ -58,6 +60,18 @@ namespace TP_PAV1
             reportViewer2.LocalReport.DataSources.Add(ds);
             reportViewer2.LocalReport.Refresh();
 
+        }
+
+        private void reportViewer4_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_ArticuloXLocal.ObtenerArticuloXLocal();
+
+            ReportDataSource ds = new ReportDataSource("ArticulosXLocal", tabla);
+
+            reportViewer2.LocalReport.DataSources.Clear();
+            reportViewer2.LocalReport.DataSources.Add(ds);
+            reportViewer2.LocalReport.Refresh();
         }
     }
 }

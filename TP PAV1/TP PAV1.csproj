@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD\AD_ArticuloXLocal.cs" />
     <Compile Include="AD\AD_Barrios.cs" />
     <Compile Include="AD\AD_Cliente.cs" />
     <Compile Include="AD\AD_HistorialVentas.cs" />
@@ -108,6 +109,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K7G12_2021DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G12_2021DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
@@ -381,6 +387,17 @@
     </None>
     <None Include="BD3K7G12_2021DataSet.xss">
       <DependentUpon>BD3K7G12_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet1.xsc">
+      <DependentUpon>BD3K7G12_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G12_2021DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G12_2021DataSet1.xss">
+      <DependentUpon>BD3K7G12_2021DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
