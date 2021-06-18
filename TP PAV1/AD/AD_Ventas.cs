@@ -211,5 +211,86 @@ namespace TP_PAV1.AD
             }
         }
 
+        public static DataTable obtenerListadoLocales()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                /*string consulta = "SELECT top(5) l.nombre_comercio as Nombre, COUNT(c.nro_compra) as Cantidad " +
+                            "FROM locales_comerciales l INNER JOIN compras c " +
+                            "ON  l.nro_local = c.nro_local Group by l.nombre_comercio";
+                */
+                //string consulta = "SELECT * FROM locales_comerciales";
+
+                string consulta = "SELECT nro_local as Id, nombre_comercio as Nombre, id_tipo_comercio as Tipo  FROM locales_comerciales";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public static DataTable obtenerLocalesXMayorCompras()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT top(5) l.nombre_comercio as Nombre, COUNT(c.nro_compra) as Cantidad " +
+                            "FROM locales_comerciales l INNER JOIN compras c " +
+                            "ON  l.nro_local = c.nro_local Group by l.nombre_comercio";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
     }
 }

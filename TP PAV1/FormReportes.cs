@@ -27,6 +27,8 @@ namespace TP_PAV1
 
         private void FormReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tablasTPShopping.locales_comerciales' Puede moverla o quitarla según sea necesario.
+            this.locales_comercialesTableAdapter.Fill(this.tablasTPShopping.locales_comerciales);
             // TODO: esta línea de código carga datos en la tabla 'ProcedimientosVentasX.VentasPorCliente' Puede moverla o quitarla según sea necesario.
             this.VentasPorClienteTableAdapter.Fill(this.ProcedimientosVentasX.VentasPorCliente);
 
@@ -109,6 +111,17 @@ namespace TP_PAV1
             DataTable tabla = new DataTable();
             tabla = AD_RegistroEstacionamiento_Ingreso.ObtenerEstadisticasRegistros();
             ReportDataSource ds = new ReportDataSource("DatosRegistrosEstacionamiento", tabla);
+
+            reportViewer5.LocalReport.DataSources.Clear();
+            reportViewer5.LocalReport.DataSources.Add(ds);
+            reportViewer5.LocalReport.Refresh();
+        }
+
+        private void reportViewer9_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.obtenerListadoLocales();
+            ReportDataSource ds = new ReportDataSource("VentasXLocal", tabla);
 
             reportViewer5.LocalReport.DataSources.Clear();
             reportViewer5.LocalReport.DataSources.Add(ds);
