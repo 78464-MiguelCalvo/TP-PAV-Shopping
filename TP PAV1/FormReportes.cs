@@ -163,10 +163,31 @@ namespace TP_PAV1
             reportViewer12.LocalReport.DataSources.Add(ds);
             reportViewer12.LocalReport.Refresh();
         }
-
         private void dataSetLocalesMasVentasBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void reportViewer3_Load_1(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = ArticuloXRubro.ObtenerArticuloXRubro();
+            ReportDataSource ds = new ReportDataSource("ArticulosXRubro", tabla);
+
+            reportViewer3.LocalReport.DataSources.Clear();
+            reportViewer3.LocalReport.DataSources.Add(ds);
+            reportViewer3.LocalReport.Refresh();
+        }
+
+        private void reportViewer4_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = ArticuloXLocal.ObtenerArticuloXLocal();
+            ReportDataSource ds = new ReportDataSource("ArticulosXLocal", tabla);
+
+            reportViewer4.LocalReport.DataSources.Clear();
+            reportViewer4.LocalReport.DataSources.Add(ds);
+            reportViewer4.LocalReport.Refresh();
         }
     }
 }

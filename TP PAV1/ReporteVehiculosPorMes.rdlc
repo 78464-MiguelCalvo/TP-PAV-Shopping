@@ -48,10 +48,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.34433cm</Width>
+              <Width>3.17733cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.93417cm</Width>
+              <Width>3.09033cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -67,7 +67,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Comercio</Value>
+                              <Value>Local</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -207,11 +207,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DatosLocalesXRubro</DataSetName>
-        <Top>2.72203cm</Top>
-        <Left>2.78553cm</Left>
+        <DataSetName>ArticulosXRubro</DataSetName>
+        <Top>2.25637cm</Top>
+        <Left>3.6957cm</Left>
         <Height>1.2cm</Height>
-        <Width>8.2785cm</Width>
+        <Width>6.26766cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -236,18 +236,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="BD3K7G12_2021DataSet">
+    <DataSource Name="LocalesXTipoComercio">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5cd845d5-a162-45c7-a0be-12f2e7a6f524</rd:DataSourceID>
+      <rd:DataSourceID>2e33e05d-7ea1-466f-a852-d3e208b4fbc5</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DatosLocalesXRubro">
+    <DataSet Name="ArticulosXRubro">
       <Query>
-        <DataSourceName>BD3K7G12_2021DataSet</DataSourceName>
+        <DataSourceName>LocalesXTipoComercio</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -261,8 +261,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BD3K7G12_2021DataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\agusl\TP-PAV-Shopping\TP PAV1\BD3K7G12_2021DataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>LocalesXTipoComercio</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\agusl\TP-PAV-Shopping\TP PAV1\LocalesXTipoComercio.xsd</rd:SchemaPath>
         <rd:TableName>LocalesXTipoComercio</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

@@ -78,6 +78,8 @@
     <Compile Include="AD\AD_VariosXFede.cs" />
     <Compile Include="AD\AD_Vehiculo.cs" />
     <Compile Include="AD\AD_Ventas.cs" />
+    <Compile Include="AD\ArticuloXLocal.cs" />
+    <Compile Include="AD\ArticuloXRubro.cs" />
     <Compile Include="AgregarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +105,11 @@
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Barrio.cs" />
+    <Compile Include="BD3K7G12_2021DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G12_2021DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CantClientesXProfesiones.cs">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </Compile>
@@ -249,6 +256,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LocalesXTipoComercio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalesXTipoComercio.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -413,6 +425,17 @@
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteCantVentasPorCliente.rdlc" />
     <EmbeddedResource Include="ReporteVentasXBarrio.rdlc" />
+    <None Include="BD3K7G12_2021DataSet2.xsc">
+      <DependentUpon>BD3K7G12_2021DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G12_2021DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G12_2021DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G12_2021DataSet2.xss">
+      <DependentUpon>BD3K7G12_2021DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="CantClientesXProfesiones.xsc">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </None>
@@ -478,6 +501,17 @@
     </None>
     <None Include="LocalesPorTipoLocal.xss">
       <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
+    </None>
+    <None Include="LocalesXTipoComercio.xsc">
+      <DependentUpon>LocalesXTipoComercio.xsd</DependentUpon>
+    </None>
+    <None Include="LocalesXTipoComercio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalesXTipoComercio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LocalesXTipoComercio.xss">
+      <DependentUpon>LocalesXTipoComercio.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="ProcedimientosVentasX.xsc">
