@@ -2,45 +2,40 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.62687cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.55833cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.44708cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.83812cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Id</Value>
-                              <Style>
-                                <FontSize>15pt</FontSize>
-                                <Color>MidnightBlue</Color>
-                              </Style>
+                              <Value>Apellido</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -56,7 +51,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -64,18 +59,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nombre</Value>
-                              <Style>
-                                <FontSize>15pt</FontSize>
-                                <Color>MidnightBlue</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -91,26 +81,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="Textbox11">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tipo</Value>
-                              <Style>
-                                <FontSize>15pt</FontSize>
-                                <Color>MidnightBlue</Color>
-                              </Style>
+                              <Value>Barrio</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -131,23 +116,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nro_local">
+                    <Textbox Name="Apellido">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nro_local.Value</Value>
+                              <Value>=Fields!Apellido.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nro_local</rd:DefaultName>
+                      <rd:DefaultName>Apellido</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -163,23 +146,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nombre_comercio">
+                    <Textbox Name="Nombre">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nombre_comercio.Value</Value>
+                              <Value>=Fields!Nombre.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nombre_comercio</rd:DefaultName>
+                      <rd:DefaultName>Nombre</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -195,23 +176,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_tipo_comercio">
+                    <Textbox Name="Barrio">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_tipo_comercio.Value</Value>
+                              <Value>=Fields!Barrio.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_tipo_comercio</rd:DefaultName>
+                      <rd:DefaultName>Barrio</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -246,41 +225,52 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>VentasXLocal</DataSetName>
-        <Top>2.00766cm</Top>
-        <Left>3.03953cm</Left>
-        <Height>1.43812cm</Height>
-        <Width>7.63228cm</Width>
+        <DataSetName>ClientesXBarrio</DataSetName>
+        <Top>2.58974cm</Top>
+        <Left>2.80141cm</Left>
+        <Height>1.2cm</Height>
+        <Width>7.5cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox7">
+      <Line Name="Line1">
+        <Top>2.24578cm</Top>
+        <Height>0cm</Height>
+        <Width>16.51cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>MidnightBlue</Color>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox14">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Listado de locales</Value>
+                <Value>Listado de Clientes por barrio</Value>
                 <Style>
-                  <FontSize>24pt</FontSize>
+                  <FontSize>20pt</FontSize>
                   <Color>MidnightBlue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Left>3.03953cm</Left>
-        <Height>1.04069cm</Height>
-        <Width>7.63229cm</Width>
-        <ZIndex>1</ZIndex>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>0.58773cm</Top>
+        <Left>2.27224cm</Left>
+        <Height>1.27882cm</Height>
+        <Width>9.69667cm</Width>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -291,20 +281,8 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line1">
-        <Top>1.42557cm</Top>
-        <Height>0cm</Height>
-        <Width>16.51cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Color>MidnightBlue</Color>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>4.13542in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -325,39 +303,46 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>24b178fd-732d-46c6-9887-de03039af1a3</rd:DataSourceID>
+      <rd:DataSourceID>0793d2cb-c68e-4291-94bd-34957d234b1e</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DataSetClientesXBarrio">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>ec2fcf04-e51e-4cbf-9bc5-14067d8e0447</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="VentasXLocal">
+    <DataSet Name="ClientesXBarrio">
       <Query>
-        <DataSourceName>TablasTPShopping</DataSourceName>
+        <DataSourceName>DataSetClientesXBarrio</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="nro_local">
-          <DataField>nro_local</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="nombre_comercio">
-          <DataField>nombre_comercio</DataField>
+        <Field Name="Apellido">
+          <DataField>Apellido</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_tipo_comercio">
-          <DataField>id_tipo_comercio</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Barrio">
+          <DataField>Barrio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>TablasTPShopping</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\TablasTPShopping.xsd</rd:SchemaPath>
-        <rd:TableName>locales_comerciales</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>locales_comercialesTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>DataSetClientesXBarrio</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Federico\PAV\TP-PAV-Shopping\TP PAV1\DataSetClientesXBarrio.xsd</rd:SchemaPath>
+        <rd:TableName>TablaClientesXBarrio</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>b2951047-8f7c-4576-938e-6bce582b6f5b</rd:ReportID>
+  <rd:ReportID>08106e5d-b194-46b7-b6ae-b867f6c67439</rd:ReportID>
 </Report>

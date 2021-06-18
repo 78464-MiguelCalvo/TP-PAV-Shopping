@@ -119,6 +119,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetClientesXBarrio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClientesXBarrio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLocalesMasVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLocalesMasVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetVentasXBarrio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -361,6 +376,7 @@
     <EmbeddedResource Include="IngresoVehiculo.resx">
       <DependentUpon>IngresoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoClientes.rdlc" />
     <EmbeddedResource Include="ListadoDePlayasMasUtilizados.rdlc" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -396,6 +412,7 @@
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteCantVentasPorCliente.rdlc" />
+    <EmbeddedResource Include="ReporteVentasXBarrio.rdlc" />
     <None Include="CantClientesXProfesiones.xsc">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </None>
@@ -417,6 +434,39 @@
     </None>
     <None Include="CantIngresosPorPlaya.xss">
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClientesXBarrio.xsc">
+      <DependentUpon>DataSetClientesXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClientesXBarrio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClientesXBarrio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetClientesXBarrio.xss">
+      <DependentUpon>DataSetClientesXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLocalesMasVentas.xsc">
+      <DependentUpon>DataSetLocalesMasVentas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLocalesMasVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLocalesMasVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetLocalesMasVentas.xss">
+      <DependentUpon>DataSetLocalesMasVentas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetVentasXBarrio.xsc">
+      <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetVentasXBarrio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVentasXBarrio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetVentasXBarrio.xss">
+      <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
     </None>
     <None Include="LocalesPorTipoLocal.xsc">
       <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>

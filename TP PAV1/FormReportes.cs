@@ -42,6 +42,8 @@ namespace TP_PAV1
             this.reportViewer8.RefreshReport();
             this.reportViewer9.RefreshReport();
             this.reportViewer10.RefreshReport();
+            this.reportViewer11.RefreshReport();
+            this.reportViewer12.RefreshReport();
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
@@ -123,9 +125,48 @@ namespace TP_PAV1
             tabla = AD_Ventas.obtenerListadoLocales();
             ReportDataSource ds = new ReportDataSource("VentasXLocal", tabla);
 
-            reportViewer5.LocalReport.DataSources.Clear();
-            reportViewer5.LocalReport.DataSources.Add(ds);
-            reportViewer5.LocalReport.Refresh();
+            reportViewer9.LocalReport.DataSources.Clear();
+            reportViewer9.LocalReport.DataSources.Add(ds);
+            reportViewer9.LocalReport.Refresh();
+        }
+
+        private void reportViewer10_Load(object sender, EventArgs e)
+        {
+            
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.obtenerLocalesXMayorCompras();
+            ReportDataSource ds = new ReportDataSource("LocalesMasVenta", tabla);
+
+            reportViewer10.LocalReport.DataSources.Clear();
+            reportViewer10.LocalReport.DataSources.Add(ds);
+            reportViewer10.LocalReport.Refresh();
+        }
+
+        private void reportViewer11_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Cliente.obtenerClientesXBarrio();
+            ReportDataSource ds = new ReportDataSource("ClientesXBarrio", tabla);
+
+            reportViewer11.LocalReport.DataSources.Clear();
+            reportViewer11.LocalReport.DataSources.Add(ds);
+            reportViewer11.LocalReport.Refresh();
+        }
+
+        private void reportViewer12_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Ventas.ObtenerVentasPorBarrio();
+            ReportDataSource ds = new ReportDataSource("VentasXBarrio", tabla);
+
+            reportViewer12.LocalReport.DataSources.Clear();
+            reportViewer12.LocalReport.DataSources.Add(ds);
+            reportViewer12.LocalReport.Refresh();
+        }
+
+        private void dataSetLocalesMasVentasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
