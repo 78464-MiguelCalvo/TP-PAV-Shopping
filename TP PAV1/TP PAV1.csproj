@@ -186,6 +186,12 @@
     <Compile Include="FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListados.Designer.cs">
+      <DependentUpon>FormListados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLocales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,9 @@
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListados.resx">
+      <DependentUpon>FormListados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLocales.resx">
       <DependentUpon>FormLocales.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +391,8 @@
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gera1.rdlc" />
+    <EmbeddedResource Include="gera2.rdlc" />
     <EmbeddedResource Include="HistorialVentas.resx">
       <DependentUpon>HistorialVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +407,8 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="miguel1.rdlc" />
+    <EmbeddedResource Include="miguel2.rdlc" />
     <EmbeddedResource Include="ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +421,8 @@
     <EmbeddedResource Include="ModificarVehiculo.resx">
       <DependentUpon>ModificarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pola1.rdlc" />
+    <EmbeddedResource Include="pola2.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -419,8 +434,8 @@
     <EmbeddedResource Include="ReporteCantidadVehiculosPorMarca.rdlc" />
     <EmbeddedResource Include="ReporteComprasPorCliente.rdlc" />
     <EmbeddedResource Include="ReporteFedeCambiarNombreDespDeMerge.rdlc" />
-    <EmbeddedResource Include="ReporteGananciaPorMes.rdlc" />
-    <EmbeddedResource Include="ReporteVehiculosPorMes.rdlc" />
+    <EmbeddedResource Include="ReporteArticulosPorLocal.rdlc" />
+    <EmbeddedResource Include="ReporteArticulosPorRubro.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteCantVentasPorCliente.rdlc" />

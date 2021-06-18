@@ -27,6 +27,8 @@ namespace TP_PAV1
 
         private void FormReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'LocalesXTipoComercio.LocalesXTipoComercio' Puede moverla o quitarla según sea necesario.
+            this.LocalesXTipoComercioTableAdapter.Fill(this.LocalesXTipoComercio.LocalesXTipoComercio);
             // TODO: esta línea de código carga datos en la tabla 'tablasTPShopping.locales_comerciales' Puede moverla o quitarla según sea necesario.
             this.locales_comercialesTableAdapter.Fill(this.tablasTPShopping.locales_comerciales);
             // TODO: esta línea de código carga datos en la tabla 'ProcedimientosVentasX.VentasPorCliente' Puede moverla o quitarla según sea necesario.

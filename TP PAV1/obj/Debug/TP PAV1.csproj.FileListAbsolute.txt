@@ -530,3 +530,4 @@ C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormReportes.resources
 C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\RdlCompile.cache
 C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\RdlCompile.compiled
 C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.csproj.CopyComplete
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormListados.resources
