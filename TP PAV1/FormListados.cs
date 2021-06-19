@@ -56,5 +56,27 @@ namespace TP_PAV1
             reportViewer4.LocalReport.DataSources.Add(ds);
             reportViewer4.LocalReport.Refresh();
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Tarjetas.ObtenerTarjetasXcliente();
+            ReportDataSource ds = new ReportDataSource("TarjetasXCliente", tabla);
+
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(ds);
+            reportViewer1.LocalReport.Refresh();
+        }
+
+        private void reportViewer2_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Tarjetas.ObtenerVehiculosXcliente();
+            ReportDataSource ds = new ReportDataSource("VehiculosXCliente", tabla);
+
+            reportViewer2.LocalReport.DataSources.Clear();
+            reportViewer2.LocalReport.DataSources.Add(ds);
+            reportViewer2.LocalReport.Refresh();
+        }
     }
 }

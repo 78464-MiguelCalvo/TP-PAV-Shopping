@@ -32,7 +32,6 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dataSetLocalesMasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetLocalesMasVentas = new TP_PAV1.DataSetLocalesMasVentas();
             this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -211,14 +210,15 @@
             // 
             // reportViewer9
             // 
+            this.reportViewer9.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource2.Name = "VentasXLocal";
             reportDataSource2.Value = this.localescomercialesBindingSource;
             this.reportViewer9.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer9.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorLocal.rdlc";
-            this.reportViewer9.Location = new System.Drawing.Point(3, 203);
+            this.reportViewer9.Location = new System.Drawing.Point(3, 3);
             this.reportViewer9.Name = "reportViewer9";
             this.reportViewer9.ServerReport.BearerToken = null;
-            this.reportViewer9.Size = new System.Drawing.Size(520, 389);
+            this.reportViewer9.Size = new System.Drawing.Size(517, 586);
             this.reportViewer9.TabIndex = 0;
             this.reportViewer9.Load += new System.EventHandler(this.reportViewer9_Load);
             // 
@@ -235,14 +235,15 @@
             // 
             // reportViewer8
             // 
+            this.reportViewer8.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource3.Name = "ProcedimientosAlmacenados";
             reportDataSource3.Value = this.VentasPorClienteBindingSource;
             this.reportViewer8.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantVentasPorCliente.rdlc";
-            this.reportViewer8.Location = new System.Drawing.Point(3, 155);
+            this.reportViewer8.Location = new System.Drawing.Point(3, 3);
             this.reportViewer8.Name = "reportViewer8";
             this.reportViewer8.ServerReport.BearerToken = null;
-            this.reportViewer8.Size = new System.Drawing.Size(520, 437);
+            this.reportViewer8.Size = new System.Drawing.Size(517, 586);
             this.reportViewer8.TabIndex = 0;
             this.reportViewer8.Load += new System.EventHandler(this.reportViewer8_Load_1);
             // 
@@ -259,11 +260,12 @@
             // 
             // reportViewer7
             // 
+            this.reportViewer7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer7.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorArticulo.rdlc";
-            this.reportViewer7.Location = new System.Drawing.Point(3, 201);
+            this.reportViewer7.Location = new System.Drawing.Point(3, 3);
             this.reportViewer7.Name = "reportViewer7";
             this.reportViewer7.ServerReport.BearerToken = null;
-            this.reportViewer7.Size = new System.Drawing.Size(520, 391);
+            this.reportViewer7.Size = new System.Drawing.Size(517, 586);
             this.reportViewer7.TabIndex = 0;
             this.reportViewer7.Load += new System.EventHandler(this.reportViewer7_Load_1);
             // 
@@ -280,11 +282,12 @@
             // 
             // reportViewer6
             // 
+            this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteComprasPorCliente.rdlc";
-            this.reportViewer6.Location = new System.Drawing.Point(3, 159);
+            this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
             this.reportViewer6.ServerReport.BearerToken = null;
-            this.reportViewer6.Size = new System.Drawing.Size(520, 433);
+            this.reportViewer6.Size = new System.Drawing.Size(517, 586);
             this.reportViewer6.TabIndex = 0;
             this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
             // 
@@ -301,11 +304,12 @@
             // 
             // reportViewer5
             // 
+            this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "TP_PAV1.ListadoDePlayasMasUtilizados.rdlc";
-            this.reportViewer5.Location = new System.Drawing.Point(3, 196);
+            this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.ServerReport.BearerToken = null;
-            this.reportViewer5.Size = new System.Drawing.Size(520, 396);
+            this.reportViewer5.Size = new System.Drawing.Size(517, 586);
             this.reportViewer5.TabIndex = 0;
             this.reportViewer5.Load += new System.EventHandler(this.reportViewer5_Load);
             // 
@@ -323,7 +327,7 @@
             // reportViewer4
             // 
             this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer4.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorLocal.rdlc";
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "TP_PAV1.agus2.rdlc";
             this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
@@ -345,10 +349,7 @@
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.agus1.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
