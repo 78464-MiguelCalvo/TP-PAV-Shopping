@@ -30,33 +30,45 @@ namespace TP_PAV1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
             this.Agus1 = new System.Windows.Forms.TabControl();
             this.ArticulosPorRubro = new System.Windows.Forms.TabPage();
-            this.articulosPorLocal = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.articulosPorLocal = new System.Windows.Forms.TabPage();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Fede1 = new System.Windows.Forms.TabPage();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Fede2 = new System.Windows.Forms.TabPage();
             this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
-            this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.LocalesXTipoComercioTableAdapter = new TP_PAV1.LocalesXTipoComercioTableAdapters.LocalesXTipoComercioTableAdapter();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.LocalesXTipoComercioTableAdapter = new TP_PAV1.LocalesXTipoComercioTableAdapters.LocalesXTipoComercioTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             this.Agus1.SuspendLayout();
             this.ArticulosPorRubro.SuspendLayout();
             this.articulosPorLocal.SuspendLayout();
             this.Fede1.SuspendLayout();
             this.Fede2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // LocalesXTipoComercioBindingSource
+            // 
+            this.LocalesXTipoComercioBindingSource.DataMember = "LocalesXTipoComercio";
+            this.LocalesXTipoComercioBindingSource.DataSource = this.LocalesXTipoComercio;
+            // 
+            // LocalesXTipoComercio
+            // 
+            this.LocalesXTipoComercio.DataSetName = "LocalesXTipoComercio";
+            this.LocalesXTipoComercio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Agus1
             // 
@@ -85,8 +97,22 @@ namespace TP_PAV1
             this.ArticulosPorRubro.Padding = new System.Windows.Forms.Padding(3);
             this.ArticulosPorRubro.Size = new System.Drawing.Size(523, 548);
             this.ArticulosPorRubro.TabIndex = 0;
-            this.ArticulosPorRubro.Text = "Articulos por Rubro";
+            this.ArticulosPorRubro.Text = "Miguel1";
             this.ArticulosPorRubro.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.DocumentMapWidth = 32;
+            reportDataSource3.Name = "ArticulosXRubro";
+            reportDataSource3.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(517, 542);
+            this.reportViewer1.TabIndex = 0;
             // 
             // articulosPorLocal
             // 
@@ -96,28 +122,13 @@ namespace TP_PAV1
             this.articulosPorLocal.Padding = new System.Windows.Forms.Padding(3);
             this.articulosPorLocal.Size = new System.Drawing.Size(523, 548);
             this.articulosPorLocal.TabIndex = 1;
-            this.articulosPorLocal.Text = "Articulos por local";
+            this.articulosPorLocal.Text = "Miguel2";
             this.articulosPorLocal.UseVisualStyleBackColor = true;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.DocumentMapWidth = 32;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(517, 542);
-            this.reportViewer1.TabIndex = 0;
             // 
             // reportViewer2
             // 
-            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorLocal.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer2.Location = new System.Drawing.Point(0, 76);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
             this.reportViewer2.Size = new System.Drawing.Size(517, 542);
@@ -131,16 +142,22 @@ namespace TP_PAV1
             this.Fede1.Padding = new System.Windows.Forms.Padding(3);
             this.Fede1.Size = new System.Drawing.Size(523, 548);
             this.Fede1.TabIndex = 2;
-            this.Fede1.Text = "Fede1";
+            this.Fede1.Text = "Agus1";
             this.Fede1.UseVisualStyleBackColor = true;
             // 
             // reportViewer3
             // 
-            this.reportViewer3.Location = new System.Drawing.Point(55, 51);
+            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "ArticulosXRubro";
+            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(360, 326);
+            this.reportViewer3.Size = new System.Drawing.Size(517, 542);
             this.reportViewer3.TabIndex = 0;
+            this.reportViewer3.Load += new System.EventHandler(this.reportViewer3_Load);
             // 
             // Fede2
             // 
@@ -150,31 +167,19 @@ namespace TP_PAV1
             this.Fede2.Padding = new System.Windows.Forms.Padding(3);
             this.Fede2.Size = new System.Drawing.Size(523, 548);
             this.Fede2.TabIndex = 3;
-            this.Fede2.Text = "Fede2";
+            this.Fede2.Text = "Agus2";
             this.Fede2.UseVisualStyleBackColor = true;
             // 
             // reportViewer4
             // 
             this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorLocal.rdlc";
             this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
             this.reportViewer4.Size = new System.Drawing.Size(517, 542);
             this.reportViewer4.TabIndex = 0;
-            // 
-            // LocalesXTipoComercio
-            // 
-            this.LocalesXTipoComercio.DataSetName = "LocalesXTipoComercio";
-            this.LocalesXTipoComercio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // LocalesXTipoComercioBindingSource
-            // 
-            this.LocalesXTipoComercioBindingSource.DataMember = "LocalesXTipoComercio";
-            this.LocalesXTipoComercioBindingSource.DataSource = this.LocalesXTipoComercio;
-            // 
-            // LocalesXTipoComercioTableAdapter
-            // 
-            this.LocalesXTipoComercioTableAdapter.ClearBeforeFill = true;
+            this.reportViewer4.Load += new System.EventHandler(this.reportViewer4_Load_1);
             // 
             // tabPage1
             // 
@@ -203,8 +208,9 @@ namespace TP_PAV1
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(523, 548);
             this.tabPage3.TabIndex = 6;
-            this.tabPage3.Text = "miguel1";
+            this.tabPage3.Text = "Pola1";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
@@ -213,7 +219,7 @@ namespace TP_PAV1
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(523, 548);
             this.tabPage4.TabIndex = 7;
-            this.tabPage4.Text = "miguel2";
+            this.tabPage4.Text = "Pola2";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
@@ -223,7 +229,7 @@ namespace TP_PAV1
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(523, 548);
             this.tabPage5.TabIndex = 8;
-            this.tabPage5.Text = "pola1";
+            this.tabPage5.Text = "Fede1";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage6
@@ -233,8 +239,24 @@ namespace TP_PAV1
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(523, 548);
             this.tabPage6.TabIndex = 9;
-            this.tabPage6.Text = "pola2";
+            this.tabPage6.Text = "Fede2";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // LocalesXTipoComercioTableAdapter
+            // 
+            this.LocalesXTipoComercioTableAdapter.ClearBeforeFill = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
+            this.label2.Location = new System.Drawing.Point(233, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Listados";
             // 
             // FormListados
             // 
@@ -242,20 +264,22 @@ namespace TP_PAV1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(555, 640);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Agus1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(555, 590);
             this.Name = "FormListados";
             this.Text = "FormListados";
             this.Load += new System.EventHandler(this.FormListados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).EndInit();
             this.Agus1.ResumeLayout(false);
             this.ArticulosPorRubro.ResumeLayout(false);
             this.articulosPorLocal.ResumeLayout(false);
             this.Fede1.ResumeLayout(false);
             this.Fede2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -279,5 +303,6 @@ namespace TP_PAV1
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label2;
     }
 }

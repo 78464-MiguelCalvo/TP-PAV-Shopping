@@ -12,9 +12,9 @@ using TP_PAV1.AD;
 
 namespace TP_PAV1
 {
-    public partial class FormReportes : Form
+    public partial class FormEstadistica : Form
     {
-        public FormReportes()
+        public FormEstadistica()
         {
             InitializeComponent();
         }
@@ -27,8 +27,6 @@ namespace TP_PAV1
 
         private void FormReportes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'LocalesXTipoComercio.LocalesXTipoComercio' Puede moverla o quitarla según sea necesario.
-            this.LocalesXTipoComercioTableAdapter.Fill(this.LocalesXTipoComercio.LocalesXTipoComercio);
             // TODO: esta línea de código carga datos en la tabla 'tablasTPShopping.locales_comerciales' Puede moverla o quitarla según sea necesario.
             this.locales_comercialesTableAdapter.Fill(this.tablasTPShopping.locales_comerciales);
             // TODO: esta línea de código carga datos en la tabla 'ProcedimientosVentasX.VentasPorCliente' Puede moverla o quitarla según sea necesario.
@@ -44,8 +42,7 @@ namespace TP_PAV1
             this.reportViewer8.RefreshReport();
             this.reportViewer9.RefreshReport();
             this.reportViewer10.RefreshReport();
-            this.reportViewer11.RefreshReport();
-            this.reportViewer12.RefreshReport();
+
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
@@ -144,27 +141,6 @@ namespace TP_PAV1
             reportViewer10.LocalReport.Refresh();
         }
 
-        private void reportViewer11_Load(object sender, EventArgs e)
-        {
-            DataTable tabla = new DataTable();
-            tabla = AD_Cliente.obtenerClientesXBarrio();
-            ReportDataSource ds = new ReportDataSource("ClientesXBarrio", tabla);
-
-            reportViewer11.LocalReport.DataSources.Clear();
-            reportViewer11.LocalReport.DataSources.Add(ds);
-            reportViewer11.LocalReport.Refresh();
-        }
-
-        private void reportViewer12_Load(object sender, EventArgs e)
-        {
-            DataTable tabla = new DataTable();
-            tabla = AD_Ventas.ObtenerVentasPorBarrio();
-            ReportDataSource ds = new ReportDataSource("VentasXBarrio", tabla);
-
-            reportViewer12.LocalReport.DataSources.Clear();
-            reportViewer12.LocalReport.DataSources.Add(ds);
-            reportViewer12.LocalReport.Refresh();
-        }
         private void dataSetLocalesMasVentasBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 

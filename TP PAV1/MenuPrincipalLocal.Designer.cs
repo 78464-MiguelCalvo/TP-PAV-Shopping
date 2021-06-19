@@ -278,7 +278,7 @@ namespace TP_PAV1
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(265, 38);
             this.btnReportes.TabIndex = 3;
-            this.btnReportes.Text = "        Reportes";
+            this.btnReportes.Text = "        Listados";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
@@ -297,7 +297,7 @@ namespace TP_PAV1
             this.btnListados.Name = "btnListados";
             this.btnListados.Size = new System.Drawing.Size(265, 38);
             this.btnListados.TabIndex = 2;
-            this.btnListados.Text = "        Listados";
+            this.btnListados.Text = "        Estadisticas";
             this.btnListados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListados.UseVisualStyleBackColor = true;
             this.btnListados.Click += new System.EventHandler(this.btnListados_Click);
@@ -318,7 +318,7 @@ namespace TP_PAV1
             this.btnComercios.Name = "btnComercios";
             this.btnComercios.Size = new System.Drawing.Size(265, 38);
             this.btnComercios.TabIndex = 2;
-            this.btnComercios.Text = "      Listado/Reportes";
+            this.btnComercios.Text = "      Listado/Estadistica";
             this.btnComercios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComercios.UseVisualStyleBackColor = false;
             this.btnComercios.Click += new System.EventHandler(this.btnComercios_Click_1);

@@ -1,6 +1,6 @@
 ﻿namespace TP_PAV1
 {
-    partial class FormReportes
+    partial class FormEstadistica
     {
         /// <summary>
         /// Required designer variable.
@@ -33,20 +33,20 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
-            this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablasTPShopping = new TP_PAV1.TablasTPShopping();
             this.dataSetLocalesMasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetLocalesMasVentas = new TP_PAV1.DataSetLocalesMasVentas();
+            this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablasTPShopping = new TP_PAV1.TablasTPShopping();
+            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
+            this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
             this.TablaClientesXBarrioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSetClientesXBarrio = new TP_PAV1.DataSetClientesXBarrio();
             this.label2 = new System.Windows.Forms.Label();
             this.VentasPorClienteTableAdapter = new TP_PAV1.ProcedimientosVentasXTableAdapters.VentasPorClienteTableAdapter();
             this.locales_comercialesTableAdapter = new TP_PAV1.TablasTPShoppingTableAdapters.locales_comercialesTableAdapter();
             this.locales_comercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
-            this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LocalesXTipoComercioTableAdapter = new TP_PAV1.LocalesXTipoComercioTableAdapters.LocalesXTipoComercioTableAdapter();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.reportViewer10 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -69,17 +69,17 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ReporteCantidadArticulosPorTipo = new System.Windows.Forms.TabControl();
-            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localescomercialesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablasTPShopping)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localescomercialesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablasTPShopping)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientesXBarrioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetClientesXBarrio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locales_comercialesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             this.tabPage10.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -93,15 +93,16 @@
             this.ReporteCantidadArticulosPorTipo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // VentasPorClienteBindingSource
+            // dataSetLocalesMasVentasBindingSource
             // 
-            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
-            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
+            this.dataSetLocalesMasVentasBindingSource.DataSource = this.dataSetLocalesMasVentas;
+            this.dataSetLocalesMasVentasBindingSource.Position = 0;
+            this.dataSetLocalesMasVentasBindingSource.CurrentChanged += new System.EventHandler(this.dataSetLocalesMasVentasBindingSource_CurrentChanged);
             // 
-            // ProcedimientosVentasX
+            // dataSetLocalesMasVentas
             // 
-            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
-            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSetLocalesMasVentas.DataSetName = "DataSetLocalesMasVentas";
+            this.dataSetLocalesMasVentas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // localescomercialesBindingSource
             // 
@@ -113,16 +114,25 @@
             this.tablasTPShopping.DataSetName = "TablasTPShopping";
             this.tablasTPShopping.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataSetLocalesMasVentasBindingSource
+            // VentasPorClienteBindingSource
             // 
-            this.dataSetLocalesMasVentasBindingSource.DataSource = this.dataSetLocalesMasVentas;
-            this.dataSetLocalesMasVentasBindingSource.Position = 0;
-            this.dataSetLocalesMasVentasBindingSource.CurrentChanged += new System.EventHandler(this.dataSetLocalesMasVentasBindingSource_CurrentChanged);
+            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
+            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
             // 
-            // dataSetLocalesMasVentas
+            // ProcedimientosVentasX
             // 
-            this.dataSetLocalesMasVentas.DataSetName = "DataSetLocalesMasVentas";
-            this.dataSetLocalesMasVentas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
+            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // LocalesXTipoComercioBindingSource
+            // 
+            this.LocalesXTipoComercioBindingSource.DataMember = "LocalesXTipoComercio";
+            this.LocalesXTipoComercioBindingSource.DataSource = this.LocalesXTipoComercio;
+            // 
+            // LocalesXTipoComercio
+            // 
+            this.LocalesXTipoComercio.DataSetName = "LocalesXTipoComercio";
+            this.LocalesXTipoComercio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TablaClientesXBarrioBindingSource
             // 
@@ -159,16 +169,6 @@
             this.locales_comercialesBindingSource.DataMember = "locales_comerciales";
             this.locales_comercialesBindingSource.DataSource = this.tablasTPShopping;
             // 
-            // LocalesXTipoComercio
-            // 
-            this.LocalesXTipoComercio.DataSetName = "LocalesXTipoComercio";
-            this.LocalesXTipoComercio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // LocalesXTipoComercioBindingSource
-            // 
-            this.LocalesXTipoComercioBindingSource.DataMember = "LocalesXTipoComercio";
-            this.LocalesXTipoComercioBindingSource.DataSource = this.LocalesXTipoComercio;
-            // 
             // LocalesXTipoComercioTableAdapter
             // 
             this.LocalesXTipoComercioTableAdapter.ClearBeforeFill = true;
@@ -181,19 +181,20 @@
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage10.Size = new System.Drawing.Size(523, 592);
             this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "pola2";
+            this.tabPage10.Text = "fede2";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // reportViewer10
             // 
+            this.reportViewer10.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "LocalesMasVenta";
             reportDataSource1.Value = this.dataSetLocalesMasVentasBindingSource;
             this.reportViewer10.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer10.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteFedeCambiarNombreDespDeMerge.rdlc";
-            this.reportViewer10.Location = new System.Drawing.Point(3, 147);
+            this.reportViewer10.Location = new System.Drawing.Point(3, 3);
             this.reportViewer10.Name = "reportViewer10";
             this.reportViewer10.ServerReport.BearerToken = null;
-            this.reportViewer10.Size = new System.Drawing.Size(520, 445);
+            this.reportViewer10.Size = new System.Drawing.Size(517, 586);
             this.reportViewer10.TabIndex = 0;
             this.reportViewer10.Load += new System.EventHandler(this.reportViewer10_Load);
             // 
@@ -205,7 +206,7 @@
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(523, 592);
             this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "pola1";
+            this.tabPage9.Text = "fede1";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // reportViewer9
@@ -229,7 +230,7 @@
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(523, 592);
             this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "fede2";
+            this.tabPage8.Text = "pola2";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // reportViewer8
@@ -253,7 +254,7 @@
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(523, 592);
             this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "fede1";
+            this.tabPage7.Text = "pola1";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // reportViewer7
@@ -321,11 +322,12 @@
             // 
             // reportViewer4
             // 
+            this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer4.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorLocal.rdlc";
-            this.reportViewer4.Location = new System.Drawing.Point(3, 158);
+            this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(520, 434);
+            this.reportViewer4.Size = new System.Drawing.Size(517, 586);
             this.reportViewer4.TabIndex = 0;
             this.reportViewer4.Load += new System.EventHandler(this.reportViewer4_Load);
             // 
@@ -346,9 +348,9 @@
             reportDataSource4.Name = "ArticulosXRubro";
             reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
             this.reportViewer3.ServerReport.BearerToken = null;
             this.reportViewer3.Size = new System.Drawing.Size(517, 586);
             this.reportViewer3.TabIndex = 0;
@@ -418,7 +420,7 @@
             this.ReporteCantidadArticulosPorTipo.TabIndex = 11;
             this.ReporteCantidadArticulosPorTipo.Tag = "";
             // 
-            // FormReportes
+            // FormEstadistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -428,20 +430,20 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(555, 590);
-            this.Name = "FormReportes";
+            this.Name = "FormEstadistica";
             this.Text = "FormReportes";
             this.Load += new System.EventHandler(this.FormReportes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localescomercialesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablasTPShopping)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localescomercialesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablasTPShopping)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientesXBarrioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetClientesXBarrio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locales_comercialesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);

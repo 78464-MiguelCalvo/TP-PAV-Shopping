@@ -250,7 +250,7 @@ namespace TP_PAV1
         {
             //nuestro codigo
             EsconderSubmenu();
-            AbrirFormularioHijo(new FormReportes());
+            AbrirFormularioHijo(new FormEstadistica());
             this.Text = ("BUY ALL - Ventas");
         }
 
@@ -258,7 +258,7 @@ namespace TP_PAV1
         {
             //nuestro codigo
             EsconderSubmenu();
-            AbrirFormularioHijo(new HistorialVentas());
+            AbrirFormularioHijo(new FormListados());
             this.Text = ("BUY ALL - Ventas");
         }
     }

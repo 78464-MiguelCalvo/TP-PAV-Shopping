@@ -225,7 +225,6 @@ C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\bin\Debug\ru\Microsof
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormRegistroEgresos.resources
-C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormReportes.resources
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.csproj.CopyComplete
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\RdlCompile.cache
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\RdlCompile.compiled
@@ -531,3 +530,4 @@ C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\RdlCompile.cache
 C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\RdlCompile.compiled
 C:\Users\agusl\TP-PAV-Shopping\TP PAV1\obj\Debug\TP PAV1.csproj.CopyComplete
 C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormListados.resources
+C:\Users\migue\OneDrive\Escritorio\TP-PAV-Shopping\TP PAV1\obj\Debug\TP_PAV1.FormEstadistica.resources
