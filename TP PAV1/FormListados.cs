@@ -21,6 +21,10 @@ namespace TP_PAV1
                     
         private void FormListados_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DatosTarjetasClientes.ListadoTarjetasPorCliente' Puede moverla o quitarla según sea necesario.
+            this.ListadoTarjetasPorClienteTableAdapter.Fill(this.DatosTarjetasClientes.ListadoTarjetasPorCliente);
+            // TODO: esta línea de código carga datos en la tabla 'TablasTPShopping.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.TablasTPShopping.clientes);
 
             // TODO: esta línea de código carga datos en la tabla 'LocalesXTipoComercio.LocalesXTipoComercio' Puede moverla o quitarla según sea necesario.
 
@@ -28,6 +32,8 @@ namespace TP_PAV1
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
+            this.reportViewer5.RefreshReport();
+            this.reportViewer6.RefreshReport();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -55,6 +61,29 @@ namespace TP_PAV1
             reportViewer4.LocalReport.DataSources.Clear();
             reportViewer4.LocalReport.DataSources.Add(ds);
             reportViewer4.LocalReport.Refresh();
+        }
+
+        private void reportViewer5_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Cliente.ObtenerListadoDeClientes();
+
+            ReportDataSource ds = new ReportDataSource("DatosClientes", tabla);
+            reportViewer5.LocalReport.DataSources.Clear();
+            reportViewer5.LocalReport.DataSources.Add(ds);
+            reportViewer5.LocalReport.Refresh();
+
+        }
+
+        private void reportViewer6_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Varios.ObtenerListadoDeTarjetasPorCliente();
+
+            ReportDataSource ds = new ReportDataSource("DatosTarjetasClientes", tabla);
+            reportViewer5.LocalReport.DataSources.Clear();
+            reportViewer5.LocalReport.DataSources.Add(ds);
+            reportViewer5.LocalReport.Refresh();
         }
     }
 }

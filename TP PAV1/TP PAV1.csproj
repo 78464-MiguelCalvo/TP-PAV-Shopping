@@ -141,6 +141,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosTarjetasClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosTarjetasClientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -258,6 +263,11 @@
     <Compile Include="IngresoVehiculo.Designer.cs">
       <DependentUpon>IngresoVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoTarjetasPorCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoTarjetasPorCliente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LocalesPorTipoLocal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -324,6 +334,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TablasTPShopping.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TarjetasPorTipoPorCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TarjetasPorTipoPorCliente.xsd</DependentUpon>
     </Compile>
     <Compile Include="Tarjeta_credito.cs" />
     <Compile Include="VehiculosPorModelo.Designer.cs">
@@ -402,7 +417,9 @@
       <DependentUpon>IngresoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoClientes.rdlc" />
+    <EmbeddedResource Include="ListadoDeClientes.rdlc" />
     <EmbeddedResource Include="ListadoDePlayasMasUtilizados.rdlc" />
+    <EmbeddedResource Include="ListadoDeTarjetasPorCliente.rdlc" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -508,6 +525,28 @@
     <None Include="DataSetVentasXBarrio.xss">
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
     </None>
+    <None Include="DatosTarjetasClientes.xsc">
+      <DependentUpon>DatosTarjetasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DatosTarjetasClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosTarjetasClientes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatosTarjetasClientes.xss">
+      <DependentUpon>DatosTarjetasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="ListadoTarjetasPorCliente.xsc">
+      <DependentUpon>ListadoTarjetasPorCliente.xsd</DependentUpon>
+    </None>
+    <None Include="ListadoTarjetasPorCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListadoTarjetasPorCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ListadoTarjetasPorCliente.xss">
+      <DependentUpon>ListadoTarjetasPorCliente.xsd</DependentUpon>
+    </None>
     <None Include="LocalesPorTipoLocal.xsc">
       <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
     </None>
@@ -561,6 +600,17 @@
     </None>
     <None Include="TablasTPShopping.xss">
       <DependentUpon>TablasTPShopping.xsd</DependentUpon>
+    </None>
+    <None Include="TarjetasPorTipoPorCliente.xsc">
+      <DependentUpon>TarjetasPorTipoPorCliente.xsd</DependentUpon>
+    </None>
+    <None Include="TarjetasPorTipoPorCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TarjetasPorTipoPorCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TarjetasPorTipoPorCliente.xss">
+      <DependentUpon>TarjetasPorTipoPorCliente.xsd</DependentUpon>
     </None>
     <None Include="VehiculosPorModelo.xsc">
       <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>

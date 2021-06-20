@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TP_PAV1.Entidades;
 
 namespace TP_PAV1.AD
@@ -81,7 +82,6 @@ namespace TP_PAV1.AD
                 cn.Close();
             }
         }
-
         public static DataTable obtenerTipos()
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaTP1"];
@@ -117,7 +117,6 @@ namespace TP_PAV1.AD
                 cn.Close();
             }
         }
-
         public static DataTable obtenerLocales()
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaTP1"];
@@ -147,6 +146,40 @@ namespace TP_PAV1.AD
             {
 
                 throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public static DataTable ObtenerListadoDeTarjetasPorCliente()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "ListadoTarjetasPorCliente";
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Recuperando datos...");
+                return null; 
             }
             finally
             {

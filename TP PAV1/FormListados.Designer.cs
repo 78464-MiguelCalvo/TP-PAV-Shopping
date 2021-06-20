@@ -30,6 +30,8 @@ namespace TP_PAV1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,6 +53,14 @@ namespace TP_PAV1
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.LocalesXTipoComercioTableAdapter = new TP_PAV1.LocalesXTipoComercioTableAdapters.LocalesXTipoComercioTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
+            this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.TablasTPShopping = new TP_PAV1.TablasTPShopping();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter = new TP_PAV1.TablasTPShoppingTableAdapters.clientesTableAdapter();
+            this.DatosTarjetasClientes = new TP_PAV1.DatosTarjetasClientes();
+            this.ListadoTarjetasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ListadoTarjetasPorClienteTableAdapter = new TP_PAV1.DatosTarjetasClientesTableAdapters.ListadoTarjetasPorClienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             this.Agus1.SuspendLayout();
@@ -58,6 +68,12 @@ namespace TP_PAV1
             this.articulosPorLocal.SuspendLayout();
             this.Fede1.SuspendLayout();
             this.Fede2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablasTPShopping)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosTarjetasClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoTarjetasPorClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LocalesXTipoComercioBindingSource
@@ -104,9 +120,9 @@ namespace TP_PAV1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.DocumentMapWidth = 32;
-            reportDataSource3.Name = "ArticulosXRubro";
-            reportDataSource3.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "ArticulosXRubro";
+            reportDataSource1.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
@@ -148,9 +164,9 @@ namespace TP_PAV1
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource2.Name = "ArticulosXRubro";
+            reportDataSource2.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -203,6 +219,7 @@ namespace TP_PAV1
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.reportViewer5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -214,6 +231,7 @@ namespace TP_PAV1
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.reportViewer6);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -258,6 +276,62 @@ namespace TP_PAV1
             this.label2.TabIndex = 11;
             this.label2.Text = "Listados";
             // 
+            // reportViewer5
+            // 
+            this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "DatosClientes";
+            reportDataSource3.Value = this.clientesBindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "TP_PAV1.ListadoDeClientes.rdlc";
+            this.reportViewer5.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer5.Name = "reportViewer5";
+            this.reportViewer5.ServerReport.BearerToken = null;
+            this.reportViewer5.Size = new System.Drawing.Size(517, 542);
+            this.reportViewer5.TabIndex = 0;
+            this.reportViewer5.Load += new System.EventHandler(this.reportViewer5_Load);
+            // 
+            // reportViewer6
+            // 
+            this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "DatosTarjetasClientes";
+            reportDataSource4.Value = this.ListadoTarjetasPorClienteBindingSource;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer6.LocalReport.ReportEmbeddedResource = "TP_PAV1.ListadoDeTarjetasPorCliente.rdlc";
+            this.reportViewer6.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer6.Name = "reportViewer6";
+            this.reportViewer6.ServerReport.BearerToken = null;
+            this.reportViewer6.Size = new System.Drawing.Size(517, 542);
+            this.reportViewer6.TabIndex = 0;
+            this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
+            // 
+            // TablasTPShopping
+            // 
+            this.TablasTPShopping.DataSetName = "TablasTPShopping";
+            this.TablasTPShopping.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.TablasTPShopping;
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // DatosTarjetasClientes
+            // 
+            this.DatosTarjetasClientes.DataSetName = "DatosTarjetasClientes";
+            this.DatosTarjetasClientes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ListadoTarjetasPorClienteBindingSource
+            // 
+            this.ListadoTarjetasPorClienteBindingSource.DataMember = "ListadoTarjetasPorCliente";
+            this.ListadoTarjetasPorClienteBindingSource.DataSource = this.DatosTarjetasClientes;
+            // 
+            // ListadoTarjetasPorClienteTableAdapter
+            // 
+            this.ListadoTarjetasPorClienteTableAdapter.ClearBeforeFill = true;
+            // 
             // FormListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +352,12 @@ namespace TP_PAV1
             this.articulosPorLocal.ResumeLayout(false);
             this.Fede1.ResumeLayout(false);
             this.Fede2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TablasTPShopping)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosTarjetasClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoTarjetasPorClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +384,13 @@ namespace TP_PAV1
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer5;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
+        private System.Windows.Forms.BindingSource clientesBindingSource;
+        private TablasTPShopping TablasTPShopping;
+        private TablasTPShoppingTableAdapters.clientesTableAdapter clientesTableAdapter;
+        private System.Windows.Forms.BindingSource ListadoTarjetasPorClienteBindingSource;
+        private DatosTarjetasClientes DatosTarjetasClientes;
+        private DatosTarjetasClientesTableAdapters.ListadoTarjetasPorClienteTableAdapter ListadoTarjetasPorClienteTableAdapter;
     }
 }
