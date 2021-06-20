@@ -30,8 +30,9 @@ namespace TP_PAV1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
             this.Agus1 = new System.Windows.Forms.TabControl();
@@ -51,6 +52,10 @@ namespace TP_PAV1
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.LocalesXTipoComercioTableAdapter = new TP_PAV1.LocalesXTipoComercioTableAdapters.LocalesXTipoComercioTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
+            this.reportFedeListadoClientes = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataSetClientesXBarrio = new TP_PAV1.DataSetClientesXBarrio();
+            this.TablaClientesXBarrioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportFedeRegistroEstadias = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             this.Agus1.SuspendLayout();
@@ -58,6 +63,10 @@ namespace TP_PAV1
             this.articulosPorLocal.SuspendLayout();
             this.Fede1.SuspendLayout();
             this.Fede2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientesXBarrio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientesXBarrioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LocalesXTipoComercioBindingSource
@@ -104,9 +113,9 @@ namespace TP_PAV1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.DocumentMapWidth = 32;
-            reportDataSource3.Name = "ArticulosXRubro";
-            reportDataSource3.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "ArticulosXRubro";
+            reportDataSource1.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
@@ -148,9 +157,9 @@ namespace TP_PAV1
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource2.Name = "ArticulosXRubro";
+            reportDataSource2.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -224,6 +233,7 @@ namespace TP_PAV1
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.reportFedeListadoClientes);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -234,6 +244,7 @@ namespace TP_PAV1
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.reportFedeRegistroEstadias);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -258,6 +269,40 @@ namespace TP_PAV1
             this.label2.TabIndex = 11;
             this.label2.Text = "Listados";
             // 
+            // reportFedeListadoClientes
+            // 
+            this.reportFedeListadoClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "ClientesXBarrio";
+            reportDataSource3.Value = this.TablaClientesXBarrioBindingSource;
+            this.reportFedeListadoClientes.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportFedeListadoClientes.LocalReport.ReportEmbeddedResource = "TP_PAV1.ListadoClientes.rdlc";
+            this.reportFedeListadoClientes.Location = new System.Drawing.Point(3, 3);
+            this.reportFedeListadoClientes.Name = "reportFedeListadoClientes";
+            this.reportFedeListadoClientes.ServerReport.BearerToken = null;
+            this.reportFedeListadoClientes.Size = new System.Drawing.Size(517, 542);
+            this.reportFedeListadoClientes.TabIndex = 0;
+            this.reportFedeListadoClientes.Load += new System.EventHandler(this.reportFedeListadoClientes_Load);
+            // 
+            // DataSetClientesXBarrio
+            // 
+            this.DataSetClientesXBarrio.DataSetName = "DataSetClientesXBarrio";
+            this.DataSetClientesXBarrio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TablaClientesXBarrioBindingSource
+            // 
+            this.TablaClientesXBarrioBindingSource.DataMember = "TablaClientesXBarrio";
+            this.TablaClientesXBarrioBindingSource.DataSource = this.DataSetClientesXBarrio;
+            // 
+            // reportFedeRegistroEstadias
+            // 
+            this.reportFedeRegistroEstadias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportFedeRegistroEstadias.Location = new System.Drawing.Point(3, 3);
+            this.reportFedeRegistroEstadias.Name = "reportFedeRegistroEstadias";
+            this.reportFedeRegistroEstadias.ServerReport.BearerToken = null;
+            this.reportFedeRegistroEstadias.Size = new System.Drawing.Size(517, 542);
+            this.reportFedeRegistroEstadias.TabIndex = 0;
+            this.reportFedeRegistroEstadias.Load += new System.EventHandler(this.reportFedeRegistroEstadias_Load);
+            // 
             // FormListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +323,10 @@ namespace TP_PAV1
             this.articulosPorLocal.ResumeLayout(false);
             this.Fede1.ResumeLayout(false);
             this.Fede2.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientesXBarrio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientesXBarrioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +353,9 @@ namespace TP_PAV1
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportFedeListadoClientes;
+        private System.Windows.Forms.BindingSource TablaClientesXBarrioBindingSource;
+        private DataSetClientesXBarrio DataSetClientesXBarrio;
+        private Microsoft.Reporting.WinForms.ReportViewer reportFedeRegistroEstadias;
     }
 }

@@ -28,6 +28,8 @@ namespace TP_PAV1
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
+            this.reportFedeListadoClientes.RefreshReport();
+            this.reportFedeRegistroEstadias.RefreshReport();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -55,6 +57,28 @@ namespace TP_PAV1
             reportViewer4.LocalReport.DataSources.Clear();
             reportViewer4.LocalReport.DataSources.Add(ds);
             reportViewer4.LocalReport.Refresh();
+        }
+
+        private void reportFedeListadoClientes_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Cliente.obtenerClientesXBarrio();
+            ReportDataSource ds = new ReportDataSource("ClientesXBarrio", tabla);
+
+            reportFedeListadoClientes.LocalReport.DataSources.Clear();
+            reportFedeListadoClientes.LocalReport.DataSources.Add(ds);
+            reportFedeListadoClientes.LocalReport.Refresh();
+        }
+
+        private void reportFedeRegistroEstadias_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_VariosXFede.ObtenerRegistroEstadias();
+            ReportDataSource ds = new ReportDataSource("EstacionamientoXCliente", tabla);
+
+            reportFedeRegistroEstadias.LocalReport.DataSources.Clear();
+            reportFedeRegistroEstadias.LocalReport.DataSources.Add(ds);
+            reportFedeRegistroEstadias.LocalReport.Refresh();
         }
     }
 }
