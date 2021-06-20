@@ -246,6 +246,11 @@
     <Compile Include="FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="gera2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gera2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HistorialVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -507,6 +512,17 @@
     </None>
     <None Include="DataSetVentasXBarrio.xss">
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="gera2.xsc">
+      <DependentUpon>gera2.xsd</DependentUpon>
+    </None>
+    <None Include="gera2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gera2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gera2.xss">
+      <DependentUpon>gera2.xsd</DependentUpon>
     </None>
     <None Include="LocalesPorTipoLocal.xsc">
       <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
