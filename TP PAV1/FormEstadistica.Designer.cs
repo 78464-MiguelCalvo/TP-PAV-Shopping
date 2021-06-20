@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dataSetLocalesMasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetLocalesMasVentas = new TP_PAV1.DataSetLocalesMasVentas();
             this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -150,9 +149,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(139)))), ((int)(((byte)(204)))));
-            this.label2.Location = new System.Drawing.Point(214, 9);
+            this.label2.Location = new System.Drawing.Point(285, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 24);
+            this.label2.Size = new System.Drawing.Size(159, 30);
             this.label2.TabIndex = 10;
             this.label2.Text = "Estadisticas";
             // 
@@ -176,10 +176,11 @@
             // tabPage10
             // 
             this.tabPage10.Controls.Add(this.reportViewer10);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Location = new System.Drawing.Point(4, 25);
+            this.tabPage10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(523, 592);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage10.Size = new System.Drawing.Size(700, 732);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "fede2";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -187,72 +188,78 @@
             // reportViewer10
             // 
             this.reportViewer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "LocalesMasVenta";
-            reportDataSource1.Value = this.dataSetLocalesMasVentasBindingSource;
-            this.reportViewer10.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource7.Name = "LocalesMasVenta";
+            reportDataSource7.Value = this.dataSetLocalesMasVentasBindingSource;
+            this.reportViewer10.LocalReport.DataSources.Add(reportDataSource7);
             this.reportViewer10.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteFedeCambiarNombreDespDeMerge.rdlc";
-            this.reportViewer10.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer10.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer10.Name = "reportViewer10";
             this.reportViewer10.ServerReport.BearerToken = null;
-            this.reportViewer10.Size = new System.Drawing.Size(517, 586);
+            this.reportViewer10.Size = new System.Drawing.Size(692, 724);
             this.reportViewer10.TabIndex = 0;
             this.reportViewer10.Load += new System.EventHandler(this.reportViewer10_Load);
             // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.reportViewer9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(523, 592);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage9.Size = new System.Drawing.Size(700, 732);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "fede1";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // reportViewer9
             // 
-            reportDataSource2.Name = "VentasXLocal";
-            reportDataSource2.Value = this.localescomercialesBindingSource;
-            this.reportViewer9.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource8.Name = "VentasXLocal";
+            reportDataSource8.Value = this.localescomercialesBindingSource;
+            this.reportViewer9.LocalReport.DataSources.Add(reportDataSource8);
             this.reportViewer9.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorLocal.rdlc";
-            this.reportViewer9.Location = new System.Drawing.Point(3, 203);
+            this.reportViewer9.Location = new System.Drawing.Point(4, 250);
+            this.reportViewer9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer9.Name = "reportViewer9";
             this.reportViewer9.ServerReport.BearerToken = null;
-            this.reportViewer9.Size = new System.Drawing.Size(520, 389);
+            this.reportViewer9.Size = new System.Drawing.Size(693, 478);
             this.reportViewer9.TabIndex = 0;
             this.reportViewer9.Load += new System.EventHandler(this.reportViewer9_Load);
             // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.reportViewer8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(523, 592);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Size = new System.Drawing.Size(700, 732);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "pola2";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // reportViewer8
             // 
-            reportDataSource3.Name = "ProcedimientosAlmacenados";
-            reportDataSource3.Value = this.VentasPorClienteBindingSource;
-            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource9.Name = "ProcedimientosAlmacenados";
+            reportDataSource9.Value = this.VentasPorClienteBindingSource;
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource9);
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantVentasPorCliente.rdlc";
-            this.reportViewer8.Location = new System.Drawing.Point(3, 155);
+            this.reportViewer8.Location = new System.Drawing.Point(4, 191);
+            this.reportViewer8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer8.Name = "reportViewer8";
             this.reportViewer8.ServerReport.BearerToken = null;
-            this.reportViewer8.Size = new System.Drawing.Size(520, 437);
+            this.reportViewer8.Size = new System.Drawing.Size(693, 537);
             this.reportViewer8.TabIndex = 0;
             this.reportViewer8.Load += new System.EventHandler(this.reportViewer8_Load_1);
             // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.reportViewer7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(523, 592);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Size = new System.Drawing.Size(700, 732);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "pola1";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -260,20 +267,22 @@
             // reportViewer7
             // 
             this.reportViewer7.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorArticulo.rdlc";
-            this.reportViewer7.Location = new System.Drawing.Point(3, 201);
+            this.reportViewer7.Location = new System.Drawing.Point(4, 247);
+            this.reportViewer7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer7.Name = "reportViewer7";
             this.reportViewer7.ServerReport.BearerToken = null;
-            this.reportViewer7.Size = new System.Drawing.Size(520, 391);
+            this.reportViewer7.Size = new System.Drawing.Size(693, 481);
             this.reportViewer7.TabIndex = 0;
             this.reportViewer7.Load += new System.EventHandler(this.reportViewer7_Load_1);
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.reportViewer6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(523, 592);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Size = new System.Drawing.Size(700, 732);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "geri2";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -281,20 +290,22 @@
             // reportViewer6
             // 
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteComprasPorCliente.rdlc";
-            this.reportViewer6.Location = new System.Drawing.Point(3, 159);
+            this.reportViewer6.Location = new System.Drawing.Point(4, 196);
+            this.reportViewer6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer6.Name = "reportViewer6";
             this.reportViewer6.ServerReport.BearerToken = null;
-            this.reportViewer6.Size = new System.Drawing.Size(520, 433);
+            this.reportViewer6.Size = new System.Drawing.Size(693, 532);
             this.reportViewer6.TabIndex = 0;
             this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.reportViewer5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(523, 592);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Size = new System.Drawing.Size(700, 732);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "geri1";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -302,20 +313,22 @@
             // reportViewer5
             // 
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "TP_PAV1.ListadoDePlayasMasUtilizados.rdlc";
-            this.reportViewer5.Location = new System.Drawing.Point(3, 196);
+            this.reportViewer5.Location = new System.Drawing.Point(4, 241);
+            this.reportViewer5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.ServerReport.BearerToken = null;
-            this.reportViewer5.Size = new System.Drawing.Size(520, 396);
+            this.reportViewer5.Size = new System.Drawing.Size(693, 487);
             this.reportViewer5.TabIndex = 0;
             this.reportViewer5.Load += new System.EventHandler(this.reportViewer5_Load);
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.reportViewer4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(523, 592);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Size = new System.Drawing.Size(700, 732);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "agus2";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -323,21 +336,23 @@
             // reportViewer4
             // 
             this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer4.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorLocal.rdlc";
-            this.reportViewer4.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "TP_PAV1.agus2.rdlc";
+            this.reportViewer4.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(517, 586);
+            this.reportViewer4.Size = new System.Drawing.Size(692, 724);
             this.reportViewer4.TabIndex = 0;
             this.reportViewer4.Load += new System.EventHandler(this.reportViewer4_Load);
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.reportViewer3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(523, 592);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(700, 732);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "agus1";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -345,24 +360,23 @@
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.agus1.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(517, 586);
+            this.reportViewer3.Size = new System.Drawing.Size(692, 724);
             this.reportViewer3.TabIndex = 0;
             this.reportViewer3.Load += new System.EventHandler(this.reportViewer3_Load_1);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.reportViewer2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(523, 592);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(700, 732);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "miguel2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -371,20 +385,22 @@
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantidadVehiculosPorMarca.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer2.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(517, 586);
+            this.reportViewer2.Size = new System.Drawing.Size(692, 724);
             this.reportViewer2.TabIndex = 0;
             this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.reportViewer1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(523, 592);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(700, 732);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "miguel1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -394,10 +410,11 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantidadArticulosPorTipo.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(517, 586);
+            this.reportViewer1.Size = new System.Drawing.Size(692, 724);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -413,23 +430,25 @@
             this.ReporteCantidadArticulosPorTipo.Controls.Add(this.tabPage8);
             this.ReporteCantidadArticulosPorTipo.Controls.Add(this.tabPage9);
             this.ReporteCantidadArticulosPorTipo.Controls.Add(this.tabPage10);
-            this.ReporteCantidadArticulosPorTipo.Location = new System.Drawing.Point(12, 54);
+            this.ReporteCantidadArticulosPorTipo.Location = new System.Drawing.Point(16, 66);
+            this.ReporteCantidadArticulosPorTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ReporteCantidadArticulosPorTipo.Name = "ReporteCantidadArticulosPorTipo";
             this.ReporteCantidadArticulosPorTipo.SelectedIndex = 0;
-            this.ReporteCantidadArticulosPorTipo.Size = new System.Drawing.Size(531, 618);
+            this.ReporteCantidadArticulosPorTipo.Size = new System.Drawing.Size(708, 761);
             this.ReporteCantidadArticulosPorTipo.TabIndex = 11;
             this.ReporteCantidadArticulosPorTipo.Tag = "";
             // 
             // FormEstadistica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(555, 640);
+            this.ClientSize = new System.Drawing.Size(740, 788);
             this.Controls.Add(this.ReporteCantidadArticulosPorTipo);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(555, 590);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(740, 726);
             this.Name = "FormEstadistica";
             this.Text = "FormReportes";
             this.Load += new System.EventHandler(this.FormReportes_Load);

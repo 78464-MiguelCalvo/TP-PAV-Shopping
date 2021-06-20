@@ -149,8 +149,8 @@ namespace TP_PAV1
         private void reportViewer3_Load_1(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = ArticuloXRubro.ObtenerArticuloXRubro();
-            ReportDataSource ds = new ReportDataSource("ArticulosXRubro", tabla);
+            tabla = ArticuloXLocal.ObtenerArticuloXLocal();
+            ReportDataSource ds = new ReportDataSource("CantArticulosXLocal", tabla);
 
             reportViewer3.LocalReport.DataSources.Clear();
             reportViewer3.LocalReport.DataSources.Add(ds);

@@ -118,6 +118,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CantidadArticulosXLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CantidadArticulosXLocal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CantIngresosPorPlaya.cs">
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
     </Compile>
@@ -463,6 +468,17 @@
     </None>
     <None Include="CantClientesXProfesiones.xss">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
+    </None>
+    <None Include="CantidadArticulosXLocal.xsc">
+      <DependentUpon>CantidadArticulosXLocal.xsd</DependentUpon>
+    </None>
+    <None Include="CantidadArticulosXLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CantidadArticulosXLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CantidadArticulosXLocal.xss">
+      <DependentUpon>CantidadArticulosXLocal.xsd</DependentUpon>
     </None>
     <None Include="CantIngresosPorPlaya.xsc">
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
