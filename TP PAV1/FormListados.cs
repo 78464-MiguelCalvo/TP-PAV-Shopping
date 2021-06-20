@@ -21,6 +21,8 @@ namespace TP_PAV1
                     
         private void FormListados_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSetRegistrosEstadias.GetRegistrosEstadiaEstacionamiento' Puede moverla o quitarla según sea necesario.
+            this.GetRegistrosEstadiaEstacionamientoTableAdapter.Fill(this.DataSetRegistrosEstadias.GetRegistrosEstadiaEstacionamiento);
 
             // TODO: esta línea de código carga datos en la tabla 'LocalesXTipoComercio.LocalesXTipoComercio' Puede moverla o quitarla según sea necesario.
 
@@ -74,7 +76,7 @@ namespace TP_PAV1
         {
             DataTable tabla = new DataTable();
             tabla = AD_VariosXFede.ObtenerRegistroEstadias();
-            ReportDataSource ds = new ReportDataSource("EstacionamientoXCliente", tabla);
+            ReportDataSource ds = new ReportDataSource("RegistrosEstadias", tabla);
 
             reportFedeRegistroEstadias.LocalReport.DataSources.Clear();
             reportFedeRegistroEstadias.LocalReport.DataSources.Add(ds);
