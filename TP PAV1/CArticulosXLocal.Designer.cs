@@ -20,17 +20,17 @@ namespace TP_PAV1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CantidadArticulosXLocal")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CArticulosXLocal")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CantidadArticulosXLocal : global::System.Data.DataSet {
+    public partial class CArticulosXLocal : global::System.Data.DataSet {
         
-        private CantiArtixLocalDataTable tableCantiArtixLocal;
+        private CantArticulosXLocalDataTable tableCantArticulosXLocal;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CantidadArticulosXLocal() {
+        public CArticulosXLocal() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TP_PAV1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CantidadArticulosXLocal(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CArticulosXLocal(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TP_PAV1 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CantiArtixLocal"] != null)) {
-                    base.Tables.Add(new CantiArtixLocalDataTable(ds.Tables["CantiArtixLocal"]));
+                if ((ds.Tables["CantArticulosXLocal"] != null)) {
+                    base.Tables.Add(new CantArticulosXLocalDataTable(ds.Tables["CantArticulosXLocal"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TP_PAV1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CantiArtixLocalDataTable CantiArtixLocal {
+        public CantArticulosXLocalDataTable CantArticulosXLocal {
             get {
-                return this.tableCantiArtixLocal;
+                return this.tableCantArticulosXLocal;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TP_PAV1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CantidadArticulosXLocal cln = ((CantidadArticulosXLocal)(base.Clone()));
+            CArticulosXLocal cln = ((CArticulosXLocal)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TP_PAV1 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CantiArtixLocal"] != null)) {
-                    base.Tables.Add(new CantiArtixLocalDataTable(ds.Tables["CantiArtixLocal"]));
+                if ((ds.Tables["CantArticulosXLocal"] != null)) {
+                    base.Tables.Add(new CantArticulosXLocalDataTable(ds.Tables["CantArticulosXLocal"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TP_PAV1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCantiArtixLocal = ((CantiArtixLocalDataTable)(base.Tables["CantiArtixLocal"]));
+            this.tableCantArticulosXLocal = ((CantArticulosXLocalDataTable)(base.Tables["CantArticulosXLocal"]));
             if ((initTable == true)) {
-                if ((this.tableCantiArtixLocal != null)) {
-                    this.tableCantiArtixLocal.InitVars();
+                if ((this.tableCantArticulosXLocal != null)) {
+                    this.tableCantArticulosXLocal.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TP_PAV1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CantidadArticulosXLocal";
+            this.DataSetName = "CArticulosXLocal";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CantidadArticulosXLocal.xsd";
+            this.Namespace = "http://tempuri.org/CArticulosXLocal.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCantiArtixLocal = new CantiArtixLocalDataTable();
-            base.Tables.Add(this.tableCantiArtixLocal);
+            this.tableCantArticulosXLocal = new CantArticulosXLocalDataTable();
+            base.Tables.Add(this.tableCantArticulosXLocal);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeCantiArtixLocal() {
+        private bool ShouldSerializeCantArticulosXLocal() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TP_PAV1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CantidadArticulosXLocal ds = new CantidadArticulosXLocal();
+            CArticulosXLocal ds = new CArticulosXLocal();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,23 @@ namespace TP_PAV1 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void CantiArtixLocalRowChangeEventHandler(object sender, CantiArtixLocalRowChangeEvent e);
+        public delegate void CantArticulosXLocalRowChangeEventHandler(object sender, CantArticulosXLocalRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CantiArtixLocalDataTable : global::System.Data.TypedTableBase<CantiArtixLocalRow> {
+        public partial class CantArticulosXLocalDataTable : global::System.Data.TypedTableBase<CantArticulosXLocalRow> {
             
-            private global::System.Data.DataColumn columnLocal;
+            private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnCantidadArticulos;
+            private global::System.Data.DataColumn columnCantidad;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CantiArtixLocalDataTable() {
-                this.TableName = "CantiArtixLocal";
+            public CantArticulosXLocalDataTable() {
+                this.TableName = "CantArticulosXLocal";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace TP_PAV1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal CantiArtixLocalDataTable(global::System.Data.DataTable table) {
+            internal CantArticulosXLocalDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +311,24 @@ namespace TP_PAV1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected CantiArtixLocalDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CantArticulosXLocalDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn LocalColumn {
+            public global::System.Data.DataColumn NombreColumn {
                 get {
-                    return this.columnLocal;
+                    return this.columnNombre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CantidadArticulosColumn {
+            public global::System.Data.DataColumn CantidadColumn {
                 get {
-                    return this.columnCantidadArticulos;
+                    return this.columnCantidad;
                 }
             }
             
@@ -343,46 +343,46 @@ namespace TP_PAV1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CantiArtixLocalRow this[int index] {
+            public CantArticulosXLocalRow this[int index] {
                 get {
-                    return ((CantiArtixLocalRow)(this.Rows[index]));
+                    return ((CantArticulosXLocalRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CantiArtixLocalRowChangeEventHandler CantiArtixLocalRowChanging;
+            public event CantArticulosXLocalRowChangeEventHandler CantArticulosXLocalRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CantiArtixLocalRowChangeEventHandler CantiArtixLocalRowChanged;
+            public event CantArticulosXLocalRowChangeEventHandler CantArticulosXLocalRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CantiArtixLocalRowChangeEventHandler CantiArtixLocalRowDeleting;
+            public event CantArticulosXLocalRowChangeEventHandler CantArticulosXLocalRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CantiArtixLocalRowChangeEventHandler CantiArtixLocalRowDeleted;
+            public event CantArticulosXLocalRowChangeEventHandler CantArticulosXLocalRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddCantiArtixLocalRow(CantiArtixLocalRow row) {
+            public void AddCantArticulosXLocalRow(CantArticulosXLocalRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CantiArtixLocalRow AddCantiArtixLocalRow(string Local, int CantidadArticulos) {
-                CantiArtixLocalRow rowCantiArtixLocalRow = ((CantiArtixLocalRow)(this.NewRow()));
+            public CantArticulosXLocalRow AddCantArticulosXLocalRow(string Nombre, int Cantidad) {
+                CantArticulosXLocalRow rowCantArticulosXLocalRow = ((CantArticulosXLocalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Local,
-                        CantidadArticulos};
-                rowCantiArtixLocalRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCantiArtixLocalRow);
-                return rowCantiArtixLocalRow;
+                        Nombre,
+                        Cantidad};
+                rowCantArticulosXLocalRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCantArticulosXLocalRow);
+                return rowCantArticulosXLocalRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CantiArtixLocalDataTable cln = ((CantiArtixLocalDataTable)(base.Clone()));
+                CantArticulosXLocalDataTable cln = ((CantArticulosXLocalDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,49 +390,49 @@ namespace TP_PAV1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CantiArtixLocalDataTable();
+                return new CantArticulosXLocalDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnLocal = base.Columns["Local"];
-                this.columnCantidadArticulos = base.Columns["CantidadArticulos"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnCantidad = base.Columns["Cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnLocal = new global::System.Data.DataColumn("Local", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLocal);
-                this.columnCantidadArticulos = new global::System.Data.DataColumn("CantidadArticulos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCantidadArticulos);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CantiArtixLocalRow NewCantiArtixLocalRow() {
-                return ((CantiArtixLocalRow)(this.NewRow()));
+            public CantArticulosXLocalRow NewCantArticulosXLocalRow() {
+                return ((CantArticulosXLocalRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CantiArtixLocalRow(builder);
+                return new CantArticulosXLocalRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CantiArtixLocalRow);
+                return typeof(CantArticulosXLocalRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CantiArtixLocalRowChanged != null)) {
-                    this.CantiArtixLocalRowChanged(this, new CantiArtixLocalRowChangeEvent(((CantiArtixLocalRow)(e.Row)), e.Action));
+                if ((this.CantArticulosXLocalRowChanged != null)) {
+                    this.CantArticulosXLocalRowChanged(this, new CantArticulosXLocalRowChangeEvent(((CantArticulosXLocalRow)(e.Row)), e.Action));
                 }
             }
             
@@ -440,8 +440,8 @@ namespace TP_PAV1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CantiArtixLocalRowChanging != null)) {
-                    this.CantiArtixLocalRowChanging(this, new CantiArtixLocalRowChangeEvent(((CantiArtixLocalRow)(e.Row)), e.Action));
+                if ((this.CantArticulosXLocalRowChanging != null)) {
+                    this.CantArticulosXLocalRowChanging(this, new CantArticulosXLocalRowChangeEvent(((CantArticulosXLocalRow)(e.Row)), e.Action));
                 }
             }
             
@@ -449,8 +449,8 @@ namespace TP_PAV1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CantiArtixLocalRowDeleted != null)) {
-                    this.CantiArtixLocalRowDeleted(this, new CantiArtixLocalRowChangeEvent(((CantiArtixLocalRow)(e.Row)), e.Action));
+                if ((this.CantArticulosXLocalRowDeleted != null)) {
+                    this.CantArticulosXLocalRowDeleted(this, new CantArticulosXLocalRowChangeEvent(((CantArticulosXLocalRow)(e.Row)), e.Action));
                 }
             }
             
@@ -458,14 +458,14 @@ namespace TP_PAV1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CantiArtixLocalRowDeleting != null)) {
-                    this.CantiArtixLocalRowDeleting(this, new CantiArtixLocalRowChangeEvent(((CantiArtixLocalRow)(e.Row)), e.Action));
+                if ((this.CantArticulosXLocalRowDeleting != null)) {
+                    this.CantArticulosXLocalRowDeleting(this, new CantArticulosXLocalRowChangeEvent(((CantArticulosXLocalRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveCantiArtixLocalRow(CantiArtixLocalRow row) {
+            public void RemoveCantArticulosXLocalRow(CantArticulosXLocalRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -474,7 +474,7 @@ namespace TP_PAV1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CantidadArticulosXLocal ds = new CantidadArticulosXLocal();
+                CArticulosXLocal ds = new CArticulosXLocal();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -492,7 +492,7 @@ namespace TP_PAV1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CantiArtixLocalDataTable";
+                attribute2.FixedValue = "CantArticulosXLocalDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -536,72 +536,71 @@ namespace TP_PAV1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CantiArtixLocalRow : global::System.Data.DataRow {
+        public partial class CantArticulosXLocalRow : global::System.Data.DataRow {
             
-            private CantiArtixLocalDataTable tableCantiArtixLocal;
+            private CantArticulosXLocalDataTable tableCantArticulosXLocal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal CantiArtixLocalRow(global::System.Data.DataRowBuilder rb) : 
+            internal CantArticulosXLocalRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCantiArtixLocal = ((CantiArtixLocalDataTable)(this.Table));
+                this.tableCantArticulosXLocal = ((CantArticulosXLocalDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Local {
+            public string Nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableCantiArtixLocal.LocalColumn]));
+                        return ((string)(this[this.tableCantArticulosXLocal.NombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Local\' de la tabla \'CantiArtixLocal\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CantArticulosXLocal\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCantiArtixLocal.LocalColumn] = value;
+                    this[this.tableCantArticulosXLocal.NombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int CantidadArticulos {
+            public int Cantidad {
                 get {
                     try {
-                        return ((int)(this[this.tableCantiArtixLocal.CantidadArticulosColumn]));
+                        return ((int)(this[this.tableCantArticulosXLocal.CantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadArticulos\' de la tabla \'CantiArtixLocal\' es DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'CantArticulosXLocal\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCantiArtixLocal.CantidadArticulosColumn] = value;
+                    this[this.tableCantArticulosXLocal.CantidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsLocalNull() {
-                return this.IsNull(this.tableCantiArtixLocal.LocalColumn);
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCantArticulosXLocal.NombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetLocalNull() {
-                this[this.tableCantiArtixLocal.LocalColumn] = global::System.Convert.DBNull;
+            public void SetNombreNull() {
+                this[this.tableCantArticulosXLocal.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCantidadArticulosNull() {
-                return this.IsNull(this.tableCantiArtixLocal.CantidadArticulosColumn);
+            public bool IsCantidadNull() {
+                return this.IsNull(this.tableCantArticulosXLocal.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCantidadArticulosNull() {
-                this[this.tableCantiArtixLocal.CantidadArticulosColumn] = global::System.Convert.DBNull;
+            public void SetCantidadNull() {
+                this[this.tableCantArticulosXLocal.CantidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -609,22 +608,22 @@ namespace TP_PAV1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class CantiArtixLocalRowChangeEvent : global::System.EventArgs {
+        public class CantArticulosXLocalRowChangeEvent : global::System.EventArgs {
             
-            private CantiArtixLocalRow eventRow;
+            private CantArticulosXLocalRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CantiArtixLocalRowChangeEvent(CantiArtixLocalRow row, global::System.Data.DataRowAction action) {
+            public CantArticulosXLocalRowChangeEvent(CantArticulosXLocalRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CantiArtixLocalRow Row {
+            public CantArticulosXLocalRow Row {
                 get {
                     return this.eventRow;
                 }

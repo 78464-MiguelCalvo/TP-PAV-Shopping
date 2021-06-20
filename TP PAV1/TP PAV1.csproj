@@ -118,10 +118,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CantidadArticulosXLocal.Designer.cs">
+    <Compile Include="CantEstacionamientosXPlaya.cs">
+      <DependentUpon>CantEstacionamientosXPlaya.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CantEstacionamientosXPlaya.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CantidadArticulosXLocal.xsd</DependentUpon>
+      <DependentUpon>CantEstacionamientosXPlaya.xsd</DependentUpon>
     </Compile>
     <Compile Include="CantIngresosPorPlaya.cs">
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
@@ -130,6 +133,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CArticulosXLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CArticulosXLocal.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetClientesXBarrio.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -469,16 +477,16 @@
     <None Include="CantClientesXProfesiones.xss">
       <DependentUpon>CantClientesXProfesiones.xsd</DependentUpon>
     </None>
-    <None Include="CantidadArticulosXLocal.xsc">
-      <DependentUpon>CantidadArticulosXLocal.xsd</DependentUpon>
+    <None Include="CantEstacionamientosXPlaya.xsc">
+      <DependentUpon>CantEstacionamientosXPlaya.xsd</DependentUpon>
     </None>
-    <None Include="CantidadArticulosXLocal.xsd">
+    <None Include="CantEstacionamientosXPlaya.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CantidadArticulosXLocal.Designer.cs</LastGenOutput>
+      <LastGenOutput>CantEstacionamientosXPlaya.Designer.cs</LastGenOutput>
     </None>
-    <None Include="CantidadArticulosXLocal.xss">
-      <DependentUpon>CantidadArticulosXLocal.xsd</DependentUpon>
+    <None Include="CantEstacionamientosXPlaya.xss">
+      <DependentUpon>CantEstacionamientosXPlaya.xsd</DependentUpon>
     </None>
     <None Include="CantIngresosPorPlaya.xsc">
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
@@ -490,6 +498,17 @@
     </None>
     <None Include="CantIngresosPorPlaya.xss">
       <DependentUpon>CantIngresosPorPlaya.xsd</DependentUpon>
+    </None>
+    <None Include="CArticulosXLocal.xsc">
+      <DependentUpon>CArticulosXLocal.xsd</DependentUpon>
+    </None>
+    <None Include="CArticulosXLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CArticulosXLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CArticulosXLocal.xss">
+      <DependentUpon>CArticulosXLocal.xsd</DependentUpon>
     </None>
     <None Include="DataSetClientesXBarrio.xsc">
       <DependentUpon>DataSetClientesXBarrio.xsd</DependentUpon>
