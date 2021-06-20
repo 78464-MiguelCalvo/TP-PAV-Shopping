@@ -30,6 +30,8 @@ namespace TP_PAV1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,6 +53,13 @@ namespace TP_PAV1
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.LocalesXTipoComercioTableAdapter = new TP_PAV1.LocalesXTipoComercioTableAdapters.LocalesXTipoComercioTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
+            this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.gera2 = new TP_PAV1.gera2();
+            this.ListadoProfesionesXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ListadoProfesionesXClienteTableAdapter = new TP_PAV1.gera2TableAdapters.ListadoProfesionesXClienteTableAdapter();
+            this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ListadoArticulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ListadoArticulosTableAdapter = new TP_PAV1.gera2TableAdapters.ListadoArticulosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             this.Agus1.SuspendLayout();
@@ -58,6 +67,11 @@ namespace TP_PAV1
             this.articulosPorLocal.SuspendLayout();
             this.Fede1.SuspendLayout();
             this.Fede2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gera2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoProfesionesXClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoArticulosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LocalesXTipoComercioBindingSource
@@ -104,9 +118,9 @@ namespace TP_PAV1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.DocumentMapWidth = 32;
-            reportDataSource3.Name = "ArticulosXRubro";
-            reportDataSource3.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "ArticulosXRubro";
+            reportDataSource1.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
@@ -148,9 +162,9 @@ namespace TP_PAV1
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource2.Name = "ArticulosXRubro";
+            reportDataSource2.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -183,6 +197,7 @@ namespace TP_PAV1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.reportViewer5);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -193,6 +208,7 @@ namespace TP_PAV1
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.reportViewer6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -258,6 +274,57 @@ namespace TP_PAV1
             this.label2.TabIndex = 11;
             this.label2.Text = "Listados";
             // 
+            // reportViewer5
+            // 
+            this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "ProfesionesXCliente";
+            reportDataSource3.Value = this.ListadoProfesionesXClienteBindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "TP_PAV1.gera1.rdlc";
+            this.reportViewer5.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer5.Name = "reportViewer5";
+            this.reportViewer5.ServerReport.BearerToken = null;
+            this.reportViewer5.Size = new System.Drawing.Size(517, 542);
+            this.reportViewer5.TabIndex = 0;
+            this.reportViewer5.Load += new System.EventHandler(this.reportViewer5_Load);
+            // 
+            // gera2
+            // 
+            this.gera2.DataSetName = "gera2";
+            this.gera2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ListadoProfesionesXClienteBindingSource
+            // 
+            this.ListadoProfesionesXClienteBindingSource.DataMember = "ListadoProfesionesXCliente";
+            this.ListadoProfesionesXClienteBindingSource.DataSource = this.gera2;
+            // 
+            // ListadoProfesionesXClienteTableAdapter
+            // 
+            this.ListadoProfesionesXClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewer6
+            // 
+            this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "Articulos";
+            reportDataSource4.Value = this.ListadoArticulosBindingSource;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer6.LocalReport.ReportEmbeddedResource = "TP_PAV1.gera2.rdlc";
+            this.reportViewer6.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer6.Name = "reportViewer6";
+            this.reportViewer6.ServerReport.BearerToken = null;
+            this.reportViewer6.Size = new System.Drawing.Size(517, 542);
+            this.reportViewer6.TabIndex = 0;
+            this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
+            // 
+            // ListadoArticulosBindingSource
+            // 
+            this.ListadoArticulosBindingSource.DataMember = "ListadoArticulos";
+            this.ListadoArticulosBindingSource.DataSource = this.gera2;
+            // 
+            // ListadoArticulosTableAdapter
+            // 
+            this.ListadoArticulosTableAdapter.ClearBeforeFill = true;
+            // 
             // FormListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +345,11 @@ namespace TP_PAV1
             this.articulosPorLocal.ResumeLayout(false);
             this.Fede1.ResumeLayout(false);
             this.Fede2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gera2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoProfesionesXClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListadoArticulosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +376,12 @@ namespace TP_PAV1
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer5;
+        private System.Windows.Forms.BindingSource ListadoProfesionesXClienteBindingSource;
+        private gera2 gera2;
+        private gera2TableAdapters.ListadoProfesionesXClienteTableAdapter ListadoProfesionesXClienteTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
+        private System.Windows.Forms.BindingSource ListadoArticulosBindingSource;
+        private gera2TableAdapters.ListadoArticulosTableAdapter ListadoArticulosTableAdapter;
     }
 }

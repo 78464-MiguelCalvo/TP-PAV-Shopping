@@ -21,6 +21,10 @@ namespace TP_PAV1
                     
         private void FormListados_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'gera2.ListadoArticulos' Puede moverla o quitarla según sea necesario.
+            this.ListadoArticulosTableAdapter.Fill(this.gera2.ListadoArticulos);
+            // TODO: esta línea de código carga datos en la tabla 'gera2.ListadoProfesionesXCliente' Puede moverla o quitarla según sea necesario.
+            this.ListadoProfesionesXClienteTableAdapter.Fill(this.gera2.ListadoProfesionesXCliente);
 
             // TODO: esta línea de código carga datos en la tabla 'LocalesXTipoComercio.LocalesXTipoComercio' Puede moverla o quitarla según sea necesario.
 
@@ -28,6 +32,8 @@ namespace TP_PAV1
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
+            this.reportViewer5.RefreshReport();
+            this.reportViewer6.RefreshReport();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -55,6 +61,28 @@ namespace TP_PAV1
             reportViewer4.LocalReport.DataSources.Clear();
             reportViewer4.LocalReport.DataSources.Add(ds);
             reportViewer4.LocalReport.Refresh();
+        }
+
+        private void reportViewer5_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Varios.ObtenerProfesionesXCliente();
+            ReportDataSource ds = new ReportDataSource("ProfesionesXCliente", tabla);
+
+            reportViewer5.LocalReport.DataSources.Clear();
+            reportViewer5.LocalReport.DataSources.Add(ds);
+            reportViewer5.LocalReport.Refresh();
+        }
+
+        private void reportViewer6_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Varios.ObtenerListadoArticulos();
+            ReportDataSource ds = new ReportDataSource("Articulos", tabla);
+
+            reportViewer6.LocalReport.DataSources.Clear();
+            reportViewer6.LocalReport.DataSources.Add(ds);
+            reportViewer6.LocalReport.Refresh();
         }
     }
 }

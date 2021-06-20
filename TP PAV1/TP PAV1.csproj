@@ -259,6 +259,11 @@
     <Compile Include="FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="gera2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gera2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HistorialVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,11 +343,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TablasTPShopping.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TarjetasXCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TarjetasXCliente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Tarjeta_credito.cs" />
     <Compile Include="VehiculosPorModelo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculosXCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehiculosXCliente.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AgregarArticulo.resx">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
@@ -543,6 +558,17 @@
     <None Include="DataSetVentasXBarrio.xss">
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
     </None>
+    <None Include="gera2.xsc">
+      <DependentUpon>gera2.xsd</DependentUpon>
+    </None>
+    <None Include="gera2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gera2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gera2.xss">
+      <DependentUpon>gera2.xsd</DependentUpon>
+    </None>
     <None Include="LocalesPorTipoLocal.xsc">
       <DependentUpon>LocalesPorTipoLocal.xsd</DependentUpon>
     </None>
@@ -597,6 +623,17 @@
     <None Include="TablasTPShopping.xss">
       <DependentUpon>TablasTPShopping.xsd</DependentUpon>
     </None>
+    <None Include="TarjetasXCliente.xsc">
+      <DependentUpon>TarjetasXCliente.xsd</DependentUpon>
+    </None>
+    <None Include="TarjetasXCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TarjetasXCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TarjetasXCliente.xss">
+      <DependentUpon>TarjetasXCliente.xsd</DependentUpon>
+    </None>
     <None Include="VehiculosPorModelo.xsc">
       <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
     </None>
@@ -607,6 +644,17 @@
     </None>
     <None Include="VehiculosPorModelo.xss">
       <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
+    </None>
+    <None Include="VehiculosXCliente.xsc">
+      <DependentUpon>VehiculosXCliente.xsd</DependentUpon>
+    </None>
+    <None Include="VehiculosXCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehiculosXCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VehiculosXCliente.xss">
+      <DependentUpon>VehiculosXCliente.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
