@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dataSetLocalesMasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetLocalesMasVentas = new TP_PAV1.DataSetLocalesMasVentas();
             this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -187,10 +185,7 @@
             // reportViewer10
             // 
             this.reportViewer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "LocalesMasVenta";
-            reportDataSource1.Value = this.dataSetLocalesMasVentasBindingSource;
-            this.reportViewer10.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer10.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteFedeCambiarNombreDespDeMerge.rdlc";
+            this.reportViewer10.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasXBarrio.rdlc";
             this.reportViewer10.Location = new System.Drawing.Point(3, 3);
             this.reportViewer10.Name = "reportViewer10";
             this.reportViewer10.ServerReport.BearerToken = null;
@@ -211,11 +206,8 @@
             // 
             // reportViewer9
             // 
-            reportDataSource2.Name = "VentasXLocal";
-            reportDataSource2.Value = this.localescomercialesBindingSource;
-            this.reportViewer9.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer9.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorLocal.rdlc";
-            this.reportViewer9.Location = new System.Drawing.Point(3, 203);
+            this.reportViewer9.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteFedeCambiarNombreDespDeMerge.rdlc";
+            this.reportViewer9.Location = new System.Drawing.Point(-4, 6);
             this.reportViewer9.Name = "reportViewer9";
             this.reportViewer9.ServerReport.BearerToken = null;
             this.reportViewer9.Size = new System.Drawing.Size(520, 389);
@@ -235,9 +227,9 @@
             // 
             // reportViewer8
             // 
-            reportDataSource3.Name = "ProcedimientosAlmacenados";
-            reportDataSource3.Value = this.VentasPorClienteBindingSource;
-            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource5.Name = "ProcedimientosAlmacenados";
+            reportDataSource5.Value = this.VentasPorClienteBindingSource;
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantVentasPorCliente.rdlc";
             this.reportViewer8.Location = new System.Drawing.Point(3, 155);
             this.reportViewer8.Name = "reportViewer8";
@@ -345,9 +337,9 @@
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ArticulosXRubro";
-            reportDataSource4.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource6.Name = "ArticulosXRubro";
+            reportDataSource6.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";

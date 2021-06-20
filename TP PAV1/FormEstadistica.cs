@@ -121,8 +121,8 @@ namespace TP_PAV1
         private void reportViewer9_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = AD_Ventas.obtenerListadoLocales();
-            ReportDataSource ds = new ReportDataSource("VentasXLocal", tabla);
+            tabla = AD_Ventas.obtenerLocalesXMayorCompras();
+            ReportDataSource ds = new ReportDataSource("LocalesMasVenta", tabla);
 
             reportViewer9.LocalReport.DataSources.Clear();
             reportViewer9.LocalReport.DataSources.Add(ds);
@@ -133,8 +133,8 @@ namespace TP_PAV1
         {
             
             DataTable tabla = new DataTable();
-            tabla = AD_Ventas.obtenerLocalesXMayorCompras();
-            ReportDataSource ds = new ReportDataSource("LocalesMasVenta", tabla);
+            tabla = AD_Ventas.ObtenerVentasPorBarrio();
+            ReportDataSource ds = new ReportDataSource("VentasXBarrio", tabla);
 
             reportViewer10.LocalReport.DataSources.Clear();
             reportViewer10.LocalReport.DataSources.Add(ds);
