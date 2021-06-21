@@ -30,10 +30,10 @@ namespace TP_PAV1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialVentas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -201,32 +201,33 @@ namespace TP_PAV1
             this.grdCompras.RowHeadersWidth = 20;
             this.grdCompras.Size = new System.Drawing.Size(452, 322);
             this.grdCompras.TabIndex = 29;
+            this.grdCompras.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCompras_CellClick);
             // 
             // nro_compra
             // 
             this.nro_compra.DataPropertyName = "nro_compra";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.nro_compra.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.nro_compra.DefaultCellStyle = dataGridViewCellStyle5;
             this.nro_compra.HeaderText = "Nro. de Compra";
             this.nro_compra.Name = "nro_compra";
             // 
             // nro_local
             // 
             this.nro_local.DataPropertyName = "nro_local";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.nro_local.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.nro_local.DefaultCellStyle = dataGridViewCellStyle6;
             this.nro_local.HeaderText = "Nro de Local";
             this.nro_local.Name = "nro_local";
             // 
             // fecha_compra
             // 
             this.fecha_compra.DataPropertyName = "fecha_compra";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.fecha_compra.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.fecha_compra.DefaultCellStyle = dataGridViewCellStyle7;
             this.fecha_compra.HeaderText = "Fecha";
             this.fecha_compra.Name = "fecha_compra";
             this.fecha_compra.Width = 150;
@@ -234,10 +235,10 @@ namespace TP_PAV1
             // monto
             // 
             this.monto.DataPropertyName = "monto";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.NullValue = null;
-            this.monto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.NullValue = null;
+            this.monto.DefaultCellStyle = dataGridViewCellStyle8;
             this.monto.HeaderText = "Monto";
             this.monto.Name = "monto";
             // 

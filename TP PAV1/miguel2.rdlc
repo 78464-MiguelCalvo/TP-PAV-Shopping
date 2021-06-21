@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Listado de Tarjetas por cliente</Value>
+                <Value>Listado de Autos por cliente</Value>
                 <Style>
                   <FontSize>17pt</FontSize>
                   <Color>Maroon</Color>
@@ -33,9 +33,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.39083cm</Top>
-        <Left>3.195cm</Left>
+        <Left>3.69771cm</Left>
         <Height>0.75292cm</Height>
-        <Width>8.69125cm</Width>
+        <Width>7.81812cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

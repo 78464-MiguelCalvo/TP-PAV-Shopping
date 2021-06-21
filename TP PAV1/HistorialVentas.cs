@@ -96,5 +96,17 @@ namespace TP_PAV1
 
 
         }
+
+        private void grdCompras_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indice = e.RowIndex;
+            DataGridViewRow filaSeleccionada = grdCompras.Rows[indice];
+            int nroCompra= Convert.ToInt32(filaSeleccionada.Cells["nro_compra"].Value.ToString());
+            
+            DetalleVenta ventana = new DetalleVenta(nroCompra);
+            ventana.ShowDialog();
+
+            
+        }
     }
 }

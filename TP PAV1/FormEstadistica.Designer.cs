@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
             this.dataSetLocalesMasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetLocalesMasVentas = new TP_PAV1.DataSetLocalesMasVentas();
             this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablasTPShopping = new TP_PAV1.TablasTPShopping();
-            this.VentasPorClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ProcedimientosVentasX = new TP_PAV1.ProcedimientosVentasX();
             this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
             this.TablaClientesXBarrioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,12 +66,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ReporteCantidadArticulosPorTipo = new System.Windows.Forms.TabControl();
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.localescomercialesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablasTPShopping)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientesXBarrioBindingSource)).BeginInit();
@@ -89,6 +89,16 @@
             this.tabPage1.SuspendLayout();
             this.ReporteCantidadArticulosPorTipo.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // VentasPorClienteBindingSource
+            // 
+            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
+            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
+            // 
+            // ProcedimientosVentasX
+            // 
+            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
+            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataSetLocalesMasVentasBindingSource
             // 
@@ -110,16 +120,6 @@
             // 
             this.tablasTPShopping.DataSetName = "TablasTPShopping";
             this.tablasTPShopping.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // VentasPorClienteBindingSource
-            // 
-            this.VentasPorClienteBindingSource.DataMember = "VentasPorCliente";
-            this.VentasPorClienteBindingSource.DataSource = this.ProcedimientosVentasX;
-            // 
-            // ProcedimientosVentasX
-            // 
-            this.ProcedimientosVentasX.DataSetName = "ProcedimientosVentasX";
-            this.ProcedimientosVentasX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // LocalesXTipoComercioBindingSource
             // 
@@ -178,7 +178,7 @@
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage10.Size = new System.Drawing.Size(523, 592);
             this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "fede2";
+            this.tabPage10.Text = "Ventas por barrio";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // reportViewer10
@@ -200,7 +200,7 @@
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(523, 592);
             this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "fede1";
+            this.tabPage9.Text = "Locales con mas ventas";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // reportViewer9
@@ -222,15 +222,15 @@
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(523, 592);
             this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "pola2";
+            this.tabPage8.Text = "Cantidad de ventas por clientes";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // reportViewer8
             // 
             this.reportViewer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "ProcedimientosAlmacenados";
-            reportDataSource2.Value = this.VentasPorClienteBindingSource;
-            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ProcedimientosAlmacenados";
+            reportDataSource1.Value = this.VentasPorClienteBindingSource;
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantVentasPorCliente.rdlc";
             this.reportViewer8.Location = new System.Drawing.Point(3, 3);
             this.reportViewer8.Name = "reportViewer8";
@@ -247,7 +247,7 @@
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(523, 592);
             this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "pola1";
+            this.tabPage7.Text = "Cantidad de ventas por articulo";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // reportViewer7
@@ -269,7 +269,7 @@
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(523, 592);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "geri2";
+            this.tabPage6.Text = "Locales por rubro";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // reportViewer6
@@ -291,7 +291,7 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(523, 592);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "geri1";
+            this.tabPage5.Text = "Uso de playa";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // reportViewer5
@@ -313,7 +313,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(523, 592);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "agus2";
+            this.tabPage4.Text = "Cantidad de estacionamientos por playa";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // reportViewer4
@@ -335,7 +335,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(523, 592);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "agus1";
+            this.tabPage3.Text = "Cantidad articulos por local";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // reportViewer3
@@ -357,7 +357,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(523, 592);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "miguel2";
+            this.tabPage2.Text = "Vehiculos por marcar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // reportViewer2
@@ -379,7 +379,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(523, 592);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "miguel1";
+            this.tabPage1.Text = "Cantidad clientes por profesión";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -426,12 +426,12 @@
             this.Name = "FormEstadistica";
             this.Text = "FormReportes";
             this.Load += new System.EventHandler(this.FormReportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetLocalesMasVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.localescomercialesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablasTPShopping)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VentasPorClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProcedimientosVentasX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientesXBarrioBindingSource)).EndInit();
