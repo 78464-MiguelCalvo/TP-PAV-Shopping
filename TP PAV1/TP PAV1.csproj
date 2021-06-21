@@ -136,6 +136,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetLocalesMasVentas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetRegistrosEstadias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRegistrosEstadias.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetVentasXBarrio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -463,6 +468,7 @@
     <EmbeddedResource Include="ReporteFedeCambiarNombreDespDeMerge.rdlc" />
     <EmbeddedResource Include="ReporteArticulosPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteArticulosPorRubro.rdlc" />
+    <EmbeddedResource Include="ReporteRegistrosEstadiaEstacionamiento.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorArticulo.rdlc" />
     <EmbeddedResource Include="ReporteVentasPorLocal.rdlc" />
     <EmbeddedResource Include="ReporteCantVentasPorCliente.rdlc" />
@@ -521,6 +527,17 @@
     </None>
     <None Include="DataSetLocalesMasVentas.xss">
       <DependentUpon>DataSetLocalesMasVentas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRegistrosEstadias.xsc">
+      <DependentUpon>DataSetRegistrosEstadias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRegistrosEstadias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRegistrosEstadias.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetRegistrosEstadias.xss">
+      <DependentUpon>DataSetRegistrosEstadias.xsd</DependentUpon>
     </None>
     <None Include="DataSetVentasXBarrio.xsc">
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>

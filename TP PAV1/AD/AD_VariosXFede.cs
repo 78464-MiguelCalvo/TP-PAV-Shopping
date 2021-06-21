@@ -16,7 +16,7 @@ namespace TP_PAV1.AD
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             bool resultado = false;
-            
+
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -33,7 +33,7 @@ namespace TP_PAV1.AD
                 cmd.Parameters.AddWithValue("@fechaNacimiento", cli.FechaNacimientoCliente);
                 cmd.Parameters.AddWithValue("@idSexo", cli.SexoCliente);
                 cmd.Parameters.AddWithValue("@id_estado_civil", cli.EstadoCivilCliente);
-                
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
@@ -72,9 +72,9 @@ namespace TP_PAV1.AD
 
                 cn.Open();
                 cmd.Connection = cn;
-                SqlDataReader dr = cmd.ExecuteReader();  
+                SqlDataReader dr = cmd.ExecuteReader();
 
-                if (dr != null && dr.Read()) 
+                if (dr != null && dr.Read())
                 {
                     c.DocumentoCliente = dr["nro_documento"].ToString();
                     c.ApellidoCliente = dr["apellido"].ToString();
@@ -86,7 +86,7 @@ namespace TP_PAV1.AD
                     c.CalleCliente = dr["calle"].ToString();
                     c.NroCasaCliente = int.Parse(dr["calle_nro"].ToString());
                     c.EstadoCivilCliente = int.Parse(dr["id_estado_civil"].ToString());
-                    
+
                 }
 
             }
@@ -101,5 +101,42 @@ namespace TP_PAV1.AD
 
             return c;
         }
+
+        public static DataTable ObtenerRegistroEstadias()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "GetRegistrosEstadiaEstacionamiento";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
     }
 }
