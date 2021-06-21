@@ -149,8 +149,8 @@ namespace TP_PAV1
         private void reportViewer3_Load_1(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = ArticuloXRubro.ObtenerArticuloXRubro();
-            ReportDataSource ds = new ReportDataSource("ArticulosXRubro", tabla);
+            tabla = ArticuloXLocal.ObtenerCantArticuloXLocal();
+            ReportDataSource ds = new ReportDataSource("ArticulosXLocal", tabla);
 
             reportViewer3.LocalReport.DataSources.Clear();
             reportViewer3.LocalReport.DataSources.Add(ds);
@@ -160,8 +160,8 @@ namespace TP_PAV1
         private void reportViewer4_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = ArticuloXLocal.ObtenerArticuloXLocal();
-            ReportDataSource ds = new ReportDataSource("ArticulosXLocal", tabla);
+            tabla = AD_PlayasYEstacionamientos.ObtenerCantEstacionamientosPorPlaya();
+            ReportDataSource ds = new ReportDataSource("EstacionamientoXPlaya", tabla);
 
             reportViewer4.LocalReport.DataSources.Clear();
             reportViewer4.LocalReport.DataSources.Add(ds);

@@ -141,6 +141,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosArticulosPorLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosArticulosPorLocal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstacionamientosPorPlaya.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstacionamientosPorPlaya.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -522,6 +532,28 @@
     </None>
     <None Include="DataSetVentasXBarrio.xss">
       <DependentUpon>DataSetVentasXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="DatosArticulosPorLocal.xsc">
+      <DependentUpon>DatosArticulosPorLocal.xsd</DependentUpon>
+    </None>
+    <None Include="DatosArticulosPorLocal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosArticulosPorLocal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosArticulosPorLocal.xss">
+      <DependentUpon>DatosArticulosPorLocal.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstacionamientosPorPlaya.xsc">
+      <DependentUpon>DatosEstacionamientosPorPlaya.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstacionamientosPorPlaya.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstacionamientosPorPlaya.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstacionamientosPorPlaya.xss">
+      <DependentUpon>DatosEstacionamientosPorPlaya.xsd</DependentUpon>
     </None>
     <None Include="gera2.xsc">
       <DependentUpon>gera2.xsd</DependentUpon>
