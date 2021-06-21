@@ -156,6 +156,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosEstacionamientosPorPlaya.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosTarjetasClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosTarjetasClientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
@@ -432,7 +437,9 @@
       <DependentUpon>IngresoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoClientes.rdlc" />
+    <EmbeddedResource Include="ListadoDeClientes.rdlc" />
     <EmbeddedResource Include="ListadoDePlayasMasUtilizados.rdlc" />
+    <EmbeddedResource Include="ListadoDeTarjetasPorCliente.rdlc" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -572,6 +579,17 @@
     <None Include="DatosEstacionamientosPorPlaya.xss">
       <DependentUpon>DatosEstacionamientosPorPlaya.xsd</DependentUpon>
     </None>
+    <None Include="DatosTarjetasClientes.xsc">
+      <DependentUpon>DatosTarjetasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DatosTarjetasClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosTarjetasClientes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatosTarjetasClientes.xss">
+      <DependentUpon>DatosTarjetasClientes.xsd</DependentUpon>
+    </None>
     <None Include="gera2.xsc">
       <DependentUpon>gera2.xsd</DependentUpon>
     </None>
@@ -648,6 +666,7 @@
     <None Include="TarjetasXCliente.xss">
       <DependentUpon>TarjetasXCliente.xsd</DependentUpon>
     </None>
+    <None Include="TP-PAV-Shopping-4.0-polaco.zip" />
     <None Include="VehiculosPorModelo.xsc">
       <DependentUpon>VehiculosPorModelo.xsd</DependentUpon>
     </None>

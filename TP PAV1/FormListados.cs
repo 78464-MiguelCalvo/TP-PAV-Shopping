@@ -21,6 +21,10 @@ namespace TP_PAV1
                     
         private void FormListados_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DatosTarjetasClientes.ListadoTarjetasPorCliente' Puede moverla o quitarla según sea necesario.
+            this.ListadoTarjetasPorClienteTableAdapter.Fill(this.DatosTarjetasClientes.ListadoTarjetasPorCliente);
+            // TODO: esta línea de código carga datos en la tabla 'TablasTPShopping.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.TablasTPShopping.clientes);
             // TODO: esta línea de código carga datos en la tabla 'DataSetRegistrosEstadias.GetRegistrosEstadiaEstacionamiento' Puede moverla o quitarla según sea necesario.
             this.GetRegistrosEstadiaEstacionamientoTableAdapter.Fill(this.DataSetRegistrosEstadias.GetRegistrosEstadiaEstacionamiento);
             // TODO: esta línea de código carga datos en la tabla 'gera2.ListadoArticulos' Puede moverla o quitarla según sea necesario.
