@@ -34,6 +34,7 @@ namespace TP_PAV1
             this.reportViewer4.RefreshReport();
             this.reportViewer5.RefreshReport();
             this.reportViewer6.RefreshReport();
+            this.reportViewer7.RefreshReport();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)

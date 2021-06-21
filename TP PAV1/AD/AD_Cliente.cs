@@ -5,13 +5,14 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TP_PAV1.Entidades;
 
 namespace TP_PAV1.AD
 {
     public class AD_Cliente
     {
-        // VER SI SE ACTUALIZO LA BASE DE DATOS
+        
         public static DataTable ObtenerTabla(string nombreTabla)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["cadenaTP1"];
@@ -241,6 +242,41 @@ namespace TP_PAV1.AD
                 cn.Close();
             }
         }
+
+        public static DataTable ObtenerListadoDeClientes()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT tipo_documento, nro_documento, nombre, apellido FROM clientes";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Recuperando datos...");
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }// para el reporte
 
     }
 }

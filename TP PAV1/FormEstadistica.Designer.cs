@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dataSetLocalesMasVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetLocalesMasVentas = new TP_PAV1.DataSetLocalesMasVentas();
             this.localescomercialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -186,9 +186,9 @@
             // reportViewer10
             // 
             this.reportViewer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "LocalesMasVenta";
-            reportDataSource4.Value = this.dataSetLocalesMasVentasBindingSource;
-            this.reportViewer10.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "LocalesMasVenta";
+            reportDataSource1.Value = this.dataSetLocalesMasVentasBindingSource;
+            this.reportViewer10.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer10.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteFedeCambiarNombreDespDeMerge.rdlc";
             this.reportViewer10.Location = new System.Drawing.Point(3, 3);
             this.reportViewer10.Name = "reportViewer10";
@@ -211,9 +211,9 @@
             // reportViewer9
             // 
             this.reportViewer9.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "VentasXLocal";
-            reportDataSource5.Value = this.localescomercialesBindingSource;
-            this.reportViewer9.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource2.Name = "VentasXLocal";
+            reportDataSource2.Value = this.localescomercialesBindingSource;
+            this.reportViewer9.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer9.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteVentasPorLocal.rdlc";
             this.reportViewer9.Location = new System.Drawing.Point(3, 3);
             this.reportViewer9.Name = "reportViewer9";
@@ -236,9 +236,9 @@
             // reportViewer8
             // 
             this.reportViewer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource6.Name = "ProcedimientosAlmacenados";
-            reportDataSource6.Value = this.VentasPorClienteBindingSource;
-            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource3.Name = "ProcedimientosAlmacenados";
+            reportDataSource3.Value = this.VentasPorClienteBindingSource;
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteCantVentasPorCliente.rdlc";
             this.reportViewer8.Location = new System.Drawing.Point(3, 3);
             this.reportViewer8.Name = "reportViewer8";

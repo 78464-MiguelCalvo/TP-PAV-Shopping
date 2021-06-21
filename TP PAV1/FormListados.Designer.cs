@@ -30,11 +30,15 @@ namespace TP_PAV1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.TarjetasXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TarjetasXCliente = new TP_PAV1.TarjetasXCliente();
+            this.VehiculosXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.VehiculosXCliente = new TP_PAV1.VehiculosXCliente();
             this.LocalesXTipoComercioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LocalesXTipoComercio = new TP_PAV1.LocalesXTipoComercio();
             this.ListadoProfesionesXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,10 +65,11 @@ namespace TP_PAV1
             this.label2 = new System.Windows.Forms.Label();
             this.ListadoProfesionesXClienteTableAdapter = new TP_PAV1.gera2TableAdapters.ListadoProfesionesXClienteTableAdapter();
             this.ListadoArticulosTableAdapter = new TP_PAV1.gera2TableAdapters.ListadoArticulosTableAdapter();
-            this.TarjetasXCliente = new TP_PAV1.TarjetasXCliente();
-            this.TarjetasXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.VehiculosXCliente = new TP_PAV1.VehiculosXCliente();
-            this.VehiculosXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer7 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListadoProfesionesXClienteBindingSource)).BeginInit();
@@ -77,11 +82,28 @@ namespace TP_PAV1
             this.Fede2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXClienteBindingSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // TarjetasXClienteBindingSource
+            // 
+            this.TarjetasXClienteBindingSource.DataMember = "TarjetasXCliente";
+            this.TarjetasXClienteBindingSource.DataSource = this.TarjetasXCliente;
+            // 
+            // TarjetasXCliente
+            // 
+            this.TarjetasXCliente.DataSetName = "TarjetasXCliente";
+            this.TarjetasXCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // VehiculosXClienteBindingSource
+            // 
+            this.VehiculosXClienteBindingSource.DataMember = "VehiculosXCliente";
+            this.VehiculosXClienteBindingSource.DataSource = this.VehiculosXCliente;
+            // 
+            // VehiculosXCliente
+            // 
+            this.VehiculosXCliente.DataSetName = "VehiculosXCliente";
+            this.VehiculosXCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // LocalesXTipoComercioBindingSource
             // 
@@ -142,9 +164,9 @@ namespace TP_PAV1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.DocumentMapWidth = 32;
-            reportDataSource1.Name = "TarjetasXCliente";
-            reportDataSource1.Value = this.TarjetasXClienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource6.Name = "TarjetasXCliente";
+            reportDataSource6.Value = this.TarjetasXClienteBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP_PAV1.miguel1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -167,9 +189,9 @@ namespace TP_PAV1
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "VehiculosXCliente";
-            reportDataSource2.Value = this.VehiculosXClienteBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource7.Name = "VehiculosXCliente";
+            reportDataSource7.Value = this.VehiculosXClienteBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource7);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "TP_PAV1.miguel2.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(3, 3);
             this.reportViewer2.Name = "reportViewer2";
@@ -192,9 +214,9 @@ namespace TP_PAV1
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "ArticulosXRubro";
-            reportDataSource3.Value = this.LocalesXTipoComercioBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource8.Name = "ArticulosXRubro";
+            reportDataSource8.Value = this.LocalesXTipoComercioBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource8);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "TP_PAV1.ReporteArticulosPorRubro.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -239,9 +261,9 @@ namespace TP_PAV1
             // reportViewer5
             // 
             this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "ProfesionesXCliente";
-            reportDataSource4.Value = this.ListadoProfesionesXClienteBindingSource;
-            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource9.Name = "ProfesionesXCliente";
+            reportDataSource9.Value = this.ListadoProfesionesXClienteBindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource9);
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "TP_PAV1.gera1.rdlc";
             this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
@@ -264,9 +286,9 @@ namespace TP_PAV1
             // reportViewer6
             // 
             this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "Articulos";
-            reportDataSource5.Value = this.ListadoArticulosBindingSource;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource10.Name = "Articulos";
+            reportDataSource10.Value = this.ListadoArticulosBindingSource;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource10);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "TP_PAV1.gera2.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
@@ -277,6 +299,7 @@ namespace TP_PAV1
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.reportViewer7);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -340,25 +363,14 @@ namespace TP_PAV1
             // 
             this.ListadoArticulosTableAdapter.ClearBeforeFill = true;
             // 
-            // TarjetasXCliente
+            // reportViewer7
             // 
-            this.TarjetasXCliente.DataSetName = "TarjetasXCliente";
-            this.TarjetasXCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TarjetasXClienteBindingSource
-            // 
-            this.TarjetasXClienteBindingSource.DataMember = "TarjetasXCliente";
-            this.TarjetasXClienteBindingSource.DataSource = this.TarjetasXCliente;
-            // 
-            // VehiculosXCliente
-            // 
-            this.VehiculosXCliente.DataSetName = "VehiculosXCliente";
-            this.VehiculosXCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // VehiculosXClienteBindingSource
-            // 
-            this.VehiculosXClienteBindingSource.DataMember = "VehiculosXCliente";
-            this.VehiculosXClienteBindingSource.DataSource = this.VehiculosXCliente;
+            this.reportViewer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer7.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer7.Name = "reportViewer7";
+            this.reportViewer7.ServerReport.BearerToken = null;
+            this.reportViewer7.Size = new System.Drawing.Size(517, 542);
+            this.reportViewer7.TabIndex = 0;
             // 
             // FormListados
             // 
@@ -373,6 +385,10 @@ namespace TP_PAV1
             this.Name = "FormListados";
             this.Text = "FormListados";
             this.Load += new System.EventHandler(this.FormListados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalesXTipoComercio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListadoProfesionesXClienteBindingSource)).EndInit();
@@ -385,10 +401,7 @@ namespace TP_PAV1
             this.Fede2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TarjetasXClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VehiculosXClienteBindingSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +439,6 @@ namespace TP_PAV1
         private TarjetasXCliente TarjetasXCliente;
         private System.Windows.Forms.BindingSource VehiculosXClienteBindingSource;
         private VehiculosXCliente VehiculosXCliente;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer7;
     }
 }
