@@ -114,6 +114,7 @@ namespace TP_PAV1
             this.btnCerrarSesionOK.TabIndex = 9;
             this.btnCerrarSesionOK.Text = "Cerrar sesión";
             this.btnCerrarSesionOK.UseVisualStyleBackColor = false;
+            this.btnCerrarSesionOK.Click += new System.EventHandler(this.btnCerrarSesionOK_Click);
             // 
             // btnSalirOK
             // 
@@ -131,6 +132,7 @@ namespace TP_PAV1
             this.btnSalirOK.TabIndex = 10;
             this.btnSalirOK.Text = "Salir";
             this.btnSalirOK.UseVisualStyleBackColor = false;
+            this.btnSalirOK.Click += new System.EventHandler(this.btnSalirOK_Click);
             // 
             // pnlSalir
             // 

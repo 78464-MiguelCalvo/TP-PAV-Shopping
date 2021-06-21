@@ -48,14 +48,14 @@ namespace TP_PAV1
                     Usuarios U = AD_usuario.obtenerUsuarioPorNombre(nombreUsuario);
                     if (U.idPerfil ==1)
                     {
-                        MenuPrincipal ventana = new MenuPrincipal();
+                        MenuPrincipal ventana = new MenuPrincipal(this);
                         ventana.Show();                      
                     }
                     else
                     {
                         if (U.idPerfil == 2)
                         {
-                                MenuPrincipalLocal ventanaPrueba = new MenuPrincipalLocal();
+                                MenuPrincipalLocal ventanaPrueba = new MenuPrincipalLocal(this);
                                 ventanaPrueba.Show();
                         }
                         else

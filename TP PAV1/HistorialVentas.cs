@@ -102,11 +102,14 @@ namespace TP_PAV1
             int indice = e.RowIndex;
             DataGridViewRow filaSeleccionada = grdCompras.Rows[indice];
             int nroCompra= Convert.ToInt32(filaSeleccionada.Cells["nro_compra"].Value.ToString());
-            
-            DetalleVenta ventana = new DetalleVenta(nroCompra);
-            ventana.ShowDialog();
+            DialogResult r = MessageBox.Show("Desea mostrar el detalle", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == r)
+            {
 
-            
+                DetalleVenta ventana = new DetalleVenta(nroCompra);
+                ventana.ShowDialog();
+
+            }
         }
     }
 }

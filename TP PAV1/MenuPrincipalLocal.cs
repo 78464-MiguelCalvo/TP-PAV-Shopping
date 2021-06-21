@@ -12,10 +12,13 @@ namespace TP_PAV1
 {
     public partial class MenuPrincipalLocal : Form
     {
-        public MenuPrincipalLocal()
+        Login LoginAnterior = new Login();
+       
+            public MenuPrincipalLocal(Login VentanaLogin)
         {
             InitializeComponent();
             PersonalizarDiseño();
+            LoginAnterior = VentanaLogin;
         }
 
         private void PersonalizarDiseño()
@@ -222,6 +225,7 @@ namespace TP_PAV1
                 Login ventana = new Login();
                 ventana.Show();
                 this.Close();
+
             }
         }
 
@@ -260,6 +264,12 @@ namespace TP_PAV1
             EsconderSubmenu();
             AbrirFormularioHijo(new FormListados());
             this.Text = ("BUY ALL - Ventas");
+        }
+
+        private void btnSalirOK_Click(object sender, EventArgs e)
+        {
+            LoginAnterior.Close();
+            this.Close();
         }
     }
 }

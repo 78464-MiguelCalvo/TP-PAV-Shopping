@@ -12,11 +12,13 @@ namespace TP_PAV1
 {
     public partial class MenuPrincipal : Form
     {
-        
-        public MenuPrincipal()
+        Login LoginAnterior = new Login();
+        public MenuPrincipal(Login VentanaLogin)
         {
             InitializeComponent();
             PersonalizarDiseño();
+
+            LoginAnterior = VentanaLogin;
         }
 
 
@@ -60,6 +62,7 @@ namespace TP_PAV1
             else
             {
                 submenu.Visible = false;
+                
             }
         }
 
@@ -213,6 +216,7 @@ namespace TP_PAV1
             if (resultado == DialogResult.Yes)
             {
                 this.Close();
+                
             }
         }
 
@@ -232,7 +236,9 @@ namespace TP_PAV1
             DialogResult resultado = MessageBox.Show("¿Está seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (resultado == DialogResult.Yes)
             {
+                LoginAnterior.Close();
                 this.Close();
+               
             }
         }
     }
