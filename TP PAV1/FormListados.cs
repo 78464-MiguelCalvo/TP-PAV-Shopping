@@ -21,6 +21,8 @@ namespace TP_PAV1
                     
         private void FormListados_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSetRegistrosEstadias.GetRegistrosEstadiaEstacionamiento' Puede moverla o quitarla según sea necesario.
+            this.GetRegistrosEstadiaEstacionamientoTableAdapter.Fill(this.DataSetRegistrosEstadias.GetRegistrosEstadiaEstacionamiento);
             // TODO: esta línea de código carga datos en la tabla 'gera2.ListadoArticulos' Puede moverla o quitarla según sea necesario.
             this.ListadoArticulosTableAdapter.Fill(this.gera2.ListadoArticulos);
             // TODO: esta línea de código carga datos en la tabla 'gera2.ListadoProfesionesXCliente' Puede moverla o quitarla según sea necesario.
@@ -35,6 +37,9 @@ namespace TP_PAV1
             this.reportViewer5.RefreshReport();
             this.reportViewer6.RefreshReport();
             this.reportViewer7.RefreshReport();
+            this.reportViewer8.RefreshReport();
+            this.reportViewer9.RefreshReport();
+            this.reportViewer10.RefreshReport();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -106,6 +111,28 @@ namespace TP_PAV1
             reportViewer2.LocalReport.DataSources.Clear();
             reportViewer2.LocalReport.DataSources.Add(ds);
             reportViewer2.LocalReport.Refresh();
+        }
+
+        private void reportViewer8_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_Cliente.obtenerClientesXBarrio();
+            ReportDataSource ds = new ReportDataSource("ClientesXBarrio", tabla);
+
+            reportViewer8.LocalReport.DataSources.Clear();
+            reportViewer8.LocalReport.DataSources.Add(ds);
+            reportViewer8.LocalReport.Refresh();
+        }
+
+        private void reportViewer9_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = AD_VariosXFede.ObtenerRegistroEstadias();
+            ReportDataSource ds = new ReportDataSource("RegistrosEstadias", tabla);
+
+            reportViewer9.LocalReport.DataSources.Clear();
+            reportViewer9.LocalReport.DataSources.Add(ds);
+            reportViewer9.LocalReport.Refresh();
         }
     }
 }
